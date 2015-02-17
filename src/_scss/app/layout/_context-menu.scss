@@ -1,0 +1,150 @@
+/*
+    CONTEXT MENU.CSS
+
+    - Last updated: 16.02.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Context Menu
+//-----------------------------------------------------------------
+
+.lv-context-menu {
+    display: none; // Hidden on mobile, JS will show
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: $secondary-nav-width;
+    height: 100%;
+    background: $secondary-color;
+
+    // Becomes table-cell on large, affects stage content
+    @media #{$large-up} {
+        display: table-cell !important; // override .lv-show simply
+        position: relative;
+        left: 0;
+        vertical-align: top;
+    }
+
+    &.lv-show {
+        display: block;
+    }
+}
+
+//-----------------------------------------------------------------
+// Context Menu Scroller
+//-----------------------------------------------------------------
+
+// Table wrapper - formerly handled main nav as vertical (now horizontal)
+.lv-context-menu-fixed {
+    bottom: 0; // needs this for mobile
+    width: 100%; // for mobile only?
+
+	// remember it's MAX WIDTH, large doesn't inherit
+    @media #{$large-up} {
+    // @media (max-width: $fixed-breakpoint) {
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        // top: $header-height;
+        left: 0;
+        width: $secondary-nav-width;
+    }
+
+    // @media (min-width: $fixed-breakpoint) {
+        // bottom: $footer-height;
+        // bottom: 0;
+    // }
+
+    @media #{$large-up} {
+        // top: $header-height + $primary-nav-height;
+    }
+}
+
+//=========================================
+// Seconday Nav (Flyout Nav)
+//=========================================
+
+.lv-context-menu-scroller {
+    width: $secondary-nav-width;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    // Read for popover on mobile
+    @media (max-width: 56.250em) {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------
+// Stuff
+//-----------------------------------------------------------------
+
+.lv-context-menu-scroller {
+    h4 {
+        padding: rem-calc(15);
+    }
+
+    .active a {
+        background: darken($secondary-color, 10%); //#5E6E7F;
+        border-left: 4px solid $primary-color;
+        color: white;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        // border-bottom: 1px solid #D4DCE3;
+        color: #CCC;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+
+        i {
+            margin-right: rem-calc(10);
+        }
+
+        &.active {
+            background: #5E6E7F;
+            color: white;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+/*
+    FOOTER.CSS
+
+    - Last updated: 17.02.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Footer
+//-----------------------------------------------------------------
+
+.lv-footer {
+    display: table-row;
+    // padding: rem-calc(5 30 70 30);
+    background: #F8A5C0; //$body-bg;
+    border-top: 1px solid #E6E6E6;
+    z-index: 100;
+
+    @media #{$large-up} {
+        background: white;
+    }
+
+    .lv-footer-inner {
+        display: table-cell;
+        padding: rem-calc(5 30 ($touch-menu-height + 15) 30);
+
+        @media #{$large-up} {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: $footer-height;
+            line-height: $footer-height;
+            padding: rem-calc(0 15);
+            background: white;
+            z-index: 100;
+        }
+    }
+
+    a,
+    .anchor {
+        color: $body-font-color;
+    }
+}
+
+//=========================================
+// Footer Links
+//=========================================
+
+.lv-footer-links a,
+.lv-footer-links .anchor {
+    @extend .transition;
+    font-size: rem-calc(12);
+    line-height: $footer-height;
+    cursor: pointer;
+
+    &:hover {
+        color: grey;
+    }
+
+    /* needs some bigger gaps */
+    @media #{$medium-up} {
+        padding: rem-calc(0 5);
+    }
+}
+
+//=========================================
+// Footer Legal
+//=========================================
+
+.lv-footer-legal {
+    font-size: rem-calc(11);
+    line-height: 0;
+    color: grey;
+}

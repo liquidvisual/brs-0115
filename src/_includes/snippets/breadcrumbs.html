@@ -1,0 +1,20 @@
+{% comment %}
+    Note: BYO Breadcrumb logic. This composes links by reading the page url.
+    https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+{% endcomment %}
+
+{% assign crumbs = page.url | split: '/' %}
+
+<h5><i class="fi-marker"></i>&nbsp; You are in:</h5>
+
+<!-- <a class="lv-breadcrumbs-expander right button tiny pill" href="#">Expand</a> -->
+
+<ul class="lv-breadcrumbs">
+    {% for crumb in crumbs offset: 1 %}
+        {% if forloop.last %}
+            <li class="active">{{ crumb | replace:'-',' ' }}</li>
+        {% else %}
+            <li><a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' }}</a>
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,43 @@
+/*
+    SPECIAL.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Special
+//-----------------------------------------------------------------
+
+.lv-super .pagination {
+    display: inline-block; // so we can text-align it
+}
+
+.postfix {
+    position: relative;
+    left: -2px;
+}
+
+.row.is-full-width {
+    max-width: none;
+}
+
+
+
+// refactor
+
+.lv-touch-menu {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	z-index: 100;
+	line-height: 0;
+	opacity: .2;
+}
+
+// Broken in Foundation
+.icon-bar label {
+	font-size: $icon-bar-font-size;
+}

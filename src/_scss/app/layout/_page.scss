@@ -1,0 +1,47 @@
+/*
+    PAGE.CSS
+
+    - Last updated: 25.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Page
+//
+// .lv-super : top-most non-visual wrapper
+// .lv-page  : visual wrapper
+//-----------------------------------------------------------------
+
+// .lv-page {
+//     @media #{$medium-up} {
+
+//     }
+// }
+
+.lv-super {
+    // height: -moz-calc(100vh - #{$footer-height});
+    // height: -webkit-calc(100vh - #{$footer-height});
+    // height: calc(100vh - #{$footer-height});
+    // height: 100%;
+}
+
+.lv-page {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    // bottom: 0;
+    // overflow: hidden;
+
+    // &:after {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     content: "";
+    //     width: 100%;
+    //     height: 100%;
+    //     background: rgba(0,0,0,.6);
+    // }
+}
