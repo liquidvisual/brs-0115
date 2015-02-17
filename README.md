@@ -1,9 +1,9 @@
 # DOCUMENTATION
 
-Last updated: **12.01.15**
+Last updated: **17.02.15**
 
 The public facing site is currently located at:
-[http://cpbeta.uat.liquidvisual.net](http://cpbeta.uat.liquidvisual.net)
+[http://bigredsky.uat.liquidvisual.net](http://bigredsky.uat.liquidvisual.net)
 
 ---
 
@@ -13,14 +13,14 @@ This project is built with [Jekyll 2.5.3](http://jekyllrb.com) - a static site g
 
 The repo for all the source files are found here:
 
-[https://github.com/liquidvisual/cp-prototype](https://github.com/liquidvisual/cp-prototype)
+[https://github.com/liquidvisual/brs-0115](https://github.com/liquidvisual/brs-0115)
 
 ### On Mac:
 
 You may need to install Ruby, Ruby Gems, NodeJS & Git. There are detailed instructions on the [Jekyll](http://jekyllrb.com/docs/installation/) website.
 
-    git clone git@github.com:liquidvisual/cp-prototype.git
-    cd cp-prototype
+    git clone git@github.com:liquidvisual/brs-0115.git
+    cd brs-0115
     bundle install
     npm install
     bower install
@@ -44,7 +44,7 @@ Jekyll is very easy to set up on Mac OS X or Linux. On Windows, not so much. The
 
 The online repo that stores the build folder named **/dist** (generated from /src) can be found on a separate repo - under the gh-pages branch. Please note: the master branch on this repo is redundant.
 
-[https://github.com/liquidvisual/cp-beta/tree/gh-pages](https://github.com/liquidvisual/cp-beta/tree/gh-pages)
+[https://github.com/liquidvisual/brs-0115/tree/gh-pages](https://github.com/liquidvisual/brs-0115/tree/gh-pages)
 
 Feel free to use it as a reference if things get hairy. Once you get the hang of reading Jekyll templates - you'll be able to copy/paste everything and substitute the basic templating syntax for your own.
 
