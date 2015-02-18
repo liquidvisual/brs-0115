@@ -22,16 +22,16 @@ $('#context-menu-btn').click(function(e){
 
     // Slide the menu offscreen left
     if (contextMenuVisible) {
+
+        contextMenu.transition({ x: -contextMenuWidth/2 });
          slideSections.transition({
             x: 0,
-            complete: function(){ contextMenu.removeClass('lv-show') }});
+            complete: function(){
+                contextMenu.removeClass('lv-show') }});
     } else {
         // Slide onscreen right
-        //contextMenu.addClass('lv-show');
-        // contextMenu.css({ x: -contextMenuWidth }).transition({ x: 0 });
-        // contextMenu.css({ x: -contextMenuWidth }).transition({ x: -contextMenuWidth });
-        //stage.addClass("fixy");
         contextMenu.addClass('lv-show');
+        contextMenu.css({ x: -contextMenuWidth/2}).transition({ x: 0 });
         slideSections.transition({ x: contextMenuWidth });
     }
 });
