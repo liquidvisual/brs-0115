@@ -1,7 +1,7 @@
 /*
     HEADER.CSS
 
-    - Last updated: 26.11.14
+    - Last updated: 18.02.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,18 +11,28 @@
 $mobile-header-height: 40px !default;
 
 //-----------------------------------------------------------------
-// Header
+// Global Header
 //-----------------------------------------------------------------
 
-.lv-header {
-    background: rgba(white, .9);
+.lv-global-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    text-align: center;
     border-bottom: 1px solid #ddd;
+    background: rgba(white, .9);
+    text-align: center;
+    z-index: 100;
 
+    h1 {
+        font-size: rem-calc(16);
+        font-weight: 600;
+
+        @media #{$large-up} {
+            font-size: $h3-font-size;
+            font-weight: normal;
+        }
+    }
 
     @media #{$large-up} {
         position: static;
@@ -32,7 +42,23 @@ $mobile-header-height: 40px !default;
     }
 }
 
-.lv-header h3 {
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.lv-header {
+    border-bottom: 1px solid #ddd;
+
+    @media #{$large-up} {
+        border: 0;
+    }
+}
+
+//=========================================
+// H3 - Brings own height
+//=========================================
+
+.lv-header h1 {
     line-height: $mobile-header-height;
 
     @media #{$large-up} {
@@ -43,6 +69,6 @@ $mobile-header-height: 40px !default;
 }
 
 //=========================================
-// Logo Wrapper
+//
 //=========================================
 

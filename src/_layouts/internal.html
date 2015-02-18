@@ -12,6 +12,17 @@ layout: master
 
     <!-- MAIN -->
     <main class="lv-main">
+
+        <!-- HEADER -->
+        <header class="lv-header lv-global-header">
+            <div class="row">
+                <div class="columns">
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+        </header> <!-- .header -->
+
+        <!-- CONTENT -->
         <div class="row">
             <div class="columns">
                 {{ content }}
@@ -22,14 +33,13 @@ layout: master
         <footer class="lv-footer">
             {% include footer.html %}
         </footer>
-    </main>
+
+    </main> <!-- .lv-main -->
 
     <!-- SIDEBAR -->
     <aside class="lv-sidebar">
         {% include sidebar.html %}
     </aside>
-
-
 
 </section> <!-- .lv-stage -->
 

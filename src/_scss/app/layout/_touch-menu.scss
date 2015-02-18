@@ -15,8 +15,13 @@
     position: fixed;
     width: 100%;
     bottom: 0;
-    z-index: 100;
+    z-index: 9000;
     line-height: 0; // fixes height issue
+}
+
+.icon-bar a:active label,
+.icon-bar a:active i {
+	color: white;
 }
 
 // Broken in Foundation for some reason

@@ -46,6 +46,40 @@
     // }
 }
 
+//-----------------------------------------------------------------
+// IS LOCKED
+//-----------------------------------------------------------------
+
+.lv-page.is-locked {
+
+    .lv-main {
+        @media (max-width: 1025px) {
+            position: fixed; // so you can't elasti-scroll on iOS
+            overflow: scroll;
+        }
+    }
+}
+
+.lv-page-lock-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0; //$secondary-nav-width;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 100;
+    opacity: 0;
+
+    @media #{$large-up} {
+        display: none;
+    }
+}
+
+//-----------------------------------------------------------------
+// DEV - Place on <body> to highlight key app-frame components
+//-----------------------------------------------------------------
+
 .dev {
 	background: #EC2945;
 

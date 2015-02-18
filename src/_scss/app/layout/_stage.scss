@@ -30,7 +30,7 @@
     min-height: calc(100vh); // Awesome, this forces main to have full height with low content
     // height: 100%; // !! DO NOT USE: This creates unwanted padding at top when content is low height
     background: $body-bg; // Main conceals the context menu underneath - so needs a BG color
-    // box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
 
     @media #{$medium-up} {
         padding: rem-calc(($mobile-header-height*2) 20 $touch-menu-height 20); // bottom has to be zero or else full-content will create top gap
@@ -45,6 +45,8 @@
 // Positions resume on desktop regardless of last mobile state
 //-----------------------------------------------------------------
 
+.lv-page-lock-overlay[style],
+.lv-global-header[style],
 .lv-context-menu[style],
 .lv-main[style],
 .lv-sidebar[style],
