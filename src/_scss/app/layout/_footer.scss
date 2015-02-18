@@ -14,21 +14,30 @@
 .lv-footer {
     padding: rem-calc(20 15 0 15);
 
-    .lv-footer-inner {
-        padding: rem-calc(5 0 20 0);
+    @media #{$large-up} {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+
+        // line-height: $footer-height;
+        padding: rem-calc(0 15);
+        background: white;
         border-top: 1px solid #E6E6E6;
+        z-index: 100;
+    }
+
+    .lv-footer-inner {
+        border-top: 1px solid #E6E6E6;
+        padding-top: rem-calc(10);
 
         @media #{$large-up} {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
+            border: 0; // parent takes on border instead
             height: $footer-height;
             line-height: $footer-height;
-            padding: rem-calc(0 15);
-            background: white;
-            z-index: 100;
+            overflow: hidden; // fixes gap
+            padding: 0;
         }
     }
 
@@ -46,7 +55,6 @@
 .lv-footer-links .anchor {
     @extend .transition;
     font-size: rem-calc(12);
-    line-height: $footer-height;
     cursor: pointer;
 
     &:hover {
@@ -57,6 +65,10 @@
     @media #{$medium-up} {
         padding: rem-calc(0 5);
     }
+
+    @media #{$large-up} {
+        line-height: $footer-height;
+    }
 }
 
 //=========================================
@@ -65,6 +77,6 @@
 
 .lv-footer-legal {
     font-size: rem-calc(11);
-    line-height: 0;
+    // line-height: $footer-height;
     color: grey;
 }
