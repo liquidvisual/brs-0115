@@ -25,14 +25,19 @@
 
 .lv-main {
     display: table-header; // trust me
-    padding: rem-calc(20 0 $touch-menu-height 0);
+    // padding: rem-calc(20 0 $touch-menu-height 0);
+    padding: rem-calc(($mobile-header-height*2) 0 $touch-menu-height 0); // account for header
     min-height: calc(100vh); // Awesome, this forces main to have full height with low content
     // height: 100%; // !! DO NOT USE: This creates unwanted padding at top when content is low height
     background: $body-bg; // Main conceals the context menu underneath - so needs a BG color
     // box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
 
     @media #{$medium-up} {
-        padding: rem-calc(20 20 $touch-menu-height 20); // bottom has to be zero or else full-content will create top gap
+        padding: rem-calc(($mobile-header-height*2) 20 $touch-menu-height 20); // bottom has to be zero or else full-content will create top gap
+    }
+
+    @media #{$large-up} {
+        padding-top: rem-calc(20);
     }
 }
 
