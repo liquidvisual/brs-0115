@@ -1,7 +1,7 @@
 /*
     CONTEXT MENU.CSS
 
-    - Last updated: 16.02.15
+    - Last updated: 18.02.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -37,30 +37,16 @@
 // Context Menu Scroller
 //-----------------------------------------------------------------
 
-// Table wrapper - formerly handled main nav as vertical (now horizontal)
 .lv-context-menu-fixed {
-    bottom: 0; // needs this for mobile
-    width: 100%; // for mobile only?
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $secondary-nav-width;
 
-	// remember it's MAX WIDTH, large doesn't inherit
+    // Account for the footer on large
     @media #{$large-up} {
-    // @media (max-width: $fixed-breakpoint) {
-
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        // top: $header-height;
-        left: 0;
-        width: $secondary-nav-width;
-    }
-
-    // @media (min-width: $fixed-breakpoint) {
-        // bottom: $footer-height;
-        // bottom: 0;
-    // }
-
-    @media #{$large-up} {
-        // top: $header-height + $primary-nav-height;
+        bottom: $footer-height;
     }
 }
 
@@ -76,7 +62,7 @@
 
     // Read for popover on mobile
     @media (max-width: 56.250em) {
-        width: 100%;
+        // width: 100%;
     }
 }
 
