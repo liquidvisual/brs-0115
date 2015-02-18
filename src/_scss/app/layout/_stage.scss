@@ -11,18 +11,6 @@
 //
 //-----------------------------------------------------------------
 
-// These are not to fly-out on desktop
-.lv-main[style],
-.lv-sidebar[style],
-.lv-footer[style],
-.lv-touch-menu[style] {
-    @media #{$large-up} {
-            -ms-transform: none !important;
-        -webkit-transform: none !important;
-                transform: none !important;
-    }
-}
-
 body {
     background: red !important;
 }
@@ -36,9 +24,7 @@ body {
     position: absolute;
     width: 100%; // Stop right gaps, essential
     height: 100%;
-
-    // overflow-x: hidden; /* stops sidebar breaking out with the -1px x value */
-    // overflow-y: scroll; // need this?
+    overflow: hidden; // prevent scrollbars when menu slides out overflow-y didn't work on FF
     background: orange;
 }
 
@@ -50,19 +36,30 @@ body {
     display: table-header; // trust me
     // position: relative; // risky? maybe remove ****
     padding: rem-calc(20 0 $touch-menu-height 0);
-    // margin-bottom: $touch-menu-height; // lifesaver
+
     // Main conceals the context menu underneath - so needs a BG color
     background: #61B95F; //$body-bg;
-    // height: 100%; // This creates unwanted padding at top when content is low height
-
+    // height: 100%; // !! DO NOT USE: This creates unwanted padding at top when content is low height
     // box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+    min-height: calc(100vh); // Awesome, this forces main to have full height with low content
 
     @media #{$medium-up} {
-        // padding: rem-calc(20 ($sidebar-width-collapsed + 20) 60 20);
-        padding: rem-calc(20 ($sidebar-width-collapsed + 20) 55px 20);
+        // coincides with footer padding
+        padding: rem-calc(20 20 $touch-menu-height 20); // bottom has to be zero or else full-content will create top gap
     }
+}
 
+//-----------------------------------------------------------------
+// Positions resume on desktop regardless of last mobile state
+//-----------------------------------------------------------------
+
+.lv-main[style],
+.lv-sidebar[style],
+.lv-footer[style],
+.lv-touch-menu[style] {
     @media #{$large-up} {
-        padding-right: rem-calc(20);
+            -ms-transform: none !important;
+        -webkit-transform: none !important;
+                transform: none !important;
     }
 }

@@ -13,7 +13,7 @@
 
 $('#context-menu-btn').click(function(e){
 
-    var slideSections = $('.lv-main, .lv-touch-menu, .lv-sidebar, .lv-footer');
+    var slideSections = $('.lv-main, .lv-touch-menu, .lv-sidebar');
     var contextMenu = $('.lv-context-menu');
     var contextMenuWidth = contextMenu.width();
     var contextMenuVisible = contextMenu.is(':visible');
