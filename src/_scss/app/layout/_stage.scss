@@ -1,20 +1,12 @@
 /*
     STAGE.CSS
 
-    - Last updated: 17.02.15
+    - Last updated: 18.02.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
-
-body {
-    background: red !important;
-}
-
 //-----------------------------------------------------------------
 // Stage
 //-----------------------------------------------------------------
@@ -25,7 +17,6 @@ body {
     width: 100%; // Stop right gaps, essential
     height: 100%;
     overflow: hidden; // prevent scrollbars when menu slides out overflow-y didn't work on FF
-    background: orange;
 }
 
 //-----------------------------------------------------------------
@@ -34,17 +25,13 @@ body {
 
 .lv-main {
     display: table-header; // trust me
-    // position: relative; // risky? maybe remove ****
     padding: rem-calc(20 0 $touch-menu-height 0);
-
-    // Main conceals the context menu underneath - so needs a BG color
-    background: #61B95F; //$body-bg;
-    // height: 100%; // !! DO NOT USE: This creates unwanted padding at top when content is low height
-    // box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
     min-height: calc(100vh); // Awesome, this forces main to have full height with low content
+    // height: 100%; // !! DO NOT USE: This creates unwanted padding at top when content is low height
+    background: $body-bg; // Main conceals the context menu underneath - so needs a BG color
+    // box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
 
     @media #{$medium-up} {
-        // coincides with footer padding
         padding: rem-calc(20 20 $touch-menu-height 20); // bottom has to be zero or else full-content will create top gap
     }
 }
@@ -55,7 +42,6 @@ body {
 
 .lv-main[style],
 .lv-sidebar[style],
-.lv-footer[style],
 .lv-touch-menu[style] {
     @media #{$large-up} {
             -ms-transform: none !important;

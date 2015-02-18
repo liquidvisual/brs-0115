@@ -1,7 +1,7 @@
 /*
     FOOTER.CSS
 
-    - Last updated: 17.02.15
+    - Last updated: 18.02.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,22 +12,9 @@
 //-----------------------------------------------------------------
 
 .lv-footer {
-    // display: table-row;
-    // padding: rem-calc(5 30 70 30);
-    padding: rem-calc(0 20); // coincides with main padding (med)
-    // width: 100%; //hmm?
-    background: #C6C6C6; //$body-bg;
-    // border-top: 1px solid #E6E6E6;
-    z-index: 100;
-
-
-    @media #{$large-up} {
-        background: white;
-    }
+    padding: rem-calc(20 15 0 15);
 
     .lv-footer-inner {
-        // display: table-cell;
-        // padding: rem-calc(5 20 ($touch-menu-height + 15) 20);
         padding: rem-calc(5 0 20 0);
         border-top: 1px solid #E6E6E6;
 
