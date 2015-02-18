@@ -23,20 +23,3 @@
 .row.is-full-width {
     max-width: none;
 }
-
-
-
-// refactor
-
-.lv-touch-menu {
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	z-index: 100;
-	line-height: 0;
-}
-
-// Broken in Foundation
-.icon-bar label {
-	font-size: $icon-bar-font-size;
-}
