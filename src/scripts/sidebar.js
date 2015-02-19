@@ -58,3 +58,38 @@ $('.lv-sidebar .tabs a').click(function(e){
         //$("html, body").animate({scrollTop: "0"}, 300); // alt method
     }
 });
+
+//-----------------------------------------------------------------
+// Hints
+//-----------------------------------------------------------------
+
+var sidebar = $('.lv-sidebar');
+var screenHeight = $(window).height();
+
+$('#hints-btn').on('click', function(e){
+
+    e.preventDefault();
+
+    //==================================================
+    // If Menu is CLOSED
+    //==================================================
+
+    if (contextMenuClosed) {
+
+        sidebar.addClass('lv-show'); // show context menu
+        sidebar.css({ y: screenHeight}).transition({ y: 0, queue: false });
+    }
+}); // end click
+
+// CLOSE
+
+$('#close-btn').click(function(e){
+
+    e.preventDefault();
+
+    sidebar.transition({ y: screenHeight, queue: false, complete:
+        function(){
+            sidebar.removeClass('lv-show').attr('style', '');
+        } }); // end complete
+});
+

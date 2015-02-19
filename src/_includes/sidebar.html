@@ -20,6 +20,12 @@
 
 		<!-- HINTS -->
 		<section role="tabpanel" aria-hidden="false" class="content active" id="hints">
+
+			<header class="lv-header lv-global-header">
+				<h1>Hints</h1>
+				<a id="close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+			</header>
+
 			{% if page.sidebar_details %}
 				{% include {{ page.sidebar_details }} %}
 			{% else %}
