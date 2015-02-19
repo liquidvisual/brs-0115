@@ -1,18 +1,18 @@
 /*
     CONTEXT MENU.CSS
 
-    - Last updated: 18.02.15
+    - Last updated: 19.02.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Context Menu
+// Context Menu - Layout
 //-----------------------------------------------------------------
 
 .lv-context-menu {
-    display: none; // Hidden on mobile, JS will show
+    display: none; // Hidden on mobile by default, JS will show
     position: fixed;
     top: 0;
     bottom: 0;
@@ -33,9 +33,9 @@
     }
 }
 
-//-----------------------------------------------------------------
-// Context Menu Scroller
-//-----------------------------------------------------------------
+//=========================================
+// Context Menu Fixed - Layout
+//=========================================
 
 .lv-context-menu-fixed {
     position: fixed;
@@ -51,7 +51,7 @@
 }
 
 //=========================================
-// Seconday Nav (Flyout Nav)
+// Context Menu Scroller - Layout
 //=========================================
 
 .lv-context-menu-scroller {
@@ -71,61 +71,114 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //-----------------------------------------------------------------
-// Stuff
+// Context Menu Components - Logo
 //-----------------------------------------------------------------
 
-.lv-context-menu-scroller {
-    h4 {
-        padding: rem-calc(15);
+//=========================================
+// Logo
+//=========================================
+
+.lv-context-menu .lv-logo {
+    display: block;
+    padding: rem-calc(30 0 30 0);
+    text-align: center;
+
+    img {
+        width: rem-calc(130);
     }
+}
 
-    .active a {
-        background: darken($secondary-color, 10%); //#5E6E7F;
-        border-left: 4px solid $primary-color;
+//=========================================
+// User
+//=========================================
+
+.lv-context-menu-user {
+    margin: rem-calc(0 15 10 15);
+    padding-bottom: rem-calc(15);
+    border-bottom: 1px solid darken($secondary-color, 10%);
+
+    .user {
         color: white;
+        font-weight: 600;
+        padding: rem-calc(0);
+        line-height: 1;
+
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
+    .logout {
+        padding-left: rem-calc(25);
+    }
+}
+
+
+//=========================================
+// Expander
+//=========================================
+
+.lv-context-menu-user-group .lv-expander {
+    padding: rem-calc(15);
+    font-size: rem-calc(11);
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+}
+
+//=========================================
+// Links
+//=========================================
+
+.lv-context-menu {
     ul {
         list-style: none;
         margin: 0;
     }
 
     a {
+        @include transition();
+        position: relative;
         display: block;
-        // border-bottom: 1px solid #D4DCE3;
-        color: #CCC;
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: rem-calc(8 15);
+        font-size: rem-calc(13);
+        color: #B8B9BA;
+        // line-height: 1;
+    }
 
-        i {
-            margin-right: rem-calc(10);
-        }
+    i {
+        position: relative;
+        top: 2px; // hack align
+        font-size: rem-calc(18);
+        line-height: 0;
+        margin-right: rem-calc(10);
+    }
 
-        &.active {
-            background: #5E6E7F;
-            color: white;
-            font-weight: 600;
+    .active a {
+        background: darken($secondary-color, 10%); //#5E6E7F;
+        color: white;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: $primary-color;
+
         }
+    }
+}
+
+//=========================================
+// Hovers
+//=========================================
+
+@media #{$large-up} {
+    .lv-context-menu a:hover {
+        color: $primary-color;
     }
 }

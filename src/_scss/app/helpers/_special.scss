@@ -23,3 +23,9 @@
 .row.is-full-width {
     max-width: none;
 }
+
+// Prevent grey box on webkit touch
+
+a {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}

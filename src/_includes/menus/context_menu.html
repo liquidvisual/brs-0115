@@ -1,11 +1,20 @@
+{% assign username = "Ajay MallasandraHandsel Aveeve" %}
+
 <div class="lv-context-menu-fixed">
-    <section class="lv-context-menu-scroller">
+    <div class="lv-context-menu-scroller">
 
-		<br>
-    	<p class="text-center"><img width="140" src="/img/content/logo@2x.png"></p>
+		<!-- Logo -->
+    	<a class="lv-logo" href="/"><img src="/img/content/logo@2x.png"></a>
 
-		<section>
-		    <h1>Standard User</h1>
+		<!-- User -->
+		<div class="lv-context-menu-user">
+    		<a class="user" href="#"><i class="fi-torso"></i> {{ username }}</a>
+    		<a class="logout" href="#">Logout</a>
+    	</div>
+
+		<!-- Standard User -->
+		<section class="lv-context-menu-user-group">
+		    <h5 class="lv-expander">Standard User</h5>
 		    <ul>
 		        <li class="active">
 		            <a href="#"><i class="fi-layout"></i> Dashboard</a>
@@ -25,8 +34,30 @@
 		    </ul>
 		</section>
 
-        <!-- Bottom space to offset footer -->
-        <div class="lv-spacer"></div>
+		<!-- Admin User -->
+		<section class="lv-context-menu-user-group">
+		    <h5 class="lv-expander">Admin User</h5>
+		    <ul>
+		        <li>
+		            <a href="#"><i class="fi-layout"></i> Client</a>
+		        </li>
+		        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
+		            <a href="#"><i class="fi-torsos-male-female"></i> Users</a>
+		        </li>
+		        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
+		            <a href="#"><i class="fi-page-search"></i> Templates</a>
+		        </li>
+		        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
+		            <a href="#"><i class="fi-page-edit"></i> Questions</a>
+		        </li>
+		        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
+		            <a href="#"><i class="fi-graph-trend"></i> Reports</a>
+		        </li>
+		        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
+		            <a href="#"><i class="fi-graph-trend"></i> Help</a>
+		        </li>
+		    </ul>
+		</section>
 
-    </section> <!-- .secondary-nav -->
-</div> <!-- .lv-inner -->
+    </div> <!-- .lv-context-menu-scroller -->
+</div> <!-- .lv-context-menu-fixed -->
