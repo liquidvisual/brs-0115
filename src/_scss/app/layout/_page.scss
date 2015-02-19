@@ -61,18 +61,16 @@
 }
 
 .lv-page-lock-overlay {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0; //$secondary-nav-width;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.6);
-    z-index: 100;
-    opacity: 0;
-
-    @media #{$large-up} {
-        display: none;
+    @media (max-width: 1025px) {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0; //$secondary-nav-width;
+        width: 100%;
+        height: 120%;
+        background: rgba(0,0,0,.6);
+        z-index: 9001; // override touch menu by 1
+        opacity: 0;
     }
 }
 
