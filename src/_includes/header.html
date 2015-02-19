@@ -1,8 +1,6 @@
-<section class="text-center large-text-left">
+<h1>Vacancy Template Library Access</h1>
 
-	<!-- Mobile Hamburgers -->
-	<div class="left">
-		<a id="context-menu-btn" class="lv-hamburger left {% if page.context_menu == nil %} remove {% endif %}" href="#"><i class="fi-results"></i></a>
-	</div>
-
-</section>
+<!-- Mobile Hamburgers -->
+{% if page.url == "/" %}
+    <a id="context-menu-btn" href="#"><i class="fi-list"></i></a>
+{% endif %}

@@ -22,6 +22,8 @@ $('.lv-sidebar .tabs a').click(function(e){
 
     e.preventDefault();
 
+    //==================================================
+
     // Strip all tab LIs, apply 'active' to clicked LI
     $('.lv-sidebar .tabs .active').removeClass('active');
     $this.parent().addClass('active');

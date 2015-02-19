@@ -8,10 +8,10 @@
 // Variables
 //-----------------------------------------------------------------
 
-$mobile-header-height: 40px !default;
+$mobile-header-height: 50px !default;
 
 //-----------------------------------------------------------------
-// Global Header
+// Global Header (Appears in mobile / tablet views)
 //-----------------------------------------------------------------
 
 .lv-global-header {
@@ -22,11 +22,23 @@ $mobile-header-height: 40px !default;
     border-bottom: 1px solid #ddd;
     background: rgba(white, .9);
     text-align: center;
-    z-index: 100;
+    z-index: 1;
+
+    @media #{$large-up} {
+        position: static;
+        background: none;
+        text-align: left;
+        border: 0;
+    }
 
     h1 {
         font-size: rem-calc(16);
         font-weight: 600;
+
+        @media #{$small-only} {
+            @include truncate(190px);
+            margin: 0 auto;
+        }
 
         @media #{$large-up} {
             font-size: $h3-font-size;
@@ -34,11 +46,29 @@ $mobile-header-height: 40px !default;
         }
     }
 
-    @media #{$large-up} {
-        position: static;
-        background: none;
-        text-align: left;
-        border: 0;
+    // Menu hamburger and context button
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: rem-calc(0 20);
+        line-height: 52px; // magic
+        color: $tertiary-color;
+        // background: red;
+        font-size: rem-calc(14);
+
+        @media #{$large-up} {
+            display: none;
+        }
+
+        i {
+            position: relative;
+            top: 4px;
+            font-size: rem-calc(24);
+            line-height: 0;
+            margin-right: rem-calc(2);
+        }
     }
 }
 
@@ -59,11 +89,13 @@ $mobile-header-height: 40px !default;
 //=========================================
 
 .lv-header h1 {
+    margin-top: 0; // remove it, gah
+    margin-bottom: 0;
     line-height: $mobile-header-height;
 
     @media #{$large-up} {
         border-bottom: 1px solid #ddd;
-        padding-bottom: rem-calc(20);
+        padding-bottom: rem-calc(10);
         margin-bottom: rem-calc(30);
     }
 }

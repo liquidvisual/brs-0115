@@ -22,12 +22,17 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 	top: 0;
 	right: 0;
 	width: 100%;
-	background: $sidebar-background-color;
+	background: white;
 	// box-shadow: $sidebar-box-shadow;
+	box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.1);
 	overflow: hidden;
 	z-index: 20;
 
-	border-left: 1px solid #E6E6E6;
+	@media #{$large-up} {
+		background: $sidebar-background-color;
+		border-left: 1px solid #E6E6E6;
+	    box-shadow: none;
+	}
 
 	p {
 		font-size: rem-calc(14);
@@ -49,39 +54,40 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 //     z-index: 10;
 // }
 
-// If explicitly opened by user - add side border on medium (instead of all shadow)
-// Better convey the overlay
-.lv-sidebar.is-uncollapsed:after {
-	@media #{$medium-up} {
-	    background: #DBDFDF;
-	    width: 2px;
-	}
+//=========================================
+// Sidebar Tabs - appear only on desktop
+//=========================================
+
+.lv-sidebar .tabs {
+	display: none;
+
 	@media #{$large-up} {
-	    background: none;
-	    width: 10px;
+	    display: block;
 	}
 }
 
-// No shadow. Border fallback.
-.lt-ie9 .lv-sidebar {
-    // border-left: 1px solid #CACDCD;
+// Applies to all states
+.lv-sidebar .tabs-content {
+	padding: rem-calc(15 30 30 30);
 }
 
 //=========================================
-// Quicklinks
+// If explicitly opened by user - add side border on medium (instead of all [inner] shadow)
+// Better convey the overlay
 //=========================================
 
-ul.lv-quicklinks {
-    background: white;
-    list-style: none;
-    margin: 0;
-    padding: rem-calc(15);
-    font-size: rem-calc(13);
+// going with shadow instead of border
 
-    li {
-        margin-bottom: rem-calc(10);
-    }
-}
+// .lv-sidebar.is-uncollapsed:after {
+// 	@media #{$medium-up} {
+// 	    background: #DBDFDF;
+// 	    width: 2px;
+// 	}
+// 	@media #{$large-up} {
+// 	    background: none;
+// 	    width: 10px;
+// 	}
+// }
 
 //-----------------------------------------------------------------
 // STATE MIXINS
@@ -99,17 +105,6 @@ ul.lv-quicklinks {
 		top: 0; //$header-height;
 		width: $sidebar-width-collapsed;
 		background: $sidebar-background-color; // need?
-
-		i {
-			font-size: rem-calc(21);
-			line-height: 1;
-			display: block;
-			color: #2C2C2C;
-		}
-
-		.text {
-			font-size: 11px;
-		}
 
 		li {
 			float: none;
@@ -152,6 +147,17 @@ ul.lv-quicklinks {
 		padding-bottom: rem-calc(10);
 		// z-index: 1; // need this?
 
+		i {
+			font-size: rem-calc(21);
+			line-height: 1;
+			display: block;
+			color: #2C2C2C;
+		}
+
+		.text {
+			font-size: 11px;
+		}
+
 		li {
 			float: left;
 			// width: 33.3333333%;
@@ -170,10 +176,6 @@ ul.lv-quicklinks {
 		.active a {
 			border-bottom: 0;
 		}
-	}
-
-	.tabs-content {
-		padding: rem-calc(15 30 30 30);
 	}
 
 	.tabs .text,
@@ -196,10 +198,27 @@ ul.lv-quicklinks {
 
 	// Hide on mobile (below portrait)
 	display: none;
+
 	@media #{$small-only} {
 	    // display: none;
 	}
 
+	@media #{$medium-up} {
+		@include uncollapsed();
+
+		// ADDED: moved fixed positioning into child of sidebar (absolute). It was previously
+		// moving passed the footer. This new design hugs the top and bottom.
+	    .lv-sidebar-inner {
+			position: fixed;
+			top: 0; //$header-height;
+			bottom: $footer-height;
+			// width: $sidebar-width-collapsed;
+		    overflow-y: auto; // for desktop scroll bars logic
+		    -webkit-overflow-scrolling: touch;
+	    }
+	}
+
+/*
 	// Becomes Overlay - portrait (768)
 	@media #{$medium-up} {
 		@include collapsed();
@@ -211,10 +230,11 @@ ul.lv-quicklinks {
 			top: 0; //$header-height;
 			bottom: $footer-height;
 			width: $sidebar-width-collapsed;
-		    overflow-y: auto; /* for desktop scroll bars logic */
+		    overflow-y: auto; // for desktop scroll bars logic
 		    -webkit-overflow-scrolling: touch;
 	    }
 	}
+	*/
 
 	// Enters into the page FLOW - landscape (1024)
 	@media #{$large-up} {
@@ -222,7 +242,6 @@ ul.lv-quicklinks {
 	    position: relative; /* needed for shadow */
 	    top: 0;
 	    overflow: hidden; /* is scrolled with rest of page */
-
 		display: table-cell; // NEW - does this work? 17.02.15
 
 		// Allow the 'fixed' inner snap back to normal. In flow now.
@@ -248,13 +267,4 @@ ul.lv-quicklinks {
 
 .lv-super .lv-sidebar.is-uncollapsed {
 	@include uncollapsed();
-}
-
-//=========================================
-// IE8 has issues with opening with media
-// queries alone. Needs explicit setting.
-//=========================================
-
-.lt-ie9 .lv-sidebar {
-	@include collapsed();
 }

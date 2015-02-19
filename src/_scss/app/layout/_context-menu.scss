@@ -99,15 +99,11 @@
     border-bottom: 1px solid darken($secondary-color, 10%);
 
     .user {
+        @include truncate(220px);
         color: white;
         font-weight: 600;
-        padding: rem-calc(0);
+        padding: 0;
         line-height: 1;
-
-        width: 220px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     .logout {
@@ -139,13 +135,17 @@
     }
 
     a {
-        @include transition();
+        transition: none;
         position: relative;
         display: block;
+        // padding: rem-calc(12 15);
         padding: rem-calc(8 15);
         font-size: rem-calc(13);
         color: #B8B9BA;
         // line-height: 1;
+        @media #{$large-up} {
+            // padding: rem-calc(8 15);
+        }
     }
 
     i {
@@ -179,6 +179,7 @@
 
 @media #{$large-up} {
     .lv-context-menu a:hover {
-        color: $primary-color;
+        color: white;
+        background: darken($secondary-color, 4%);
     }
 }
