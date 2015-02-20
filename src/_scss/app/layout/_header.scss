@@ -71,6 +71,12 @@ $mobile-header-height: 50px !default;
         }
     }
 }
+// refactor later
+#account-btn {
+    left: auto;
+    right: 0;
+    color: #ddd;
+}
 
 //-----------------------------------------------------------------
 // Header
