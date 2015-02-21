@@ -1,5 +1,5 @@
 /*
-    SIDEBAR.JS - Last updated: 26-11-14
+    SIDEBAR.JS - Last updated: 22-02-15
 */
 //-----------------------------------------------------------------
 // Variables
@@ -7,121 +7,113 @@
 
 var TOUCH_ENABLED = $(".touch").length;
 var sidebar = $('.lv-sidebar');
+var sidebarTabs = $('.lv-sidebar .tabs').children();
+var sidebarTabPanels = $('.lv-sidebar .tabs-content').children();
+
+// --- API ---
+
+// sidebarSlide(direction: true, event, tabIndex);
+
+//-----------------------------------------------------------------
+// sidebarSlide
+//-----------------------------------------------------------------
+
+function sidebarSlide(direction, tabPanel) {
+    var screenHeight = $(window).height();
+    var screenWidth = $(window).width();
+    var sidebarWidth = $('.lv-sidebar').width();
+    var isMobile = screenWidth < 641;
+
+    // Start, fin positions
+    var xStart = isMobile ? 0 : screenWidth;
+    var yStart = isMobile ? screenHeight : 0;
+    var xEnd = 0;
+    var yEnd = 0;
+
+    // Reverse for exit
+    if (!direction) {
+        xStart = 0;
+        yStart = 0;
+        xEnd = isMobile ? 0 : sidebarWidth;
+        yEnd = isMobile ? screenHeight : 0;
+    }
+
+    sidebar.addClass('lv-show'); // show context menu
+
+    showSidebarTab(tabPanel);
+
+    // ENGAGE
+    sidebar.css({ x: xStart, y: yStart }).transition({ x: xEnd, y: yEnd, queue: false, complete:
+        function(){
+            sidebar.attr('style', '');
+            // Remember to remove sidebar afterwards
+            if (!direction) sidebar.removeClass('lv-show');
+        } }, 400, 'ease'); // end complete
+}
 
 //-----------------------------------------------------------------
 // Sidebar Tabs
 //-----------------------------------------------------------------
 
-$('.lv-sidebar .tabs a').click(function(e){
-
-    var $this = $(this);
-    var tabHash = $this.attr('href');
-    var sidebar = $this.parent().parent().parent().parent();
+function showSidebarTab(targetIndex) {
+    var target = sidebarTabs.eq(targetIndex);
     var sidebarCollapsed = sidebar.hasClass('is-collapsed');
     var sidebarUncollapsed = sidebar.hasClass('is-uncollapsed');
-    var sizeWhereSidebarIsInFlow = $(window).width() >= 1024;
+    var sizeWhereSidebarIsInFlow = $(window).width() >= 1025;
 
-    e.preventDefault();
-
-    //==================================================
+    // Will ALWAYS be the last one
+    var isCollapseBtn = targetIndex == sidebarTabs.length-1;
 
     // Strip all tab LIs, apply 'active' to clicked LI
-    $('.lv-sidebar .tabs .active').removeClass('active');
-    $this.parent().addClass('active');
+    sidebarTabs.removeClass('active').eq(targetIndex).addClass('active');
 
     // If 'collapse' is clicked (only possible when open)
-    if (tabHash == "#collapse") {
-
+    if (isCollapseBtn) {
         // user has engaged the sidebar. Remember explicit preferences override media queries
         sidebar.removeClass('is-uncollapsed').addClass('is-collapsed');
-
-    // Clicking all other tabs - will ** UNCOLLAPSE ** sidebar
+        // Clicking all other tabs - will ** UNCOLLAPSE ** sidebar
     } else {
-        // Strip all content sections, apply 'active' to ID that matches tabHash
-        $('.tabs-content .active').removeClass('active');
-        $(tabHash).addClass('active');
-
+        sidebarTabPanels.removeClass('active').eq(targetIndex).addClass('active');
         // 1. Sidebar is collapsed by user engagement directly OR
-        // 2. If initalized by medium media query - in which case, there
+        // 2. If initalized by LARGE media query - in which case, there
         // are no explicit collapse/uncollapse classes applied.
-
-        // Uncollapse the sidebar
-
         if (sidebarCollapsed || (!sidebarCollapsed && !sidebarUncollapsed)) {
             sidebar.removeClass('is-collapsed').addClass('is-uncollapsed');
 
-            // sidebar.css({ x: sidebar.width() }).transition({ x: 0 }); can't make this work
+            // sidebar.css({ x: sidebar.width()-100 }).transition({ x: 0, queue: false, complete:
+            //     function(){
+            //         sidebar.attr('style', '');
+            //     } }, 300, 'snap');
         }
-
         // scroll to top on desktop, sidebar scrolls WITH page on medium-up
         if (sizeWhereSidebarIsInFlow) $.scrollTo(0, 300);
         //$(window).scrollTop(0); // alt method
-        //$("html, body").animate({scrollTop: "0"}, 300); // alt method
     }
-});
+}
 
 //-----------------------------------------------------------------
 // SIDEBAR SLIDE-IN
 //-----------------------------------------------------------------
 
-$('#hints-btn').on('click', function(e){
-
-    var screenHeight = $(window).height();
-    var screenWidth = $(window).width();
-
-    e.preventDefault();
-
-    //==================================================
-    // Sidebar will slide IN from the bottom or right
-    // depending on screensize
-    //==================================================
-
-    sidebar.addClass('lv-show'); // show context menu
-
-    if (screenWidth < 641) {
-        sidebar.css({ y: screenHeight}).transition({ y: 0, queue: false, complete:
-            function(){
-                sidebar.attr('style', '');
-            } }); // end complete
-
-    } else {
-
-        sidebar.css({ x: screenWidth}).transition({ x: 0, queue: false, complete:
-            function(){
-                sidebar.attr('style', '');
-            } }); // end complete
-
-    } // end else
-}); // end click
-
-//-----------------------------------------------------------------
-// SIDEBAR SLIDE-OUT
-//-----------------------------------------------------------------
-
-$('#close-btn').click(function(e){
-
-    var screenHeight = $(window).height();
-    var screenWidth = $(window).width();
-    var sidebarWidth = $('.lv-sidebar').width();
-
-    e.preventDefault();
-
-    //==================================================
-    // Sidebar will slide OUT from the top or right
-    //==================================================
-
-    if (screenWidth < 641) {
-        console.log('is less than 641');
-        sidebar.transition({ y: screenHeight, queue: false, complete:
-            function(){
-                sidebar.removeClass('lv-show').attr('style', '');
-            } }); // end complete
-    } else {
-        console.log('is more than 641');
-        sidebar.transition({ x: sidebarWidth, queue: false, complete:
-            function(){
-                sidebar.removeClass('lv-show').attr('style', '');
-            } }); // end complete
-    } // end if
+// @@@ TAB CLICKS VIA LOOP @@@
+$(sidebarTabs).each(function(index){
+    $(sidebarTabs[index]).click(function(event){
+        event.preventDefault();
+        this.index = index;
+        showSidebarTab(this.index);
+    });
 });
 
+$('#hints-btn').on('click', function(event){
+    event.preventDefault();
+    sidebarSlide(true, 0);
+});
+
+$('#close-btn').click(function(event){
+    event.preventDefault();
+    sidebarSlide(false);
+});
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

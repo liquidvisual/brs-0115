@@ -21,7 +21,7 @@ var pageLockOverlay = $('<span class="lv-page-lock-overlay"></span>');
 
 $('#context-menu-btn').on('click', function(e){
 
-    console.log("Context Menu Triggered");
+    console.log("Context Menu Triggered: "+contextMenuClosed);
 
     e.preventDefault();
 
