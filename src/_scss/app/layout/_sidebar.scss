@@ -55,8 +55,26 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 // }
 
 //=========================================
-// Sidebar Tabs - appear only on desktop
+// If explicitly opened by user - add side border on medium (instead of all [inner] shadow)
+// Better convey the overlay
 //=========================================
+
+// going with shadow instead of border
+
+// .lv-sidebar.is-uncollapsed:after {
+// 	@media #{$medium-up} {
+// 	    background: #DBDFDF;
+// 	    width: 2px;
+// 	}
+// 	@media #{$large-up} {
+// 	    background: none;
+// 	    width: 10px;
+// 	}
+// }
+
+//-----------------------------------------------------------------
+// Sidebar Defaults
+//-----------------------------------------------------------------
 
 .lv-sidebar .tabs {
 	@media #{$devices-only} {
@@ -74,24 +92,6 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 	    padding: rem-calc(15 30 30 30);
 	}
 }
-
-//=========================================
-// If explicitly opened by user - add side border on medium (instead of all [inner] shadow)
-// Better convey the overlay
-//=========================================
-
-// going with shadow instead of border
-
-// .lv-sidebar.is-uncollapsed:after {
-// 	@media #{$medium-up} {
-// 	    background: #DBDFDF;
-// 	    width: 2px;
-// 	}
-// 	@media #{$large-up} {
-// 	    background: none;
-// 	    width: 10px;
-// 	}
-// }
 
 //-----------------------------------------------------------------
 // STATE MIXINS
@@ -138,10 +138,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 //=========================================
 
 @mixin uncollapsed() {
-
-	@media #{$medium-up} {
-	    width: $sidebar-width;
-	}
+	width: $sidebar-width;
 
 	.tabs {
 		position: relative;
@@ -198,12 +195,8 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 //-----------------------------------------------------------------
 
 .lv-sidebar {
+	display: none; // Hide by default on mobile
 
-	// Hide by default on mobile
-	display: none;
-
-	// ADDED: moved fixed positioning into child of sidebar (absolute). It was previously
-	// moving passed the footer. This new design hugs the top and bottom.
     .lv-sidebar-inner {
 		position: fixed;
 		top: 0;
@@ -219,23 +212,9 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 		}
 	}
 
-/*
-	// Becomes Overlay - portrait (768)
-	@media #{$medium-up} {
-		@include collapsed();
-
-		// ADDED: moved fixed positioning into child of sidebar (absolute). It was previously
-		// moving passed the footer. This new design hugs the top and bottom.
-	    .lv-sidebar-inner {
-			position: fixed;
-			top: 0; //$header-height;
-			bottom: $footer-height;
-			width: $sidebar-width-collapsed;
-		    overflow-y: auto; // for desktop scroll bars logic
-		    -webkit-overflow-scrolling: touch;
-	    }
-	}
-	*/
+	//=========================================
+	// Start Queries
+	//=========================================
 
 	@media #{$medium-up} {
 		@include uncollapsed();
@@ -268,12 +247,20 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 
 //-----------------------------------------------------------------
 // State Classes (Overrides media queries)
+//
+// This is brilliantly simple.
+// These state classes only work on screens larger than devices.
+// The rest is handled via media queries
 //-----------------------------------------------------------------
 
 .lv-super .lv-sidebar.is-collapsed {
-	@include collapsed();
+	@media #{$large-up} {
+	    @include collapsed();
+	}
 }
 
 .lv-super .lv-sidebar.is-uncollapsed {
-	@include uncollapsed();
+	@media #{$large-up} {
+		@include uncollapsed();
+	}
 }
