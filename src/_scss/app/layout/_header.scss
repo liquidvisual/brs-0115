@@ -15,25 +15,26 @@ $mobile-header-height: 50px !default;
 //-----------------------------------------------------------------
 
 .lv-global-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    background: rgba(white, .9);
-    text-align: center;
-    z-index: 1;
-
-    @media #{$large-up} {
-        position: static;
-        background: none;
-        text-align: left;
-        border: 0;
+    @media #{$devices-only} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        background: rgba(white, .9);
+        text-align: center;
+        z-index: 1;
     }
 
+    //=========================================
+    // H1
+    //=========================================
+
     h1 {
-        font-size: rem-calc(16);
-        font-weight: 600;
+        @media #{$devices-only} {
+            font-size: rem-calc(16);
+            font-weight: 600;
+        }
 
         @media #{$small-only} {
             @include truncate(190px);
@@ -42,9 +43,12 @@ $mobile-header-height: 50px !default;
 
         @media #{$large-up} {
             font-size: $h3-font-size;
-            font-weight: normal;
         }
     }
+
+    //=========================================
+    // Context Buttons
+    //=========================================
 
     // Menu hamburger and context button
     a {
@@ -71,7 +75,11 @@ $mobile-header-height: 50px !default;
         }
     }
 }
-// refactor later
+
+//-----------------------------------------------------------------
+// Refactor Later
+//-----------------------------------------------------------------
+
 #account-btn {
     left: auto;
     right: 0;
