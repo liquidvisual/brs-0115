@@ -191,7 +191,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 }
 
 //-----------------------------------------------------------------
-// Media Queries - Placement and display. Organic styles (inner).
+// Media Queries - Placement and display. Organic styles (inner - just easier).
 //-----------------------------------------------------------------
 
 .lv-sidebar {
@@ -223,7 +223,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 		}
 	}
 
-	// Enters into the page FLOW - landscape (1024)
+	// Enters into the page FLOW - landscape (1025+)
 	@media #{$large-up} {
 		@include collapsed();
 	    @extend .table-cell;

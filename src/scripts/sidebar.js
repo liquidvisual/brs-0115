@@ -6,6 +6,7 @@
 //-----------------------------------------------------------------
 
 var TOUCH_ENABLED = $(".touch").length;
+var sidebar = $('.lv-sidebar');
 
 //-----------------------------------------------------------------
 // Sidebar Tabs
@@ -60,40 +61,67 @@ $('.lv-sidebar .tabs a').click(function(e){
 });
 
 //-----------------------------------------------------------------
-// Hints
+// SIDEBAR SLIDE-IN
 //-----------------------------------------------------------------
 
-var sidebar = $('.lv-sidebar');
-var screenHeight = $(window).height();
-
 $('#hints-btn').on('click', function(e){
+
+    var screenHeight = $(window).height();
+    var screenWidth = $(window).width();
 
     e.preventDefault();
 
     //==================================================
-    // If Menu is CLOSED
+    // Sidebar will slide IN from the bottom or right
+    // depending on screensize
     //==================================================
 
-    if (true) {
+    sidebar.addClass('lv-show'); // show context menu
 
-        sidebar.addClass('lv-show'); // show context menu
-        // $('body').css({ 'overflow-y': 'hidden'});
+    if (screenWidth < 641) {
         sidebar.css({ y: screenHeight}).transition({ y: 0, queue: false, complete:
             function(){
                 sidebar.attr('style', '');
             } }); // end complete
-    }
+
+    } else {
+
+        sidebar.css({ x: screenWidth}).transition({ x: 0, queue: false, complete:
+            function(){
+                sidebar.attr('style', '');
+            } }); // end complete
+
+    } // end else
 }); // end click
 
-// CLOSE
+//-----------------------------------------------------------------
+// SIDEBAR SLIDE-OUT
+//-----------------------------------------------------------------
 
 $('#close-btn').click(function(e){
 
+    var screenHeight = $(window).height();
+    var screenWidth = $(window).width();
+    var sidebarWidth = $('.lv-sidebar').width();
+
     e.preventDefault();
 
-    sidebar.transition({ y: screenHeight, queue: false, complete:
-        function(){
-            sidebar.removeClass('lv-show').attr('style', '');
-        } }); // end complete
+    //==================================================
+    // Sidebar will slide OUT from the top or right
+    //==================================================
+
+    if (screenWidth < 641) {
+        console.log('is less than 641');
+        sidebar.transition({ y: screenHeight, queue: false, complete:
+            function(){
+                sidebar.removeClass('lv-show').attr('style', '');
+            } }); // end complete
+    } else {
+        console.log('is more than 641');
+        sidebar.transition({ x: sidebarWidth, queue: false, complete:
+            function(){
+                sidebar.removeClass('lv-show').attr('style', '');
+            } }); // end complete
+    } // end if
 });
 

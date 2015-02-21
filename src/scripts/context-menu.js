@@ -21,6 +21,8 @@ var pageLockOverlay = $('<span class="lv-page-lock-overlay"></span>');
 
 $('#context-menu-btn').on('click', function(e){
 
+    console.log("Context Menu Triggered");
+
     e.preventDefault();
 
     //==================================================
@@ -28,6 +30,8 @@ $('#context-menu-btn').on('click', function(e){
     //==================================================
 
     if (contextMenuClosed) {
+
+        console.log("Context Menu Opening");
 
         page.addClass('is-locked').append(pageLockOverlay); // lock the page and append 'exit' overlay
         contextMenu.addClass('lv-show'); // show context menu
@@ -53,6 +57,8 @@ $('#context-menu-btn').on('click', function(e){
 //-----------------------------------------------------------------
 
 var exitOverlay = function(){
+
+    console.log("Context Menu Closing");
 
     pageLockOverlay.on('touchstart, touchmove, click', function(e){
 
