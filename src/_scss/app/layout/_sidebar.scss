@@ -18,7 +18,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 //-----------------------------------------------------------------
 
 .lv-sidebar {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
@@ -138,7 +138,10 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 //=========================================
 
 @mixin uncollapsed() {
-	width: $sidebar-width;
+
+	@media #{$medium-up} {
+	    width: $sidebar-width;
+	}
 
 	.tabs {
 		position: relative;
@@ -191,46 +194,29 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 }
 
 //-----------------------------------------------------------------
-// Media Queries - Placement and display. Organic styles.
+// Media Queries - Placement and display. Organic styles (inner).
 //-----------------------------------------------------------------
 
 .lv-sidebar {
 
 	// Hide by default on mobile
-	// display: none;
+	display: none;
 
-	@media #{$medium-up} {
-		@include uncollapsed();
-
-		// ADDED: moved fixed positioning into child of sidebar (absolute). It was previously
-		// moving passed the footer. This new design hugs the top and bottom.
-	    .lv-sidebar-inner {
-			position: fixed;
-			top: 0; //$header-height;
-			bottom: $footer-height;
-			// width: $sidebar-width-collapsed;
-		    overflow-y: auto; // for desktop scroll bars logic
-		    -webkit-overflow-scrolling: touch;
-	    }
+	// ADDED: moved fixed positioning into child of sidebar (absolute). It was previously
+	// moving passed the footer. This new design hugs the top and bottom.
+    .lv-sidebar-inner {
+		position: fixed;
+		top: 0;
+		bottom: $touch-menu-height;
+		// width: $sidebar-width-collapsed;
+	    overflow-y: auto; // for desktop scroll bars logic
+	    -webkit-overflow-scrolling: touch;
 	}
 
 	&.lv-show {
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-
-		    .lv-sidebar-inner {
-				position: fixed;
-				top: 0; //$header-height;
-				bottom: 0;
-				// width: $sidebar-width-collapsed;
-			    overflow-y: auto; // for desktop scroll bars logic
-			    -webkit-overflow-scrolling: touch;
-		    }
+		@media #{$devices-only} {
+			display: block;
+		}
 	}
 
 /*
@@ -251,8 +237,16 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 	}
 	*/
 
+	@media #{$medium-up} {
+		@include uncollapsed();
+		.lv-sidebar-inner {
+			position: absolute;
+		}
+	}
+
 	// Enters into the page FLOW - landscape (1024)
 	@media #{$large-up} {
+		@include collapsed();
 	    @extend .table-cell;
 	    position: relative; /* needed for shadow */
 	    top: 0;

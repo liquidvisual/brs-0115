@@ -31,7 +31,7 @@ $('.lv-sidebar .tabs a').click(function(e){
     // If 'collapse' is clicked (only possible when open)
     if (tabHash == "#collapse") {
 
-        // user has engaged the sidebar. Remember preferences and override media queries
+        // user has engaged the sidebar. Remember explicit preferences override media queries
         sidebar.removeClass('is-uncollapsed').addClass('is-collapsed');
 
     // Clicking all other tabs - will ** UNCOLLAPSE ** sidebar
@@ -74,10 +74,14 @@ $('#hints-btn').on('click', function(e){
     // If Menu is CLOSED
     //==================================================
 
-    if (contextMenuClosed) {
+    if (true) {
 
         sidebar.addClass('lv-show'); // show context menu
-        sidebar.css({ y: screenHeight}).transition({ y: 0, queue: false });
+        // $('body').css({ 'overflow-y': 'hidden'});
+        sidebar.css({ y: screenHeight}).transition({ y: 0, queue: false, complete:
+            function(){
+                sidebar.attr('style', '');
+            } }); // end complete
     }
 }); // end click
 
