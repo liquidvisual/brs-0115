@@ -15,7 +15,7 @@ var sidebarTabPanels = $('.lv-sidebar .tabs-content').children();
 // sidebarSlide(direction: true, event, tabIndex);
 
 //-----------------------------------------------------------------
-// sidebarSlide
+// Toggle Sidebar Transition
 //-----------------------------------------------------------------
 
 function sidebarSlide(direction, tabPanel) {
@@ -52,7 +52,7 @@ function sidebarSlide(direction, tabPanel) {
 }
 
 //-----------------------------------------------------------------
-// Sidebar Tabs
+// Switch Between Sidebar Tabs
 //-----------------------------------------------------------------
 
 function showSidebarTab(targetIndex) {
@@ -92,7 +92,7 @@ function showSidebarTab(targetIndex) {
 }
 
 //-----------------------------------------------------------------
-// SIDEBAR SLIDE-IN
+// Sidebar Tab Buttons
 //-----------------------------------------------------------------
 
 // @@@ TAB CLICKS VIA LOOP @@@
@@ -104,12 +104,25 @@ $(sidebarTabs).each(function(index){
     });
 });
 
-$('#hints-btn').on('click', function(event){
-    event.preventDefault();
-    sidebarSlide(true, 0);
+//-----------------------------------------------------------------
+// Touch Menu
+//-----------------------------------------------------------------
+
+var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
+
+touchMenuBtns.each(function(index){
+    $(this).click(function(event){
+        event.preventDefault();
+        this.index = index;
+        sidebarSlide(true, this.index);
+    });
 });
 
-$('#close-btn').click(function(event){
+//==================================================
+// Close Button
+//==================================================
+
+$('.js-close-btn').click(function(event){
     event.preventDefault();
     sidebarSlide(false);
 });
