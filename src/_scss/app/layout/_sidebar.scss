@@ -201,7 +201,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 		position: fixed;
 		top: 0;
 		bottom: $touch-menu-height;
-		// width: $sidebar-width-collapsed;
+		width: 100%; //$sidebar-width-collapsed;
 	    overflow-y: auto; // for desktop scroll bars logic
 	    -webkit-overflow-scrolling: touch;
 	}

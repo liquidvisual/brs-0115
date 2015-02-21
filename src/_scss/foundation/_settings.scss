@@ -731,7 +731,7 @@ $icon-bar-icon-color: #ccc; //$white;
 $icon-bar-icon-size: rem-calc(20); //1.875rem;
 // $icon-bar-image-width: 1.875rem;
 // $icon-bar-image-height: 1.875rem;
-// $icon-bar-active-color: $primary-color;
+$icon-bar-active-color: darken($secondary-color, 10%); //$primary-color;
 $icon-bar-item-padding: rem-calc(8); //1.25rem;
 
 // 13. Inline Lists

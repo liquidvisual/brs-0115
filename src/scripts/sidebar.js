@@ -7,6 +7,7 @@
 
 var TOUCH_ENABLED = $(".touch").length;
 var sidebar = $('.lv-sidebar');
+var sidebarContent = sidebar.find('.lv-sidebar-inner')
 var sidebarTabs = $('.lv-sidebar .tabs').children();
 var sidebarTabPanels = $('.lv-sidebar .tabs-content').children();
 
@@ -19,10 +20,24 @@ var sidebarTabPanels = $('.lv-sidebar .tabs-content').children();
 //-----------------------------------------------------------------
 
 function sidebarSlide(direction, tabPanel) {
+    var sidebarVisible = sidebar.is(':visible');
+    var sidebarWidth = sidebar.width();
     var screenHeight = $(window).height();
     var screenWidth = $(window).width();
-    var sidebarWidth = $('.lv-sidebar').width();
     var isMobile = screenWidth < 641;
+
+    // Only switch when an index is passed - unless content turns up empty
+    if (tabPanel != undefined) showSidebarTab(tabPanel);
+
+    // If OPEN just fast switch content, not transition sidebar
+    if (sidebarVisible && tabPanel != undefined) {
+        var speed = isMobile ? 400 : 300;
+        sidebarContent.css({ x: sidebarWidth }).transition({ x: 0, queue: false, complete:
+            function(){
+                sidebarContent.attr('style', '');
+            } }, speed, 'snap');
+        return;
+    }
 
     // Start, fin positions
     var xStart = isMobile ? 0 : screenWidth;
@@ -40,14 +55,12 @@ function sidebarSlide(direction, tabPanel) {
 
     sidebar.addClass('lv-show'); // show context menu
 
-    showSidebarTab(tabPanel);
-
     // ENGAGE
     sidebar.css({ x: xStart, y: yStart }).transition({ x: xEnd, y: yEnd, queue: false, complete:
         function(){
-            sidebar.attr('style', '');
+            // sidebar.attr('style', ''); // for some reason this screwed up visibility on mobile only, on switch after transition
             // Remember to remove sidebar afterwards
-            if (!direction) sidebar.removeClass('lv-show');
+            if (!direction) sidebar.removeClass('lv-show is-collapsed is-uncollapsed'); // just incase (is-collapsed etc..)
         } }, 400, 'ease'); // end complete
 }
 
@@ -113,6 +126,7 @@ var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
 touchMenuBtns.each(function(index){
     $(this).click(function(event){
         event.preventDefault();
+        touchMenuBtns.removeClass('active').eq(index).addClass('active');
         this.index = index;
         sidebarSlide(true, this.index);
     });

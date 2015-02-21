@@ -19,9 +19,16 @@
     line-height: 0; // fixes height issue
 }
 
-.icon-bar a:active label,
-.icon-bar a:active i {
-	color: white;
+.icon-bar a.active label,
+.icon-bar a.active i {
+	// color: $primary-color;
+    color: white;
+}
+
+.icon-bar .item.active {
+    @media #{$medium-up} {
+        // background: $secondary-color;
+    }
 }
 
 // Broken in Foundation for some reason
