@@ -1,7 +1,7 @@
 /*
     HEADER.CSS
 
-    - Last updated: 18.02.15
+    - Last updated: 21.02.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -32,34 +32,25 @@ $mobile-header-height: 50px !default;
 
     h1 {
         @media #{$devices-only} {
+            @include truncate(70%);
+            margin: 0 auto;
             font-size: rem-calc(16);
             font-weight: 600;
-        }
-
-        @media #{$small-only} {
-            @include truncate(190px);
-            margin: 0 auto;
-        }
-
-        @media #{$large-up} {
-            font-size: $h3-font-size;
         }
     }
 
     //=========================================
-    // Context Buttons
+    // Context Buttons (hamburger etc)
     //=========================================
 
-    // Menu hamburger and context button
     a {
         position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
         padding: rem-calc(0 20);
-        line-height: 52px; // magic
+        line-height: $mobile-header-height;
         color: $tertiary-color;
-        // background: red;
         font-size: rem-calc(14);
 
         @media #{$large-up} {
@@ -87,19 +78,17 @@ $mobile-header-height: 50px !default;
 }
 
 //-----------------------------------------------------------------
-// Header
+// Normal Header
 //-----------------------------------------------------------------
 
 .lv-header {
-    border-bottom: 1px solid #ddd;
-
-    @media #{$large-up} {
-        border: 0;
+    @media #{$devices-only} {
+        border-bottom: 1px solid #ddd;
     }
 }
 
 //=========================================
-// H3 - Brings own height
+// H1 - Brings own height
 //=========================================
 
 .lv-header h1 {

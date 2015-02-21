@@ -229,20 +229,28 @@ $header-font-color: #222; //$jet;
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
 
-$h1-font-size: rem-calc(30); // 44
-$h2-font-size: rem-calc(27); // 37
-$h3-font-size: rem-calc(23); // 27
-$h4-font-size: rem-calc(20); // 23
-$h5-font-size: rem-calc(18); // 18
-$h6-font-size: 1rem;
+// Checkpoint Defaults
+// $h1-font-size: rem-calc(30); // 44
+// $h2-font-size: rem-calc(27); // 37
+// $h3-font-size: rem-calc(23); // 27
+// $h4-font-size: rem-calc(20); // 23
+// $h5-font-size: rem-calc(18); // 18
+// $h6-font-size: 1rem;
+
+$h1-font-size: rem-calc(22);
+$h2-font-size: rem-calc(20);
+$h3-font-size: rem-calc(18);
+$h4-font-size: rem-calc(16);
+$h5-font-size: rem-calc(14);
+$h6-font-size: rem-calc(11);
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10) !default;
-// $h2-font-reduction: rem-calc(10) !default;
-// $h3-font-reduction: rem-calc(5) !default;
-// $h4-font-reduction: rem-calc(5) !default;
-// $h5-font-reduction: 0 !default;
-// $h6-font-reduction: 0 !default;
+$h1-font-reduction: rem-calc(4) !default;
+$h2-font-reduction: rem-calc(4) !default;
+$h3-font-reduction: rem-calc(2) !default;
+$h4-font-reduction: rem-calc(2) !default;
+$h5-font-reduction: rem-calc(0) !default;
+$h6-font-reduction: 0 !default;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -258,7 +266,7 @@ $subheader-font-weight: 300; //$font-weight-normal;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc(14); //1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
