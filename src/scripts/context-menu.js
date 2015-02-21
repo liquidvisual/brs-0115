@@ -13,26 +13,14 @@ var contextMenuClosed = !contextMenu.is(':visible');
 var pageLockOverlay = $('<span class="lv-page-lock-overlay"></span>');
 
 //-----------------------------------------------------------------
-// Context Menu
+// Launch Context Menu
 //
 // Note: 'context-menu-btn' lives inside the header.
 // The context menu leverages the Transit animation library.
 //-----------------------------------------------------------------
 
-$('#context-menu-btn').on('click', function(e){
-
-    console.log("Context Menu Triggered: "+contextMenuClosed);
-
-    e.preventDefault();
-
-    //==================================================
-    // If Menu is CLOSED
-    //==================================================
-
+function launchContextMenu() {
     if (contextMenuClosed) {
-
-        console.log("Context Menu Opening");
-
         page.addClass('is-locked').append(pageLockOverlay); // lock the page and append 'exit' overlay
         contextMenu.addClass('lv-show'); // show context menu
         contextMenu.css({ x: -contextMenuWidth/6}).transition({ x: 0, queue: false }); // slide in from left slightly
@@ -48,17 +36,14 @@ $('#context-menu-btn').on('click', function(e){
         //==================================================
 
         slideSections.transition({ x: contextMenuWidth, queue: false }); // complete transition
-
     }
-}); // end click
+}
 
 //-----------------------------------------------------------------
-// Variables
+// Exit Overlay
 //-----------------------------------------------------------------
 
 var exitOverlay = function(){
-
-    console.log("Context Menu Closing");
 
     pageLockOverlay.on('touchstart, touchmove, click', function(e){
 
@@ -94,6 +79,34 @@ var exitOverlay = function(){
     }); // complete context menu transition
 });
 }
+
+//-----------------------------------------------------------------
+// launchContextMenu
+//-----------------------------------------------------------------
+
+$('#context-menu-btn').on('click', function(event){
+    event.preventDefault();
+    launchContextMenu();
+}); // end click
+
+// Refactor - rushed
+
+var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
+
+$('#home-btn').on('click', function(event){
+    $this = $(this);
+
+    // If user is HOME - launch context menu, otherwise load "/"
+    if (window.location.pathname == "/") {
+        launchContextMenu();
+    } else {
+        event.preventDefault();
+    }
+
+    // Active
+    // $this.hasClass('active') ? $this.removeClass('active') : $this.addClass('active')
+});
+
 
 
 

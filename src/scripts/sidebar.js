@@ -105,10 +105,9 @@ function showSidebarTab(targetIndex) {
 }
 
 //-----------------------------------------------------------------
-// Sidebar Tab Buttons
+// @@@ Sidebar Tab Buttons Loop @@@
 //-----------------------------------------------------------------
 
-// @@@ TAB CLICKS VIA LOOP @@@
 $(sidebarTabs).each(function(index){
     $(sidebarTabs[index]).click(function(event){
         event.preventDefault();
@@ -118,7 +117,7 @@ $(sidebarTabs).each(function(index){
 });
 
 //-----------------------------------------------------------------
-// Touch Menu
+// @@@ Touch Menu Loop @@@
 //-----------------------------------------------------------------
 
 var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
@@ -126,18 +125,25 @@ var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
 touchMenuBtns.each(function(index){
     $(this).click(function(event){
         event.preventDefault();
-        touchMenuBtns.removeClass('active').eq(index).addClass('active');
         this.index = index;
-        sidebarSlide(true, this.index);
+
+        if ($(this).hasClass('active')){
+            touchMenuBtns.removeClass('active');
+            sidebarSlide(false);
+        } else {
+            touchMenuBtns.removeClass('active');
+            $(this).addClass('active');
+            sidebarSlide(true, this.index);
+        }
     });
 });
-
 //==================================================
 // Close Button
 //==================================================
 
 $('.js-close-btn').click(function(event){
     event.preventDefault();
+    touchMenuBtns.removeClass('active');
     sidebarSlide(false);
 });
 
