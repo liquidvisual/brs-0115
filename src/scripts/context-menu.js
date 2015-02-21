@@ -9,7 +9,7 @@ var slideSections = $('.lv-main, .lv-touch-menu, .lv-sidebar, .lv-page-lock-over
 var contextMenu = $('.lv-context-menu');
 var page = $('.lv-page');
 var contextMenuWidth = contextMenu.width(); //- 5;
-var contextMenuClosed = !contextMenu.is(':visible');
+var contextMenuClosed = contextMenu.not(':visible');
 var pageLockOverlay = $('<span class="lv-page-lock-overlay"></span>');
 
 //-----------------------------------------------------------------
