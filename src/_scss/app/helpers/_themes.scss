@@ -1,0 +1,176 @@
+/*
+    THEMES.CSS
+
+    - Last updated: 22.02.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+// $theme-one: true;
+$theme-one: false;
+// $theme-two: true;
+$theme-two: false;
+// $theme-three: true;
+$theme-three: false;
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+@if $theme-two {
+    .lv-super {
+        .lv-sidebar, .lv-sidebar .tabs, .lv-sidebar .tab-title a {
+            // background: white;
+            background: darken(desaturate(darken(#F9FAFC, 4%), 15%), 0.0%);
+        }
+
+
+
+        .lv-sidebar {
+            border-left: 1px solid #DDDDDD;
+            // border-left: 1px solid #D4DCE3;
+        }
+
+        .lv-main {
+            // background: #F9FAFC; // good
+            // background: darken(#F9FAFC, 1.5%);
+            background: #F4F6F9;
+            // background: #EEEFF0;
+            // background: #EDEFF0;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+
+@if $theme-three {
+    .lv-super {
+        .lv-sidebar, .lv-sidebar .tab-title a {
+            background: darken(desaturate(darken(#F9FAFC, 4%), 15%), 0.0%);
+            // background: white;
+        }
+
+        .lv-sidebar .tabs {
+            // border-bottom: 1px solid #ddd !important;
+        }
+
+        .lv-sidebar .tab-title a {
+
+            // background: darken(desaturate(darken(#F9FAFC, 5%), 20%), 3%);
+            // background: white;
+            background: darken(desaturate(darken(#F9FAFC, 4%), 15%), 0.0%);
+        }
+
+        .tab-title.active a {
+            // background: darken(desaturate(darken(#F9FAFC, 4%), 15%), 0.0%);
+
+        //     position: relative;
+        //     &:after {
+        //         content: "";
+        //         width: 100%;
+        //         height: 3px;
+        //         position: absolute;
+        //         left: 0;
+        //         bottom: -11px;
+        //         z-index: 100;
+        //         background: $primary-color;
+        //     }
+        }
+
+
+        .lv-footer {
+            border-top: 1px solid #ddd;
+            // border-top: 0;
+            // background: darken($secondary-color, 5%);
+        }
+    }
+
+    .lv-super .lv-main {
+        position: relative;
+        top: 10px;
+        border-radius: 10px 0px 0 0;
+        background: #F4F6F9;
+    }
+
+    .lv-super .lv-sidebar {
+        top: 10px;
+        border-left: 1px solid #ddd;
+        // border-radius: rem-calc(10px 0 0 0);
+
+        &.is-uncollapsed .tabs li a,
+        .tabs li a {
+            border: 0 !important;
+            // border-bottom: 1px solid #E6E6E6 !important;
+            // background: white;
+        }
+
+        .tab-title.active {
+            // border-bottom: 2px solid $primary-color;
+            border-color: #ddd;
+
+
+            a, a i {
+                color: $primary-color;
+                border: 0;
+            }
+        }
+    }
+
+    html, body {
+        background: $secondary-color !important;
+    }
+}
+
+//-----------------------------------------------------------------
+
+@if $theme-one {
+    .lv-super {
+        .lv-sidebar, .lv-sidebar .tabs, .lv-sidebar .tab-title a {
+            background: white;
+            // background: #F9FAFA;
+        }
+    }
+
+    .lv-super .lv-main {
+        position: relative;
+        top: 10px;
+        border-radius: 10px 10px 0 0;
+        // background: #EDEFF0;
+        background: #F9FAFC;
+        // background: #EDEFF0;
+    }
+
+    .lv-super .lv-sidebar {
+        top: 10px;
+        border-left: 1px solid #E5E5E5;
+        border-radius: rem-calc(10px 0 0 0);
+
+        &.is-uncollapsed .tabs li a,
+        .tabs li a {
+            border: 0 !important;
+            // background: white;
+            border-bottom: 1px solid #E6E6E6 !important;
+        }
+
+        .tab-title.active {
+            // border-bottom: 2px solid $primary-color;
+            border: 0px solid #F9FAFA;
+
+
+            a, a i {
+                color: $primary-color;
+                border: 0;
+            }
+        }
+    }
+
+    html, body {
+        background: $secondary-color !important;
+    }
+}
+
+//=========================================
+//
+//=========================================
+

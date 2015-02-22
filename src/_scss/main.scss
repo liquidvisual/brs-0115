@@ -1,7 +1,7 @@
 /*
-    Checkpoint SCSS
+    MAIN.CSS
 
-    - Last updated: 26.11.14
+    - Last updated: 22.02.15
     - hello@liquidvisual.com
 */
 
@@ -15,6 +15,7 @@
 @import "app/helpers/mixins";
 @import "app/helpers/partial-view";
 @import "app/helpers/special";
+@import "app/helpers/themes";
 
 // Base
 @import "app/base/fonts";

@@ -87,9 +87,11 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 .lv-sidebar .tabs-content {
 	// Account for fixed header on touch
 	padding: rem-calc(($mobile-header-height+15) 30 30 30); // 15 is to do with padding made up else where
+	// padding: rem-calc(($mobile-header-height+15) 0 30 0); // top and bottom, tabpanel brings own padding // scrapped
 
 	@media #{$large-up} {
 	    padding: rem-calc(15 30 30 30);
+	    // padding: rem-calc(15 0 30 0); // scapped, looked bad
 	}
 }
 
