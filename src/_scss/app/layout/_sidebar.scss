@@ -123,7 +123,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 			}
 
 			.active i {
-				color: inherit; // does this work? Precaution only
+				// color: #222; // does this work? Precaution only
 			}
 		}
 	}
@@ -231,6 +231,10 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 		@include uncollapsed();
 		.lv-sidebar-inner {
 			position: absolute;
+		}
+
+		.tabs .active a i {
+			color: #222; // refactor
 		}
 	}
 

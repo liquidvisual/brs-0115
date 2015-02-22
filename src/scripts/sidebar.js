@@ -125,6 +125,7 @@ var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
 touchMenuBtns.each(function(index){
     $(this).click(function(event){
         event.preventDefault();
+
         this.index = index;
 
         if ($(this).hasClass('active')){

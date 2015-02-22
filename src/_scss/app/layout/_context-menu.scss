@@ -19,6 +19,7 @@
     width: $secondary-nav-width;
     height: 100%;
     background: $secondary-color;
+    // Can't have z-index, needs behind main which slides
 
     // Becomes table-cell on large, affects stage content
     @media #{$large-up} {

@@ -18,7 +18,11 @@
     height: 100%;
     overflow: hidden; // prevent scrollbars when menu slides out overflow-y didn't work on FF
 
-    background: $secondary-color; // REMOVE THIS
+    // Create curved top effect
+    @media #{$large-up} {
+        padding-top: 10px;
+        background: $secondary-color;
+    }
 }
 
 //-----------------------------------------------------------------
@@ -26,8 +30,6 @@
 //-----------------------------------------------------------------
 
 .lv-main {
-    position: relative; // Added later
-
     display: table-header; // trust me
     padding: rem-calc(($mobile-header-height+30) 0 $touch-menu-height 0); // account for header
     min-height: calc(100vh); // Awesome, this forces main to have full height with low content
@@ -41,16 +43,7 @@
 
     @media #{$large-up} {
         padding-top: rem-calc(20);
-        top: rem-calc(10);
         border-radius: 5px 0 0 0;
-    }
-}
-
-// Refactor this
-
-.lv-sidebar {
-    @media #{$large-up} {
-        top: rem-calc(10);
     }
 }
 
