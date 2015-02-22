@@ -106,7 +106,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 	// Tabs stick to top on collapsed
 	.tabs {
 		position: fixed;
-		top: 0; //$header-height;
+		top: rem-calc(10);//0; //$header-height;
 		width: $sidebar-width-collapsed;
 		background: $sidebar-background-color; // need?
 
