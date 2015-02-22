@@ -67,8 +67,8 @@ ul.lv-quicklinks {
         font-size: rem-calc(13);
 
         @media #{$large-up} {
-            &:hover {
-                // color: white;
+            &:hover:before {
+                color: darken($tabs-navigation-hover-bg-color, 30%);
             }
             &:hover:after {
                 content: "";
@@ -77,7 +77,7 @@ ul.lv-quicklinks {
                 left: rem-calc(-30);
                 width: 200%;
                 height: 100%;
-                background: darken(#EEEFF3, 4%);
+                background: lighten($tabs-navigation-hover-bg-color, 2%); //darken(#EEEFF3, 4%);
                 z-index: -1;
             }
         }

@@ -115,10 +115,15 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 			width: 100%;
 
 			a {
+				@include transition('background');
 				outline: none;
 				padding: rem-calc(15 0);
 				// border-bottom: 1px solid #ddd; //#CACDCD;
 				border-right: 0;
+			}
+
+			.active i {
+				color: inherit; // does this work? Precaution only
 			}
 		}
 	}
