@@ -1,5 +1,5 @@
 /*
-    MAIN SCRIPTS - Last updated: 18-02-15
+    CONTEXT-MENU.JS - Last updated: 18-02-15
 */
 //-----------------------------------------------------------------
 // Variables
@@ -106,6 +106,10 @@ $('#home-btn').on('click', function(event){
     // Active
     // $this.hasClass('active') ? $this.removeClass('active') : $this.addClass('active')
 });
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
 
 
 
