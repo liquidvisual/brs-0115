@@ -63,8 +63,8 @@
 
 		<!-- Standard User -->
 		<section class="lv-context-menu-user-group">
-		    <h6 class="lv-expander">Standard User</h6>
-		    <ul>
+		    <h6 class="lv-expander js-expander">Standard User</h6>
+		    <ul class="lv-expander-content">
 		        <li class="active">
 		            <a href="#"><i class="fi-layout"></i> Dashboard</a>
 		        </li>
@@ -85,25 +85,74 @@
 
 		<!-- Admin User -->
 		<section class="lv-context-menu-user-group">
-		    <h6 class="lv-expander">Admin User</h6>
-		    <ul>
-		        <li>
-		            <a href="#"><i class="fi-layout"></i> Client</a>
+		    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torso-business"></i> Client</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Divisions</a></li>
+		            	<li><a href="#">Splash Page Message</a></li>
+		            	<li><a href="#">Vacancy Template Library Access</a></li>
+		            	<li><a href="#">Job Board Emails</a></li>
+		            	<li><a href="#">Job Board Messages</a></li>
+		            	<li><a href="#">Recruitment Request Emails</a></li>
+		            	<li><a href="#">Requisition Emails</a></li>
+		            	<li><a href="#">Selection Report Approval Emails</a></li>
+		            	<li><a href="#">SHL Projects</a></li>
+		            	<li><a href="#">Applicant Attributes</a></li>
+		            	<li><a href="#">Attribute Display Groups</a></li>
+		            </ul>
 		        </li>
-		        <li class="">
-		            <a href="#"><i class="fi-torsos-male-female"></i> Users</a>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torsos-all"></i> Users</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Search Users</a></li>
+		            	<li><a href="#">New User</a></li>
+		            	<li><a href="#">Agency Users</a></li>
+		            	<li><a href="#">Groups</a></li>
+		            	<li><a href="#">My Account</a></li>
+		            </ul>
 		        </li>
-		        <li class="">
-		            <a href="#"><i class="fi-page-search"></i> Templates</a>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-page-copy"></i> Templates</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Vacancies</a></li>
+		            	<li><a href="#">Email</a></li>
+		            </ul>
 		        </li>
-		        <li class="">
-		            <a href="#"><i class="fi-page-edit"></i> Questions</a>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-comments"></i> Questions</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Screening</a></li>
+		            	<li><a href="#">Application / Admin</a></li>
+		            	<li><a href="#">Preference</a></li>
+		            	<li><a href="#">KPI</a></li>
+		            	<li><a href="#">Selection Report</a></li>
+		            	<li><a href="#">Selection Report Approval</a></li>
+		            	<li><a href="#">Question Responses</a></li>
+		            	<li><a href="#">Library Groups</a></li>
+		            </ul>
 		        </li>
-		        <li class="">
-		            <a href="#"><i class="fi-graph-trend"></i> Reports</a>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Reporting Engine</a></li>
+		            	<li><a href="#">SMS Report</a></li>
+		            	<li><a href="#">Transaction Summary</a></li>
+		            </ul>
 		        </li>
-		        <li class="">
-		            <a href="#"><i class="fi-graph-trend"></i> Help</a>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-info"></i> Help</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Helpdesk</a></li>
+		            	<li><a href="#">Service Levels</a></li>
+		            	<li><a href="#">Time &amp; Material Charges</a></li>
+		            	<li><a href="#">Training Directory</a></li>
+		            	<li><a href="#">Incident Report</a></li>
+		            	<li><a href="#">BigRedSky Update</a></li>
+		            </ul>
 		        </li>
 		    </ul>
 		</section>
