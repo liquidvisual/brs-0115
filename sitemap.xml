@@ -2,109 +2,24 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>/guide/</loc>
-    <lastmod>2015-02-25T23:57:21+11:00</lastmod>
+    <lastmod>2015-02-27T03:37:51+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2015-02-25T23:57:21+11:00</lastmod>
+    <lastmod>2015-02-27T03:37:51+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/modal_output/about-alerts.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
+    <loc>/modal_output/account.html</loc>
+    <lastmod>2015-02-26T17:46:59+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/modal_output/about-learning.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/add-to-my-quicklinks.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/change-client-id.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/coming-soon.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/create-email-alert.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/datepicker-example.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/download-search.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/email-document.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/email-results.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/email-search.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/export-document.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/export-results.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/print-document.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/print-results.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/print-search.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/terms-and-connectors.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/tree-of-contents.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>/modal_output/understanding-workflow.html</loc>
-    <lastmod>2015-01-12T01:17:32+11:00</lastmod>
+    <loc>/modal_output/logout.html</loc>
+    <lastmod>2015-02-26T17:46:47+11:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

@@ -1,0 +1,142 @@
+<!-- This simulates the output from an AJAX call - to be placed into a modal -->
+
+<!-- HEADER -->
+<!-- <header class="lv-header lv-global-header">
+    <div class="row">
+        <div class="columns">
+            <h1>My Account</h1>
+        </div>
+    </div>
+</header> -->
+
+<a class="close-reveal-modal">&#215;</a>
+
+<div class="row">
+	<div class="medium-10 large-10 columns">
+
+		<h1>My Account</h1>
+		<p>You can update your settings or change your password at any time below.</p>
+
+		<form data-abide novalidate method="post" action="#">
+			<!-- Title -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Title</span>
+						<select id="subject" name="subject">
+			                <option disabled>Please Select</option>
+			                <option value="Dr">Dr</option>
+			                <option value="Miss">Miss</option>
+			                <option value="Mr">Mr</option>
+			                <option value="Mrs">Mrs</option>
+			                <option value="Ms">Ms</option>
+			                <option value="Professor">Professor</option>
+			            </select>
+					</label>
+				</div>
+			</div>
+
+			<!-- Name* -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Given Names</span> <small>required</small>
+						<input name="name" type="text">
+					</label>
+					<small class="error">Your full name is required.</small>
+				</div>
+			</div>
+
+			<!-- Surname* -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Surname</span> <small>required</small>
+						<input name="name" type="text">
+					</label>
+					<small class="error">Your full name is required.</small>
+				</div>
+			</div>
+
+			<!-- Position Title -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Position Title</span>
+						<input name="name" type="text" placeholder="Eg. Recruiter">
+					</label>
+					<small class="error">Your full name is required.</small>
+				</div>
+			</div>
+
+			<!-- Email* -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Email</span> <small>required</small>
+						<input name="email" type="email" required>
+					</label>
+					<small class="error">A valid email address is required.</small>
+				</div>
+			</div>
+
+			<!-- Phone* -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Phone</span> <small>required</small>
+						<input name="phone" type="text">
+					</label>
+					<small class="error">Please try again.</small>
+				</div>
+			</div>
+
+			<!-- Timezone -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Timezone</span> <small>required</small>
+						<select name="User[TimeZone]" id="TimeZone2090">
+							 <option value="" selected="">Please select</option>
+							 <option value="Australia/Perth">Australia/Perth</option>
+							 <option value="Australia/Melbourne" selected="">Australia/Melbourne</option>
+							 <option value="Australia/Sydney">Australia/Sydney</option>
+							 <option value="Australia/Brisbane">Australia/Brisbane</option>
+							 <option value="Australia/Adelaide">Australia/Adelaide</option>
+							 <option value="Australia/Hobart">Australia/Hobart</option>
+							 <option value="Australia/Darwin">Australia/Darwin</option>
+							 <option value="Asia/Dubai">Asia/Dubai</option>
+							 <option value="Asia/Hong_Kong">Asia/Hong_Kong</option>
+							 <option value="US/Pacific"> US/Pacific</option>
+							 <option value="Europe/London">Europe/London</option>
+							 <option value="Africa/Johannesburg">Africa/Johannesburg</option>
+							 <option value="NZ">New Zealand</option>
+						</select>
+					</label>
+					<small class="error">Please select a timezone.</small>
+				</div>
+			</div>
+
+			<!-- Password -->
+			<div class="row">
+				<div class="medium-6 columns">
+					<label><span class="text">Password</span> <small>required</small>
+						<input name="password-1" type="password">
+					</label>
+					<small class="error">Please provide a password.</small>
+				</div>
+				<div class="medium-6 columns">
+					<label><span class="text">Retype Password</span> <small>required</small>
+						<input name="password-2" type="password">
+					</label>
+					<small class="error">Please retype your password.</small>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- Submit -->
+			<div class="row">
+				<div class="columns text-centerX medium-text-left">
+					<button class="button radius button-greyed">Cancel</button>
+					<button type="submit" class="button radius">Save</button>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</div>
