@@ -118,7 +118,7 @@ $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial
 // We use these as default colors throughout
 $primary-color: #D92D4B; //#FF8000;
 $secondary-color: #2A2B31; //#666666; //#e7e7e7;
-$tertiary-color: #89CAC9;
+$tertiary-color: #61B5B3; //#89CAC9;
 $alert-color: #F8403A; //#DB3A48; //#f04124;
 $success-color: $tertiary-color;
 $warning-color: #f08a24;
@@ -479,13 +479,13 @@ $button-lrg: rem-calc(12);
 // $button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+$button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-bg-color: $tertiary-color; //$primary-color;
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
@@ -661,17 +661,17 @@ $button-lrg: rem-calc(12);
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
-// $input-bg-color: $white;
-// $input-focus-bg-color: scale-color($white, $lightness: -2%);
+$input-font-size: rem-calc(16);
+$input-bg-color: #EEEFF3; //#E0E4E9; //#D1D7DE; //$white;
+$input-focus-bg-color: darken($input-bg-color, 5%);//scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
 // $input-focus-border-color: scale-color($white, $lightness: -40%);
 // $input-border-style: solid;
-// $input-border-width: 1px;
+$input-border-width: 0; //1px;
 // $input-border-radius: $global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+// $input-box-shadow: none; //inset 0 1px 2px rgba(0,0,0,0.1);
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
@@ -713,7 +713,7 @@ $button-lrg: rem-calc(12);
 // $glowing-effect-color: $input-focus-border-color;
 
 // Select variables
-// $select-bg-color: $ghost;
+$select-bg-color: $input-bg-color; //$ghost;
 // $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 
 // 12. Icon Bar

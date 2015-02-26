@@ -12,28 +12,42 @@
 // Buttons
 //-----------------------------------------------------------------
 
-.search-button i {
-    font-size: rem-calc(20);
-    line-height: 36px;
+.button {
+    min-width: rem-calc(112);
+    // border-color: $tertiary-color !important;
+    // color: $tertiary-color !important;
 }
 
-.lv-super input[type="button"],
-.lv-super input[type="submit"],
-input[type="button"],
-input[type="submit"]
- {
-    @include button;
-    border-radius: $global-radius;
-    cursor: pointer;
+.button-greyed {
+    background: lighten($secondary-color, 50%);
+
+    &:hover {
+        background: darken(#A7A8B3, 10%) !important;
+    }
 }
 
-.lv-super .pill {
-    padding: rem-calc(5 10);
-    background: grey;
-    border-radius: rem-calc(30);
-}
+// .search-button i {
+//     font-size: rem-calc(20);
+//     line-height: 36px;
+// }
 
-.lv-sidebar .pill {
-    float: right;
-    margin-top: rem-calc(6);
-}
+// .lv-super input[type="button"],
+// .lv-super input[type="submit"],
+// input[type="button"],
+// input[type="submit"]
+//  {
+//     @include button;
+//     border-radius: $global-radius;
+//     cursor: pointer;
+// }
+
+// .lv-super .pill {
+//     padding: rem-calc(5 10);
+//     background: grey;
+//     border-radius: rem-calc(30);
+// }
+
+// .lv-sidebar .pill {
+//     float: right;
+//     margin-top: rem-calc(6);
+// }

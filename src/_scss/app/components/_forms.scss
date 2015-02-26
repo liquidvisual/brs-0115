@@ -14,14 +14,36 @@
 // Center all input placeholder text - looks better
 
 ::-webkit-input-placeholder {
-  text-align: center;
+	color: #9CA0A6;
+  // text-align: center;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  text-align: center;
+	color: #9CA0A6;
+  // text-align: center;
 }
 :-ms-input-placeholder {
-  text-align: center;
+	color: #9CA0A6;
+  // text-align: center;
 }
 :-moz-placeholder { /* Firefox 18- */
-  text-align: center;
+	color: #9CA0A6;
+  // text-align: center;
+}
+
+//-----------------------------------------------------------------
+// Inputs
+//-----------------------------------------------------------------
+
+select,
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=email] {
+	border-radius: $global-radius;
+	// margin-bottom: rem-calc(20);
+}
+
+form label .text {
+	display: inline-block;
+	margin-bottom: rem-calc(8);
 }
