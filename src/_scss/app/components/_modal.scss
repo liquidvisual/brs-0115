@@ -15,14 +15,33 @@
 	padding: rem-calc(20 0 0 0);
 	max-width: rem-calc(690);
 
-	@media #{$small-only} {
-	    position: fixed;
-	    top: 0;
-	}
 
 	@media #{$medium-up} {
 	    padding: rem-calc(20);
 	}
+}
+
+.reveal-modal[style] {
+	@media #{$small-only} {
+	    position: fixed !important;
+	    top: 0 !important;
+	    bottom: 100%;
+	    padding-bottom: rem-calc(100);
+	    overflow: auto;
+	    border-radius: 0;
+	    -webkit-overflow-scrolling: touch;
+		z-index: 10000;
+	}
+}
+
+.reveal-modal-bg[style] {
+	@media #{$small-only} {
+	    z-index: 500;
+	}
+}
+
+.close-reveal-modal {
+	z-index: 9999999999999; // Come on Zurb
 }
 
 //-----------------------------------------------------------------
