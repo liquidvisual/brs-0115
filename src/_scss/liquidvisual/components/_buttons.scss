@@ -1,7 +1,7 @@
 /*
 	LIQUIDVISUAL BUTTONS :: A Personal Framework
 
-	- updated: 07.07.14
+	- updated: 02.03.15
 	- liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -78,15 +78,15 @@ $button-bg-active: darken($button-bg-hover, 2%) !default;
 
 	&.knockout,
 	&.knockout:active {
-		border: 2px solid $button-bg;
-		color: $button-bg;
+		border: 2px solid $button-bg-color;
+		color: $button-bg-color;
 		background: none;
 		box-shadow: none;
 		text-shadow: none;
 
 		&:hover {
-			background: $button-bg;
-			color: white;
+			background: $button-bg-color;
+			color: white !important;
 		}
 	}
 }

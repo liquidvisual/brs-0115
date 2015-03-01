@@ -13,9 +13,11 @@
 //-----------------------------------------------------------------
 
 .button {
-    min-width: rem-calc(112);
+    // min-width: rem-calc(112);
+    min-width: rem-calc(140);
     // border-color: $tertiary-color !important;
     // color: $tertiary-color !important;
+    font-weight: 600;
 }
 
 .button-greyed {
