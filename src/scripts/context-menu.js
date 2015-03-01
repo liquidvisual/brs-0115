@@ -89,7 +89,7 @@ $('#context-menu-btn').on('click', function(event){
     launchContextMenu();
 }); // end click
 
-// Refactor - rushed
+// Refactor - rushed - HOME BUTTON
 
 var touchMenuBtns = $('#hints-btn, #favourites-btn, #history-btn');
 
@@ -97,7 +97,7 @@ $('#home-btn').on('click', function(event){
     $this = $(this);
 
     // If user is HOME - launch context menu, otherwise load "/"
-    if (window.location.pathname == "/") {
+    if (window.location.pathname == "/dashboard/") {
         launchContextMenu();
     } else {
         event.preventDefault();
