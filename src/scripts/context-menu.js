@@ -99,7 +99,6 @@ $('#home-btn').on('click', function(event){
     // If user is HOME - launch context menu, otherwise load "/"
     if (window.location.pathname == "/dashboard/") {
         launchContextMenu();
-    } else {
         event.preventDefault();
     }
 

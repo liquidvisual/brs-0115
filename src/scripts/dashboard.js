@@ -12,7 +12,7 @@ var advancedOptions = $('.lv-advanced-options');
 // Content Expander
 //-----------------------------------------------------------------
 
-$('.lv-dashboard-grid .lv-content-block').each(function(){
+$('.lv-content-block').each(function(){
 
     var $this = $(this);
     var minimizer = $('.minimize-btn', $this);

@@ -2,12 +2,19 @@
 /*
     DASHBOARD.CSS
 
-    - Last updated: 20.09.14
+    - Last updated: 02.03.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Common Actions
+//-----------------------------------------------------------------
+
+
+
 //-----------------------------------------------------------------
 // Dasboard
 //-----------------------------------------------------------------
@@ -59,10 +66,17 @@
     width: 100%;
     padding: rem-calc(15 5);
     margin-bottom: rem-calc(20);
-    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.08);
+
+    // border-top: 3px solid #BEE2FF;
 
     .lv-content-block-inner {
         padding: rem-calc(20);
+    }
+
+    p {
+        line-height: 2;
+        color: #999;
     }
 
     &.is-collapsed {
@@ -115,8 +129,8 @@
         }
 
         &:hover span {
-            background: $primary-color;
-            border-color: $primary-color !important;
+            background: $tertiary-color;
+            border-color: $tertiary-color !important;
         }
     }
 }
@@ -133,6 +147,6 @@
     color: $blue-color;
 
     &:hover {
-        color: $primary-color;
+        color: $tertiary-color;
     }
 }

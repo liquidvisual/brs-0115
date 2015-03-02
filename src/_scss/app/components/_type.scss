@@ -22,3 +22,10 @@ h6 {
     color: #777;
     text-transform: uppercase;
 }
+
+.lv-main h6 {
+	@media #{$medium-up} {
+	    font-size: rem-calc(14);
+	    margin-bottom: rem-calc(30);
+	}
+}
