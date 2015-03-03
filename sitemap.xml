@@ -1,128 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/KPI.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/kpi/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/adverts.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/adverts/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/applications.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/applicant-search/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/attachments.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/applications/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/client-vacancies.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/attachments/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/contact-history.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/client-vacancies/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/vacancy-item/contact-history/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/dashboard/</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/new-vacancy/vacancy-action/details/</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/details/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/guide/</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/log.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>/new-vacancy/copy/</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/log/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/new-vacancy/</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/notes.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/notes/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/permissions.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/permissions/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/questionnaries.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/questionnaires/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/questions.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/questions/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/requisition.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/recruitment-requests/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/selection-report.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/requisition/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/sessions.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/selection-report/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/pages/standard/vacancies/vacancy-action/summary.html</loc>
-    <lastmod>2015-03-03T02:41:35+11:00</lastmod>
+    <loc>/vacancy-item/sessions/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/sitemap/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/vacancy-item/summary/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/vacancy-item/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/vacancy-search/</loc>
+    <lastmod>2015-03-03T19:28:35+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
