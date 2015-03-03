@@ -54,7 +54,28 @@
 }
 
 //-----------------------------------------------------------------
-// Buttons
+// Context Menu Back Button (emulate h6 style)
+//-----------------------------------------------------------------
+
+.lv-context-menu .lv-back-button {
+    margin: rem-calc(15);
+    padding: rem-calc(15);
+    border: 2px solid $tertiary-color;
+    font-size: $h6-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $tertiary-color;
+    border-radius: $global-radius;
+    cursor: pointer;
+
+    i {
+        line-height: 1;
+        font-size: rem-calc(14);
+    }
+}
+
+//-----------------------------------------------------------------
+//
 //-----------------------------------------------------------------
 
 // .search-button i {
