@@ -2,13 +2,13 @@
 
 # General
 seo_title: ""
-title: ""
+title: "Big Red Sky"
 company: "Thomson Reuters"
 description: ""
 
 # Contact Info
-email: test@example.com
-phone: 1800 020 548
+email: helpdesk@bigredsky.com
+phone: 1300 733 056
 fax: (05) 555 555
 address: "ABC Street, Earth"
 
@@ -16,16 +16,13 @@ address: "ABC Street, Earth"
 facebook: ""
 
 # Links
-thomson_reuters_au: "http://www.thomsonreuters.com.au"
-help: "http://training.thomsonreuters.com.au/products/checkpoint/"
+feedback: "https://www.nicereply.com/thomson-reuters-anz.bigredsky/bigredsky"
+help: "http://www.bigredsky.com/index.php?page=training"
 privacy_policy: "http://www.thomsonreuters.com.au/terms/privacy-policy.aspx"
 terms_of_use: "http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx"
 
 # Site Links
-checkpoint_world: "https://www.checkpointworld.com"
-proview: "http://thomsonreuters.com/site/proview/"
-westlaw_au: "http://www.westlaw.com.au"
-westlaw_nz: "http://www.westlaw.co.nz"
+thomson_reuters_au: "http://www.thomsonreuters.com.au"
 
 # Google Analytics
 google_analytics: "UA-XXXXXXXX-X"
