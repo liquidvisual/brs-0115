@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/adverts
+layout: app/standard/vacancies/vacancy_item/adverts
 title: "Adverts"
 permalink: /vacancy-item/adverts/
 ---

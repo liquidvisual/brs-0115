@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/requisition
+layout: app/standard/vacancies/vacancy_item/requisition
 title: "Requisition"
 permalink: /vacancy-item/requisition/
 ---

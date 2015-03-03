@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/summary
+layout: app/standard/vacancies/vacancy_item/summary
 title: "Summary"
 permalink: /vacancy-item/summary/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: standard/applicants/applicant_search
+layout: app/standard/applicants/applicant_search
 title: Applicant Search
 permalink: /applicant-search/
 ---

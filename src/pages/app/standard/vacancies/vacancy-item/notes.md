@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/notes
+layout: app/standard/vacancies/vacancy_item/notes
 title: "Notes"
 permalink: /vacancy-item/notes/
 ---

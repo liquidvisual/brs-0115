@@ -1,5 +1,5 @@
 ---
-layout: standard/dashboard/dashboard
+layout: app/standard/dashboard/dashboard
 title: Dashboard
 permalink: /dashboard/
 ---

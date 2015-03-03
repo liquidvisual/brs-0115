@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/kpi
+layout: app/standard/vacancies/vacancy_item/kpi
 title: "KPI"
 permalink: /vacancy-item/kpi/
 ---

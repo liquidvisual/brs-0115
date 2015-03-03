@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/log
+layout: app/standard/vacancies/vacancy_item/log
 title: "Log"
 permalink: /vacancy-item/log/
 ---

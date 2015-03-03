@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/attachments
+layout: app/standard/vacancies/vacancy_item/attachments
 title: "Attachments"
 permalink: /vacancy-item/attachments/
 ---

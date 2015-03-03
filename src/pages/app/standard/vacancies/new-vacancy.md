@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/new_vacancy
+layout: app/standard/vacancies/new_vacancy
 title: New Vacancy
 permalink: /new-vacancy/
 ---

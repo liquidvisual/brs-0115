@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/permissions
+layout: app/standard/vacancies/vacancy_item/permissions
 title: "Permissions"
 permalink: /vacancy-item/permissions/
 ---

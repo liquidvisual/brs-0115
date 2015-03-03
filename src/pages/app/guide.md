@@ -1,5 +1,5 @@
 ---
-layout: internal
+layout: app/internal
 title: Guide
 permalink: /guide/
 ---

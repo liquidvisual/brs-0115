@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/sessions
+layout: app/standard/vacancies/vacancy_item/sessions
 title: "Sessions"
 permalink: /vacancy-item/sessions/
 ---

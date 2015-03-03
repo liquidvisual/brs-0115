@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/questions
+layout: app/standard/vacancies/vacancy_item/questions
 title: "Questions"
 permalink: /vacancy-item/questions/
 ---

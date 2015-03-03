@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/client_vacancies
+layout: app/standard/vacancies/vacancy_item/client_vacancies
 title: "Client Vacancies"
 permalink: /vacancy-item/client-vacancies/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item/details
+layout: app/standard/vacancies/vacancy_item/details
 title: "1 Data Quality Analyst - Red Energy, BankMECU"
 permalink: /vacancy-item/details/
 ---

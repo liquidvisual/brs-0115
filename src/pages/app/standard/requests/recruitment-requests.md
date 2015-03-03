@@ -1,5 +1,5 @@
 ---
-layout: standard/requests/recruitment_requests
+layout: app/standard/requests/recruitment_requests
 title: Recruitment Requests
 permalink: /recruitment-requests/
 ---

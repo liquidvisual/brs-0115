@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_search
+layout: app/standard/vacancies/vacancy_search
 title: Vacancy Search
 permalink: /vacancy-search/
 ---

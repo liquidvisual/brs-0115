@@ -1,5 +1,5 @@
 ---
-layout: standard/vacancies/vacancy_item
+layout: app/standard/vacancies/vacancy_item
 title: Copy Data Quality Analyst - Red Energy
 permalink: /vacancy-item/
 ---
