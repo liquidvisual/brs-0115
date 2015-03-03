@@ -25,10 +25,10 @@
     </title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
-    <link rel='shortcut icon' type='image/x-icon' href='{{ "/favicon.ico" | prepend: site.assets }}'>
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png" | prepend: site.assets }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "/img/template/favicon.ico" | prepend: site.assets }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/img/template/apple-touch-icon-144x144.png" | prepend: site.assets }}">
 
-    <!-- CDN -->
+    <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
@@ -43,7 +43,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
 </head>
-<body class="devX">
+<body>
     <div class="lv-super">
         <div class="lv-page">
 
@@ -55,23 +55,19 @@
     <!-- ***** JAVASCRIPT ***** -->
 
     <!-- build:js(src) /assets/scripts/minified.js -->
-    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
-    <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="/_bower_components/jquery.transit/jquery.transit.js"></script>
-    <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <script src="/_bower_components/nprogress/nprogress.js"></script>
-
     <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="/_bower_components/foundation/js/foundation/foundation.reveal.js"></script>
     <script src="/_bower_components/foundation/js/foundation/foundation.abide.js"></script>
-
+    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/_bower_components/jquery.transit/jquery.transit.js"></script>
+    <script src="/_bower_components/nprogress/nprogress.js"></script>
+    <script src="/scripts/adhoc-datepicker.js"></script>
     <script src="/scripts/accordion.js"></script>
-    <script src="/scripts/expander.js"></script>
-    <script src="/scripts/content-expander.js"></script>
     <script src="/scripts/context-menu.js"></script>
     <script src="/scripts/dashboard.js"></script>
+    <script src="/scripts/expander.js"></script>
     <script src="/scripts/modal.js"></script>
     <script src="/scripts/sidebar.js"></script>
     <script src="/scripts/tooltips.js"></script>
@@ -113,9 +109,7 @@
     -->
     {% endcomment %}
 
-    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
-    <!-- // <script src="/scripts/adhoc-datepicker.js"></script> -->
-    <!-- Analytics Scripts Go Below Here -->
+    <!-- PLACE ALL OTHER SCRIPTS HERE INCL. ANALYTICS -->
 
     <!-- No Javascript Warning -->
     <noscript>

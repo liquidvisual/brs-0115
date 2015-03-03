@@ -7,7 +7,7 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
-
+/*
 // jQuery UI on SELECT elements
 $(".ui-datepicker").datepicker({ dateFormat: "dd-mm-yy" });
 
@@ -44,3 +44,5 @@ $("#datepicker").datepicker({ changeMonth: true, changeYear: true, dateFormat: "
           }
         }, 0);
 }});
+
+*/
