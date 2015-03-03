@@ -3,29 +3,29 @@
 <section class="lv-context-menu-user-group">
     <h6 class="lv-expander js-expander">Basic</h6>
     <ul class="lv-expander-content">
-        <li><a href="#"><i class="fi-page-export"></i> Details</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Summary</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Attachments</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Client Vacancies</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Notes</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Sessions</a></li>
+        <li class="{% include snippets/is_active.html current_path="details" %}"><a href="/vacancy-item/"><i class="fi-page-export"></i> Details</a></li>
+        <li class="{% include snippets/is_active.html current_path="summary" %}"><a href="/vacancy-item/summary/"><i class="fi-page-export"></i> Summary</a></li>
+        <li class="{% include snippets/is_active.html current_path="attachments" %}"><a href="/vacancy-item/attachments/"><i class="fi-page-export"></i> Attachments</a></li>
+        <li class="{% include snippets/is_active.html current_path="client-vacancies" %}"><a href="/vacancy-item/client-vacancies/"><i class="fi-page-export"></i> Client Vacancies</a></li>
+        <li class="{% include snippets/is_active.html current_path="notes" %}"><a href="/vacancy-item/notes/"><i class="fi-page-export"></i> Notes</a></li>
+        <li class="{% include snippets/is_active.html current_path="sessions" %}"><a href="/vacancy-item/sessions/"><i class="fi-page-export"></i> Sessions</a></li>
     </ul>
 </section>
 
 <section class="lv-context-menu-user-group">
-    <h6 class="lv-expander lv-expander-hidden js-expander">Advanced</h6>
+    <h6 class="lv-expander lv-expander-hiddenX js-expander">Advanced</h6>
     <ul class="lv-expander-content">
         <!-- Alphabetical -->
-        <li><a href="#"><i class="fi-page-export"></i> Adverts</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Applications</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Contact History</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> KPI</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Log</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Permissions</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Questions</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Questionnaires</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Requisition</a></li>
-        <li><a href="#"><i class="fi-page-export"></i> Selection Report</a></li>
+        <li class="{% include snippets/is_active.html current_path="adverts" %}"><a href="/vacancy-item/adverts/"><i class="fi-page-export"></i> Adverts</a></li>
+        <li class="{% include snippets/is_active.html current_path="applications" %}"><a href="/vacancy-item/applications/"><i class="fi-page-export"></i> Applications</a></li>
+        <li class="{% include snippets/is_active.html current_path="contact-history" %}"><a href="/vacancy-item/contact-history/"><i class="fi-page-export"></i> Contact History</a></li>
+        <li class="{% include snippets/is_active.html current_path="kpi" %}"><a href="/vacancy-item/kpi/"><i class="fi-page-export"></i> KPI</a></li>
+        <li class="{% include snippets/is_active.html current_path="log" %}"><a href="/vacancy-item/log/"><i class="fi-page-export"></i> Log</a></li>
+        <li class="{% include snippets/is_active.html current_path="permissions" %}"><a href="/vacancy-item/permissions/"><i class="fi-page-export"></i> Permissions</a></li>
+        <li class="{% include snippets/is_active.html current_path="questions" %}"><a href="/vacancy-item/questions/"><i class="fi-page-export"></i> Questions</a></li>
+        <li class="{% include snippets/is_active.html current_path="questionnaires" %}"><a href="/vacancy-item/questionnaires/"><i class="fi-page-export"></i> Questionnaires</a></li>
+        <li class="{% include snippets/is_active.html current_path="requisition" %}"><a href="/vacancy-item/requisition/"><i class="fi-page-export"></i> Requisition</a></li>
+        <li class="{% include snippets/is_active.html current_path="selection-report" %}"><a href="/vacancy-item/selection-report/"><i class="fi-page-export"></i> Selection Report</a></li>
     </ul>
 </section>
 

@@ -19,20 +19,20 @@
 			<section class="lv-context-menu-user-group">
 			    <h6 class="lv-expander js-expander">Standard User</h6>
 			    <ul class="lv-expander-content">
-			        <li class="active">
-			            <a href="#"><i class="fi-layout"></i> Dashboard</a>
+			        <li class="{% if page.url == "/dashboard/" %}active{% endif %}">
+			            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
 			        </li>
-			        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
-			            <a href="#"><i class="fi-torsos-male-female"></i> Applicant Search</a>
+			        <li class="{% if page.url == "/applicant-search/" %}active{% endif %}">
+			            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
 			        </li>
-			        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
-			            <a href="#"><i class="fi-page-search"></i> Vacancy Search</a>
+			        <li class="{% if page.url == "/vacancy-search/" %}active{% endif %}">
+			            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
 			        </li>
-			        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
-			            <a href="#"><i class="fi-page-edit"></i> New Vacancy</a>
+			        <li class="{% if page.url == "/new-vacancy/" %}active{% endif %}">
+			            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
 			        </li>
-			        <li class="{% if page.url == "/CHANGE-THIS/" %}active{% endif %}">
-			            <a href="#"><i class="fi-graph-trend"></i> Recruitment Requests</a>
+			        <li class="{% if page.url == "/recruitment-requests/" %}active{% endif %}">
+			            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
 			        </li>
 			    </ul>
 			</section>
