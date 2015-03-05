@@ -3,4 +3,163 @@ layout: app/internal
 context_menu: "app/menus/cm_vacancy.html"
 ---
 
-{{ content }}
+<link rel="stylesheet" href="/_bower_components/footable/css/footable.core.css">
+<!-- <link rel="stylesheet" href="/_bower_components/footable/css/footable.metro.css"> -->
+<script src="/_bower_components/footable/js/footable.js"></script>
+<script src="/_bower_components/footable/js/footable.paginate.js"></script>
+<script src="/_bower_components/footable/js/footable.sort.js"></script>
+<script src="/_bower_components/footable/js/footable.filter.js"></script>
+
+<script type="text/javascript">
+$(function () {
+    $('.footable').footable({
+    	breakpoints: {
+	        phone: 480,
+	        tablet: 963,
+	        default: 1000
+	    }
+    }).find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
+});
+</script>
+
+<!-- { { content }} -->
+
+<!-- Header -->
+<div class="row">
+	<div class="medium-6 columns">
+		<h3>1 Data Quality Analyst - Red Energy, BankMECU</h3>
+	</div>
+	<div class="medium-6 columns text-center medium-text-right">
+		<a href="#" class="button"><i class="fi-plus"></i>&nbsp; Add Applicant</a>
+	</div>
+</div>
+
+<br>
+
+<!-- Tools -->
+<div class="row">
+	<div class="medium-4 columns">
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="search-filter" class="right inline">Search</label>
+			</div>
+			<div class="small-9 columns">
+				<input type="text" id="search-filter" placeholder="">
+			</div>
+		</div>
+	</div>
+	<div class="medium-8 columns text-right">
+
+		<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Update All"><i class="fi-refresh"></i></a>
+
+		<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Print"><i class="fi-print"></i></a>
+
+		<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Delete"><i class="fi-trash"></i></a>
+
+		<a href="#" class="button small" data-dropdown="action-menu">Actions &nbsp;<i class="fi-annotate"></i></a>
+
+		<!-- Tools menu extended -->
+		<div id="action-menu" data-dropdown-content class="f-dropdown content medium" aria-hidden="true" tabindex="-1">
+			<div>
+			<table>
+			  <tr>
+			    <td><a href="#">Merge</a></td>
+			    <td><a href="#">Bulk Update</a></td>
+			    <td><a href="#">Contact</a></td>
+			  </tr>
+			  <tr>
+			    <td><a href="#"></a></td>
+			    <td><a href="#"></a></td>
+			    <td><a href="#"></a></td>
+			  </tr>
+			</table>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Footable Table -->
+<table class="footable lv-unselectable" data-filter="#search-filter" data-page-size="10">
+	<thead>
+		<tr>
+			<th data-hide="phone, tablet" data-type="numeric">ID</th>
+			<th data-hide="phone, tablet">Flags</th>
+			<th>Applicant</th>
+			<th data-hide="phone, tablet" data-type="numeric">Date</th>
+			<th data-hide="phone, tablet">Rank</th>
+			<th data-hide="phone, tablet">Short List</th>
+			<th data-hide="phone, tablet">Status</th>
+			<th data-hide="phone, tablet">Attachments</th>
+			<th data-hide="all">Attachments</th>
+			<th data-hide="all">Notes</th>
+			<th data-hide="all">Log</th>
+			<th data-hide="all">Answers</th>
+			<th data-sort-ignore="true"></th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for i in (1..100) %}
+		<tr>
+			<td data-title="ID">5692097{{forloop.index}}</td>
+			<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
+			<td data-title="Applicant"><a href="#">{{forloop.index}}. Engelbert Humperdink</a></td>
+			<td data-title="Date">03/03/2015</td>
+			<td data-title="Rank">-</td>
+			<td data-title="Short List">
+				<select name="SaveInfo[0][YesMaybeNo1]">
+					<option selected> - </option>
+					<option>No</option>
+					<option>Maybe</option>
+					<option>Yes</option>
+				</select>
+			</td>
+			<td data-title="Status">
+				<select name="SaveInfo[0][Status1]">
+					<option value=""> -- Select from List -- </option>
+					<option value="22" selected="">Applied</option>
+					<option value="19184">Available</option>
+					<option value="32489">Induction Month 1</option>
+					<option value="32490">Induction Month 2</option>
+					<option value="32491">Induction Month 3</option>
+					<option value="669">Interview 1 Conducted</option>
+					<option value="684">Interview 1 Scheduled</option>
+					<option value="739">Interview 2 Conducted</option>
+					<option value="19208">Interview 2 Scheduled</option>
+					<option value="32488">Invited for Interview</option>
+					<option value="25">Not Successful</option>
+					<option value="741">Referee check in progress</option>
+					<option value="1397">Swept</option>
+					<option value="31501">Tools and Equipment Ordered</option>
+					<option value="31500">Training and Medicals Organised</option>
+					<option value="33278">Transferred to CRIS 21</option>
+					<option value="31499">Transferred to PayGlobal</option>
+					<option value="680">Unable to Contact</option>
+					<option value="27176">Unavailable</option>
+					<option value="26">Withdrawn</option>
+				</select>
+			</td>
+			<td data-title="Attachments" class="text-center"><i class="fi-paperclip"></i></td>
+			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a></td>
+			<td data-title="Notes">[select]</td>
+			<td data-title="Log">[select]</td>
+			<td data-title="Answers"><a href="#">Application</a> <a href="#">Admin</a></td>
+			<td data-title="All"><input type="checkbox"></td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+<!-- CLIENT PAGINATION -->
+<ul class="pagination pagination-centered hide-if-no-paging"></ul>
+
+
+
+<!-- Buttons -->
+<p><a class="button small" href="#">Save All</a> <a class="button small" href="#">Download Report</a></p>
+
+
+
+
+
+<!-- <div id="no-more-tablesX"></div> -->

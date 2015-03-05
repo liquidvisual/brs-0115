@@ -37,7 +37,7 @@ $(window).load(function() {
 // Refactor into legacy?
 //-----------------------------------------------------------------
 
-$('.lv-content table').wrap('<div class="lv-table-scroller"></div>');
+// $('.lv-content table').wrap('<div class="lv-table-responsive"></div>');
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

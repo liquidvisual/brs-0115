@@ -18,6 +18,22 @@
     // border-color: $tertiary-color !important;
     // color: $tertiary-color !important;
     font-weight: 600;
+    border-radius: $button-radius;
+    background: $tertiary-color; //#5686B9; //refactor
+
+    &.small {
+        min-width: 0;
+        // background: #5686B9; // good blue
+    }
+}
+
+.lv-main .button {
+    background: #5686B9;
+}
+
+//refactor
+.lv-login .button {
+    background: $tertiary-color;
 }
 
 .button-greyed {
@@ -32,18 +48,34 @@
 // Feature Button (Seen on Dashboard)
 //-----------------------------------------------------------------
 
+.lv-main {
+    // background: #E8E8E8;
+}
+
 .lv-feature-button {
-    display: block;
+    display: inline-block;
+    padding: rem-calc(10);
     border: 1px solid #ddd;
-    text-align: center;
-    padding: rem-calc(40);
     border-radius: $global-radius*2;
-    background: #EEEFF3;
+    background: #EEEFF3;// #EEEFF3;
+    width: 100%;
+
+    @media #{$medium-up} {
+        display: block;
+        padding: rem-calc(30);
+        text-align: center;
+    }
 
     i {
-        display: block;
-        font-size: rem-calc(50);
+        display: inline-block;
+        font-size: rem-calc(30);
+        padding: rem-calc(0 15);
         color: $tertiary-color;
+
+        @media #{$medium-up} {
+            display: block;
+            font-size: rem-calc(50);
+        }
     }
 
     .text {
@@ -60,11 +92,12 @@
 .lv-context-menu .lv-back-button {
     margin: rem-calc(15);
     padding: rem-calc(15);
-    border: 2px solid $tertiary-color;
+    border: 2px solid #42434C; //$quaternary-color;
+    // background: #42434C;
     font-size: $h6-font-size;
     font-weight: 700;
     text-transform: uppercase;
-    color: $tertiary-color;
+    color: $quaternary-color;
     border-radius: $global-radius;
     cursor: pointer;
 

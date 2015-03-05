@@ -118,7 +118,8 @@ $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial
 // We use these as default colors throughout
 $primary-color: #D92D4B; //#FF8000;
 $secondary-color: #2A2B31; //#666666; //#e7e7e7;
-$tertiary-color: #7BB1AF; //#61B5B3; //#89CAC9;
+$tertiary-color: #5686B9;
+$quaternary-color: #7BB1AF;
 $alert-color: #F0403E; //#DB3A48; //#f04124;
 $success-color: $tertiary-color;
 $warning-color: #f08a24;
@@ -484,7 +485,7 @@ $button-function-factor: -20%;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-$button-bg-color: $tertiary-color; //$primary-color;
+$button-bg-color: $primary-color; //$tertiary-color; //$primary-color;
 $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -661,7 +662,7 @@ $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-fac
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-$input-font-size: rem-calc(16);
+// $input-font-size: rem-calc(16);
 $input-bg-color: #EEEFF3; //#E0E4E9; //#D1D7DE; //$white;
 $input-focus-bg-color: darken($input-bg-color, 5%);//scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);

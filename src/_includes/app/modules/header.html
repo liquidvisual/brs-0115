@@ -6,3 +6,19 @@
     <a id="context-menu-btn" href="#"><i class="fi-list"></i></a>
     <a id="account-btn" href="/modal_output/account.html" data-reveal-id="modal-account" data-reveal-ajax="true"><i class="fi-torso"></i></a>
 <!-- { % endif %} -->
+
+{% comment %}
+
+{% assign url_paths = page.url | split: '/' %}
+
+{% for path in url_paths %}
+    {% if path == "vacancy-item" %}
+		<a id="context-menu-btn" href="#"><i class="fi-list"></i></a>
+		<a id="account-btn" href="/modal_output/account.html" data-reveal-id="modal-account" data-reveal-ajax="true"><i class="fi-torso"></i></a>
+	{% else %}
+		<a id="context-menu-btn" href="#"><i class="fi-list"></i></a>
+		<a class="button small" id="account-btn" href="/modal_output/account.html" data-reveal-id="modal-account" data-reveal-ajax="true"><i class="fi-pencil"></i></a>
+    {% endif %}
+{% endfor %}
+
+{% endcomment %}
