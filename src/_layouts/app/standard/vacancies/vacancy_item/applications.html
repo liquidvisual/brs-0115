@@ -58,21 +58,17 @@ $(function () {
 
 			<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Delete"><i class="fi-trash"></i></a>
 
-			<a href="#" class="button small" data-dropdown="action-menu">Actions &nbsp;<i class="fi-annotate"></i></a>
-
-			<!-- Tools menu extended -->
-			<div id="action-menu" data-dropdown-content class="f-dropdown medium" aria-hidden="true" tabindex="-1">
-			  <ul>
-			    <li><a href="#">Merge</a></li>
-			    <li><a href="#">Contact</a></li>
-			    <li><a href="#">Forward</a></li>
-			    <li><a href="#">Talegent</a></li>
-			    <li><a href="#">Transfer to Payroll</a></li>
-			    <li><a href="#">Nominate Applicant</a></li>
-			    <li><a href="#">Test</a></li>
-			    <li><a href="">Invite</a></li>
-			  </ul>
-			</div>
+			<a data-dropdown="drop1" class="button small ">Bulk Actions <i class="fa fa-caret-down"></i></a>
+			<ul id="drop1" class="f-dropdown small text-left" data-dropdown-content>
+				<li><a href="#">Merge</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Forward</a></li>
+				<li><a href="#">Talegent</a></li>
+				<li><a href="#">Transfer to Payroll</a></li>
+				<li><a href="#">Nominate Applicant</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="">Invite</a></li>
+			</ul>
 		</div>
 	</div>
 </section>
@@ -81,8 +77,7 @@ $(function () {
 <table class="footable lv-unselectable" data-filter="#search-filter" data-page-size="10">
 	<thead>
 		<tr>
-			<th data-hide="phone, tablet" data-type="numeric">ID</th>
-			<th data-hide="phone, tablet">Flags</th>
+			<th data-hide="all" data-type="numeric">ID</th>
 			<th>Applicant</th>
 			<th data-hide="phone, tablet" data-type="numeric">Date</th>
 			<th data-hide="phone, tablet">Rank</th>
@@ -90,6 +85,7 @@ $(function () {
 			<th data-hide="phone, tablet">Status</th>
 			<th data-hide="phone, tablet">Attachments</th>
 			<th data-hide="all">Attachments</th>
+			<th data-hide="phone, tablet">Flags</th>
 			<th data-hide="all">Notes</th>
 			<th data-hide="all">Log</th>
 			<th data-hide="all">Answers</th>
@@ -100,7 +96,7 @@ $(function () {
 	{% for i in (1..100) %}
 		<tr>
 			<td data-title="ID">5692097{{forloop.index}}</td>
-			<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
+
 			<td data-title="Applicant"><a href="#">{{forloop.index}}. Engelbert Humperdink</a></td>
 			<td data-title="Date">03/03/2015</td>
 			<td data-title="Rank">-</td>
@@ -138,7 +134,8 @@ $(function () {
 				</select>
 			</td>
 			<td data-title="Attachments" class="text-center"><i class="fi-paperclip"></i></td>
-			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a></td>
+			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a> <a href="#" class="pill button tiny">Add Attachment</a></td>
+			<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
 			<td data-title="Notes">[select]</td>
 			<td data-title="Log">[select]</td>
 			<td data-title="Answers"><a href="#">Application</a> <a href="#">Admin</a></td>
@@ -148,8 +145,7 @@ $(function () {
 	</tbody>
 </table>
 
-<!-- CLIENT PAGINATION -->
-
+<!-- CLIENT SIDE PAGINATION -->
 <ul class="right pagination pagination-centered hide-if-no-paging"></ul>
 
 
