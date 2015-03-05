@@ -56,27 +56,40 @@ td select {
 }
 
 //-----------------------------------------------------------------
+// Table Tools
+//-----------------------------------------------------------------
+
+.lv-table-tools {
+
+    input[type=text] {
+        background: white;
+        border: 1px solid #ddd;
+    }
+
+    .button {
+        background: lighten(#5B5D68, 30%);
+        // color: darken(#5B5D68, 5%);
+    }
+}
+
+//-----------------------------------------------------------------
 // Table Theme
 //-----------------------------------------------------------------
 
 table {
-    position: relative;
+    // position: relative;
     border: 1px solid #ddd;//$tertiary-color;
     background: white;
 }
 
 .footable {
-    padding: rem-calc(10 10 10 10);
+    padding: rem-calc(0 15 15 15);
+    border-top: 40px solid #5A5C67;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.08);
 
     thead th {
         position: relative;
-        top: -10px;
-        left: -10px;
-        // width: 100%;
-    }
-
-    tbody {
-        padding: 30px;
+        top: -38px;
     }
 
     td, th {
