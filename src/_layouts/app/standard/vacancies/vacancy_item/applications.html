@@ -4,22 +4,6 @@ context_menu: "app/menus/cm_vacancy.html"
 ---
 
 <link rel="stylesheet" href="/_bower_components/footable/css/footable.core.css">
-<!-- <link rel="stylesheet" href="/_bower_components/footable/css/footable.metro.css"> -->
-<script src="/_bower_components/footable/js/footable.js"></script>
-<script src="/_bower_components/footable/js/footable.paginate.js"></script>
-<script src="/_bower_components/footable/js/footable.sort.js"></script>
-<script src="/_bower_components/footable/js/footable.filter.js"></script>
-
-<script type="text/javascript">
-$(function () {
-    $('.footable').footable({
-    	breakpoints: {
-	        phone: 480,
-	        tablet: 963-30 //-30
-	    }
-    })//.find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
-});
-</script>
 
 <!-- { { content }} -->
 
@@ -40,7 +24,7 @@ $(function () {
 <!-- Tools -->
 <section class="lv-table-tools">
 	<div class="row">
-		<div class="medium-4 columns">
+		<div class="medium-5 large-4 columns">
 			<div class="row">
 				<div class="small-3 columns">
 					<label for="search-filter" class="right inline">Search</label>
@@ -50,7 +34,7 @@ $(function () {
 				</div>
 			</div>
 		</div>
-		<div class="medium-8 columns text-right">
+		<div class="medium-7 large-8 columns text-right">
 
 			<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Update All"><i class="fi-refresh"></i></a>
 
@@ -74,7 +58,7 @@ $(function () {
 </section>
 
 <!-- Footable Table -->
-<table class="footable lv-unselectable" data-filter="#search-filter" data-page-size="10">
+<table class="footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10">
 	<thead>
 		<tr>
 			<th data-hide="all" data-type="numeric">ID</th>
@@ -153,8 +137,19 @@ $(function () {
 <!-- Buttons -->
 <p><a class="button small" href="#">Save All</a> <a class="button small" href="#">Download Report</a></p>
 
+<script src="/_bower_components/footable/js/footable.js"></script>
+<script src="/_bower_components/footable/js/footable.paginate.js"></script>
+<script src="/_bower_components/footable/js/footable.sort.js"></script>
+<script src="/_bower_components/footable/js/footable.filter.js"></script>
 
-
-
-
-<!-- <div id="no-more-tablesX"></div> -->
+<script type="text/javascript">
+$(function () {
+    $('.footable').footable({
+    	breakpoints: {
+	        phone: 480,
+	        tablet: 963-30 //-30
+	    }
+    })//.find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
+});
+$('.footable').removeClass('lv-loading');
+</script>

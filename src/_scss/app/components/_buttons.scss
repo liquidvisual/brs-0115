@@ -83,7 +83,8 @@
         display: inline-block;
         font-size: rem-calc(30);
         padding: rem-calc(0 15);
-        color: $tertiary-color;
+        // color: $tertiary-color;
+        color: #5A5C67;
 
         @media #{$medium-up} {
             display: block;

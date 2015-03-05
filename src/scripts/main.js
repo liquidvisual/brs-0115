@@ -39,6 +39,10 @@ $(window).load(function() {
 
 // $('.lv-content table').wrap('<div class="lv-table-responsive"></div>');
 
+$('.lv-content .Report').addClass('lv-table-theme');
+
+$('.lv-content #questions').parent().addClass('legacy-form');
+
 //-----------------------------------------------------------------
 // <= IE8 Caution Message
 //-----------------------------------------------------------------

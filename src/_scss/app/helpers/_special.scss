@@ -8,7 +8,21 @@
 // Variables
 //-----------------------------------------------------------------
 
+.lv-loading {
+    // display: none;
+    visibility: hidden;
+}
 
+.legacy-form {
+    background: white;
+    padding: rem-calc(15);
+    margin: rem-calc(20 0);
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+}
 
 
 .has-tip:hover {
