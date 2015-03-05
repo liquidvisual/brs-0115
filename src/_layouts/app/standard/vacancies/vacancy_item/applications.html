@@ -3,22 +3,18 @@ layout: app/internal
 context_menu: "app/menus/cm_vacancy.html"
 ---
 
-<link rel="stylesheet" href="/_bower_components/footable/css/footable.core.css">
-
-<!-- { { content }} -->
-
 <!-- Header -->
 <div class="row">
 	<div class="medium-6 columns">
 		<h3>1 Data Quality Analyst - Red Energy, BankMECU</h3>
 	</div>
 	<div class="medium-6 columns text-center medium-text-right">
-		<a href="#" class="button"><i class="fi-plus"></i>&nbsp; Add Applicant</a>
+		<a href="/modal_output/add_applicant.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="button"><i class="fi-plus"></i>&nbsp; Add Applicant</a>
+		<!-- <a id="account-btn" href="/modal_output/account.html" data-reveal-id="modal-account" data-reveal-ajax="true"><i class="fi-torso"></i></a> -->
 	</div>
 </div>
 
 <hr>
-
 <br>
 
 <!-- Tools -->
@@ -118,7 +114,7 @@ context_menu: "app/menus/cm_vacancy.html"
 				</select>
 			</td>
 			<td data-title="Attachments" class="text-center"><i class="fi-paperclip"></i></td>
-			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a> <a href="#" class="pill button tiny">Add Attachment</a></td>
+			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a> <a href="/modal_output/notes.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="pill button tiny">Add Attachment</a></td>
 			<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
 			<td data-title="Notes">[select]</td>
 			<td data-title="Log">[select]</td>
@@ -132,24 +128,8 @@ context_menu: "app/menus/cm_vacancy.html"
 <!-- CLIENT SIDE PAGINATION -->
 <ul class="right pagination pagination-centered hide-if-no-paging"></ul>
 
-
-
 <!-- Buttons -->
-<p><a class="button small" href="#">Save All</a> <a class="button small" href="#">Download Report</a></p>
-
-<script src="/_bower_components/footable/js/footable.js"></script>
-<script src="/_bower_components/footable/js/footable.paginate.js"></script>
-<script src="/_bower_components/footable/js/footable.sort.js"></script>
-<script src="/_bower_components/footable/js/footable.filter.js"></script>
-
-<script type="text/javascript">
-$(function () {
-    $('.footable').footable({
-    	breakpoints: {
-	        phone: 480,
-	        tablet: 963-30 //-30
-	    }
-    })//.find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
-});
-$('.footable').removeClass('lv-loading');
-</script>
+<p>
+	<a class="button small" href="#">Save All</a>
+	<a class="button small" href="#">Download Report</a>
+</p>

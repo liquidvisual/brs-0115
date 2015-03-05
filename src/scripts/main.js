@@ -33,13 +33,22 @@ $(window).load(function() {
 
 // var top = $('.sticky-scroll-box').offset().top;
 
+$(function () {
+    $('.footable').footable({
+        breakpoints: {
+            phone: 480,
+            tablet: 963-30 //-30
+        }
+    }).removeClass('lv-loading');//.find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
+});
+
 //-----------------------------------------------------------------
 // Refactor into legacy?
 //-----------------------------------------------------------------
 
 // $('.lv-content table').wrap('<div class="lv-table-responsive"></div>');
 
-$('.lv-content .Report').addClass('lv-table-theme');
+$('.lv-content .Report, .lv-content .Form').addClass('lv-table-theme');
 
 $('.lv-content #questions').parent().addClass('legacy-form');
 

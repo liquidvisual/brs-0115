@@ -1,7 +1,7 @@
 /*
     SPECIAL.CSS
 
-    - Last updated: 25.11.14
+    - Last updated: 06.03.15
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,18 +12,6 @@
     // display: none;
     visibility: hidden;
 }
-
-.legacy-form {
-    background: white;
-    padding: rem-calc(15);
-    margin: rem-calc(20 0);
-
-    ul {
-        list-style: none;
-        margin-left: 0;
-    }
-}
-
 
 .has-tip:hover {
     border: 0; // stupid foundation
@@ -66,24 +54,6 @@ ul.lv-quicklinks {
     li {
         margin-bottom: rem-calc(10);
     }
-}
-
-//-----------------------------------------------------------------
-// Table experiment
-//-----------------------------------------------------------------
-
-.lv-scrollerX {
-    // max-width: 320px;
-    // overflow-x: scroll;
-
-    @media #{$medium-up} {
-        // max-width: 1024px;
-    }
-}
-
-.lv-main-constrain {
-    // width: 1000px;
-    // display: none;
 }
 
 //-----------------------------------------------------------------
