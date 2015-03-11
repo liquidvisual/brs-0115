@@ -1,5 +1,9 @@
 /*
-    CONTEXT-MENU.JS - Last updated: 18-02-15
+    CONTEXT-MENU.JS - Last updated: 11-03-15
+
+    Usage:
+            1. launchContextMenu() - used by application frame
+            2. Soon ** - loadContextMenu('page.html') - run on pages where nested menus are needed
 */
 //-----------------------------------------------------------------
 // Variables
@@ -107,9 +111,12 @@ $('#home-btn').on('click', function(event){
 });
 
 //-----------------------------------------------------------------
-//
+// loadContextMenu - need to know more about BRS application
 //-----------------------------------------------------------------
 
+// function loadContextMenu(target) {
+
+// }
 
 
 

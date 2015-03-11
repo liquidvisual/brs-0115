@@ -56,8 +56,25 @@
 //=========================================
 
 .lv-context-menu-scroller {
-    width: $secondary-nav-width;
+    // position: relative;
+    // width: $secondary-nav-width;
+    // height: 100%;
+    // overflow: auto;
+    // -webkit-overflow-scrolling: touch;
+}
+
+//=========================================
+// Context Menu Panel - Layout
+//=========================================
+
+.lv-context-menu-panel {
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 100%;
+    padding-bottom: rem-calc(30);
+    background: $secondary-color;
+    // padding-top: rem-calc(200);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }

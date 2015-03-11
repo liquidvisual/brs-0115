@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------
 
 $mobile-header-height: 50px !default;
+$header-icon-color: white; //#929292 !default;
 
 //-----------------------------------------------------------------
 // Global Header (Appears in mobile / tablet views)
@@ -20,7 +21,7 @@ $mobile-header-height: 50px !default;
         top: 0;
         left: 0;
         width: 100%;
-        border-bottom: 1px solid #ddd;
+        // border-bottom: 1px solid #ddd;
         // background: rgba(white, .9);
         background: $tertiary-color;
         text-align: center;
@@ -53,7 +54,8 @@ $mobile-header-height: 50px !default;
         padding: rem-calc(0 20);
         line-height: $mobile-header-height;
         // color: $tertiary-color;
-        color: white;
+        // color: white;
+        color: $header-icon-color;
         font-size: rem-calc(14);
 
         @media #{$large-up} {
@@ -77,7 +79,8 @@ $mobile-header-height: 50px !default;
 #account-btn {
     left: auto;
     right: 0;
-    color: #ddd;
+    // color: #ddd;
+    color: $header-icon-color;
 }
 
 .lv-global-header a.button {
@@ -113,7 +116,7 @@ $mobile-header-height: 50px !default;
 
 .lv-header {
     @media #{$devices-only} {
-        border-bottom: 1px solid #ddd;
+        // border-bottom: 1px solid #ddd;
     }
 }
 

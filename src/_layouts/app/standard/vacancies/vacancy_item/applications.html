@@ -3,133 +3,158 @@ layout: app/internal
 context_menu: "app/menus/cm_vacancy.html"
 ---
 
-<!-- Header -->
-<div class="row">
-	<div class="medium-6 columns">
-		<h3>1 Data Quality Analyst - Red Energy, BankMECU</h3>
-	</div>
-	<div class="medium-6 columns text-center medium-text-right">
-		<a href="/modal_output/add_applicant.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="button"><i class="fi-plus"></i>&nbsp; Add Applicant</a>
-		<!-- <a id="account-btn" href="/modal_output/account.html" data-reveal-id="modal-account" data-reveal-ajax="true"><i class="fi-torso"></i></a> -->
-	</div>
-</div>
+<!-- REPORTS - SEARCH - RESULTS | TABS -->
+<ul class="tabs lv-tabs" data-tab role="tablist" data-options="deep_linking: true; scroll_to_content:false">
+	<li class="tab-title active" role="presentational" >
+		<a href="#reports" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Reports</a>
+	</li>
+	<li class="tab-title" role="presentational">
+		<a href="#search" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">Search</a>
+	</li>
+	<li class="tab-title" role="presentational">
+		<a href="#results" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">Results</a>
+	</li>
+</ul>
 
-<hr>
-<br>
+<!-- TABS CONTENT PANEL -->
+<div class="tabs-content">
+	<section role="tabpanel" aria-hidden="false" class="content active" id="reports">
+		<h2>First panel content goes here...</h2>
+	</section>
+	<section role="tabpanel" aria-hidden="true" class="content" id="search">
+		<h2>Second panel content goes here...</h2>
+	</section>
+	<section role="tabpanel" aria-hidden="true" class="content" id="results">
+		<!-- RESULTS TAB CONTENT -->
 
-<!-- Tools -->
-<section class="lv-table-tools">
-	<div class="row">
-		<div class="medium-5 large-4 columns">
-			<div class="row">
-				<div class="small-3 columns">
-					<label for="search-filter" class="right inline">Search</label>
-				</div>
-				<div class="small-9 columns">
-					<input type="text" id="search-filter" placeholder="Enter Name or ID">
-				</div>
+		<!-- Header -->
+		<div class="row">
+			<div class="medium-6 columns">
+				<h3>1 Data Quality Analyst - Red Energy, BankMECU</h3>
+			</div>
+			<div class="medium-6 columns text-center medium-text-right">
+				<a href="/modal_output/add_applicant.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="button"><i class="fi-plus"></i>&nbsp; Add Applicant</a>
 			</div>
 		</div>
-		<div class="medium-7 large-8 columns text-right">
 
-			<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Update All"><i class="fi-refresh"></i></a>
+		<hr><br>
 
-			<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Print"><i class="fi-print"></i></a>
+		<!-- Tools -->
+		<section class="lv-table-tools">
+			<div class="row">
+				<div class="medium-5 large-4 columns">
+					<div class="row">
+						<div class="small-3 columns">
+							<label for="search-filter" class="right inline">Search</label>
+						</div>
+						<div class="small-9 columns">
+							<input type="text" id="search-filter" placeholder="Enter Name or ID">
+						</div>
+					</div>
+				</div>
+				<div class="medium-7 large-8 columns text-right">
 
-			<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Delete"><i class="fi-trash"></i></a>
+					<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Update All"><i class="fi-refresh"></i></a>
 
-			<a data-dropdown="drop1" class="button small ">Bulk Actions <i class="fa fa-caret-down"></i></a>
-			<ul id="drop1" class="f-dropdown small text-left" data-dropdown-content>
-				<li><a href="#">Merge</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Forward</a></li>
-				<li><a href="#">Talegent</a></li>
-				<li><a href="#">Transfer to Payroll</a></li>
-				<li><a href="#">Nominate Applicant</a></li>
-				<li><a href="#">Test</a></li>
-				<li><a href="">Invite</a></li>
-			</ul>
-		</div>
-	</div>
-</section>
+					<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Print"><i class="fi-print"></i></a>
 
-<!-- Footable Table -->
-<table class="footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10">
-	<thead>
-		<tr>
-			<th data-hide="all" data-type="numeric">ID</th>
-			<th>Applicant</th>
-			<th data-hide="phone, tablet" data-type="numeric">Date</th>
-			<th data-hide="phone, tablet">Rank</th>
-			<th data-hide="phone, tablet">Short List</th>
-			<th data-hide="phone, tablet">Status</th>
-			<th data-hide="phone, tablet">Attachments</th>
-			<th data-hide="all">Attachments</th>
-			<th data-hide="phone, tablet">Flags</th>
-			<th data-hide="all">Notes</th>
-			<th data-hide="all">Log</th>
-			<th data-hide="all">Answers</th>
-			<th data-sort-ignore="true">All</th>
-		</tr>
-	</thead>
-	<tbody>
-	{% for i in (1..100) %}
-		<tr>
-			<td data-title="ID">5692097{{forloop.index}}</td>
+					<a data-tooltip data-options="disable_for_touch:true" class="button small has-tip" title="Delete"><i class="fi-trash"></i></a>
 
-			<td data-title="Applicant"><a href="#">{{forloop.index}}. Engelbert Humperdink</a></td>
-			<td data-title="Date">03/03/2015</td>
-			<td data-title="Rank">-</td>
-			<td data-title="Short List">
-				<select name="SaveInfo[0][YesMaybeNo1]">
-					<option selected> - </option>
-					<option>No</option>
-					<option>Maybe</option>
-					<option>Yes</option>
-				</select>
-			</td>
-			<td data-title="Status">
-				<select name="SaveInfo[0][Status1]">
-					<option value=""> -- Select from List -- </option>
-					<option value="22" selected="">Applied</option>
-					<option value="19184">Available</option>
-					<option value="32489">Induction Month 1</option>
-					<option value="32490">Induction Month 2</option>
-					<option value="32491">Induction Month 3</option>
-					<option value="669">Interview 1 Conducted</option>
-					<option value="684">Interview 1 Scheduled</option>
-					<option value="739">Interview 2 Conducted</option>
-					<option value="19208">Interview 2 Scheduled</option>
-					<option value="32488">Invited for Interview</option>
-					<option value="25">Not Successful</option>
-					<option value="741">Referee check in progress</option>
-					<option value="1397">Swept</option>
-					<option value="31501">Tools and Equipment Ordered</option>
-					<option value="31500">Training and Medicals Organised</option>
-					<option value="33278">Transferred to CRIS 21</option>
-					<option value="31499">Transferred to PayGlobal</option>
-					<option value="680">Unable to Contact</option>
-					<option value="27176">Unavailable</option>
-					<option value="26">Withdrawn</option>
-				</select>
-			</td>
-			<td data-title="Attachments" class="text-center"><i class="fi-paperclip"></i></td>
-			<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a> <a href="/modal_output/notes.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="pill button tiny">Add Attachment</a></td>
-			<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
-			<td data-title="Notes">[select]</td>
-			<td data-title="Log">[select]</td>
-			<td data-title="Answers"><a href="#">Application</a> <a href="#">Admin</a></td>
-			<td data-title="All"><input type="checkbox"></td>
-		</tr>
-	{% endfor %}
-	</tbody>
-</table>
+					<a data-dropdown="drop1" class="button small ">Bulk Actions <i class="fa fa-caret-down"></i></a>
+					<ul id="drop1" class="f-dropdown small text-left" data-dropdown-content>
+						<li><a href="#">Merge</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Forward</a></li>
+						<li><a href="#">Talegent</a></li>
+						<li><a href="#">Transfer to Payroll</a></li>
+						<li><a href="#">Nominate Applicant</a></li>
+						<li><a href="#">Test</a></li>
+						<li><a href="">Invite</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-<!-- CLIENT SIDE PAGINATION -->
-<ul class="right pagination pagination-centered hide-if-no-paging"></ul>
+		<!-- Footable Table -->
+		<table class="footable lv-loading lv-table-theme lv-unselectable" data-filter="#search-filter" data-page-size="10">
+			<thead>
+				<tr>
+					<th data-hide="all" data-type="numeric">ID</th>
+					<th>Applicant</th>
+					<th data-hide="phone, tablet" data-type="numeric">Date</th>
+					<th data-hide="phone, tablet">Rank</th>
+					<th data-hide="phone, tablet">Short List</th>
+					<th data-hide="phone, tablet">Status</th>
+					<th data-hide="phone, tablet">Attachments</th>
+					<th data-hide="all">Attachments</th>
+					<th data-hide="phone, tablet">Flags</th>
+					<th data-hide="all">Notes</th>
+					<th data-hide="all">Log</th>
+					<th data-hide="all">Answers</th>
+					<th data-sort-ignore="true">All</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in (1..100) %}
+				<tr>
+					<td data-title="ID">5692097{{forloop.index}}</td>
 
-<!-- Buttons -->
-<p>
-	<a class="button small" href="#">Save All</a>
-	<a class="button small" href="#">Download Report</a>
-</p>
+					<td data-title="Applicant"><a href="#">{{forloop.index}}. Engelbert Humperdink</a></td>
+					<td data-title="Date">03/03/2015</td>
+					<td data-title="Rank">-</td>
+					<td data-title="Short List">
+						<select name="SaveInfo[0][YesMaybeNo1]">
+							<option selected> - </option>
+							<option>No</option>
+							<option>Maybe</option>
+							<option>Yes</option>
+						</select>
+					</td>
+					<td data-title="Status">
+						<select name="SaveInfo[0][Status1]">
+							<option value=""> -- Select from List -- </option>
+							<option value="22" selected="">Applied</option>
+							<option value="19184">Available</option>
+							<option value="32489">Induction Month 1</option>
+							<option value="32490">Induction Month 2</option>
+							<option value="32491">Induction Month 3</option>
+							<option value="669">Interview 1 Conducted</option>
+							<option value="684">Interview 1 Scheduled</option>
+							<option value="739">Interview 2 Conducted</option>
+							<option value="19208">Interview 2 Scheduled</option>
+							<option value="32488">Invited for Interview</option>
+							<option value="25">Not Successful</option>
+							<option value="741">Referee check in progress</option>
+							<option value="1397">Swept</option>
+							<option value="31501">Tools and Equipment Ordered</option>
+							<option value="31500">Training and Medicals Organised</option>
+							<option value="33278">Transferred to CRIS 21</option>
+							<option value="31499">Transferred to PayGlobal</option>
+							<option value="680">Unable to Contact</option>
+							<option value="27176">Unavailable</option>
+							<option value="26">Withdrawn</option>
+						</select>
+					</td>
+					<td data-title="Attachments" class="text-center"><i class="fi-paperclip"></i></td>
+					<td data-title="Attached" class="text-center"><a href="#">myDoc1.pdf</a>, <a href="#">resume.doc</a> <a href="/modal_output/notes.html" data-reveal-id="modal-account" data-reveal-ajax="true" class="pill button tiny">Add Attachment</a></td>
+					<td data-title="Flags"><i class="fi-flag alert-color"></i> <i class="fi-flag"></i></td>
+					<td data-title="Notes">[select]</td>
+					<td data-title="Log">[select]</td>
+					<td data-title="Answers"><a href="#">Application</a> <a href="#">Admin</a></td>
+					<td data-title="All"><input type="checkbox"></td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+
+		<!-- CLIENT SIDE PAGINATION -->
+		<ul class="right pagination pagination-centered hide-if-no-paging"></ul>
+
+		<!-- Buttons -->
+		<p>
+			<a class="button small" href="#">Save All</a>
+			<a class="button small" href="#">Download Report</a>
+		</p>
+		<!-- end Results Tab -->
+	</section>
+</div>

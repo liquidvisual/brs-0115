@@ -1,7 +1,9 @@
 {% assign username = "Ajay MallasandraHandsel Aveeve" %}
 
 <div class="lv-context-menu-fixed">
-    <div class="lv-context-menu-scroller">
+
+    <!-- GLOBAL PANEL -->
+    <div class="lv-context-menu-panel">
 
 		<!-- Logo -->
     	<a class="lv-logo" href="/dashboard/"><img src="/img/content/logo@2x.png"></a>
@@ -12,115 +14,111 @@
     		<a href="/modal_output/logout.html" class="logout" data-reveal-id="modal-logout" data-reveal-ajax="true">Logout</a>
     	</div>
 
-	    <!-- GLOBAL PANEL -->
-	    <div class="lv-context-menu-panel {% if page.context_menu %}hide{% endif %}">
+		<!-- Standard User -->
+		<section class="lv-context-menu-user-group">
+		    <h6 class="lv-expander js-expander">Standard User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="{% if page.url == "/dashboard/" %}active{% endif %}">
+		            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
+		        </li>
+		        <li class="{% if page.url == "/applicant-search/" %}active{% endif %}">
+		            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
+		        </li>
+		        <li class="{% if page.url == "/vacancy-search/" %}active{% endif %}">
+		            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
+		        </li>
+		        <li class="{% if page.url == "/new-vacancy/" %}active{% endif %}">
+		            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
+		        </li>
+		        <li class="{% if page.url == "/recruitment-requests/" %}active{% endif %}">
+		            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
+		        </li>
+		    </ul>
+		</section>
 
-			<!-- Standard User -->
+		<!-- Admin User -->
+		<section class="lv-context-menu-user-group">
+		    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torso-business"></i> Client</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Divisions</a></li>
+		            	<li><a href="#">Splash Page Message</a></li>
+		            	<li><a href="#">Vacancy Template Library Access</a></li>
+		            	<li><a href="#">Job Board Emails</a></li>
+		            	<li><a href="#">Job Board Messages</a></li>
+		            	<li><a href="#">Recruitment Request Emails</a></li>
+		            	<li><a href="#">Requisition Emails</a></li>
+		            	<li><a href="#">Selection Report Approval Emails</a></li>
+		            	<li><a href="#">SHL Projects</a></li>
+		            	<li><a href="#">Applicant Attributes</a></li>
+		            	<li><a href="#">Attribute Display Groups</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torsos-all"></i> Users</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Search Users</a></li>
+		            	<li><a href="#">New User</a></li>
+		            	<li><a href="#">Agency Users</a></li>
+		            	<li><a href="#">Groups</a></li>
+		            	<li><a href="#">My Account</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-page-copy"></i> Templates</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Vacancies</a></li>
+		            	<li><a href="#">Email</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-comments"></i> Questions</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Screening</a></li>
+		            	<li><a href="#">Application / Admin</a></li>
+		            	<li><a href="#">Preference</a></li>
+		            	<li><a href="#">KPI</a></li>
+		            	<li><a href="#">Selection Report</a></li>
+		            	<li><a href="#">Selection Report Approval</a></li>
+		            	<li><a href="#">Question Responses</a></li>
+		            	<li><a href="#">Library Groups</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Reporting Engine</a></li>
+		            	<li><a href="#">SMS Report</a></li>
+		            	<li><a href="#">Transaction Summary</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-info"></i> Help</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Helpdesk</a></li>
+		            	<li><a href="#">Service Levels</a></li>
+		            	<li><a href="#">Time &amp; Material Charges</a></li>
+		            	<li><a href="#">Training Directory</a></li>
+		            	<li><a href="#">Incident Report</a></li>
+		            	<li><a href="#">BigRedSky Update</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+		</section>
+
+	</div> <!-- .lv-context-menu-panel -->
+
+	<!-- CONTEXT PANEL -->
+	{% if page.context_menu %}
+		<div class="lv-context-menu-panel">
 			<section class="lv-context-menu-user-group">
-			    <h6 class="lv-expander js-expander">Standard User</h6>
-			    <ul class="lv-expander-content">
-			        <li class="{% if page.url == "/dashboard/" %}active{% endif %}">
-			            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
-			        </li>
-			        <li class="{% if page.url == "/applicant-search/" %}active{% endif %}">
-			            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
-			        </li>
-			        <li class="{% if page.url == "/vacancy-search/" %}active{% endif %}">
-			            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
-			        </li>
-			        <li class="{% if page.url == "/new-vacancy/" %}active{% endif %}">
-			            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
-			        </li>
-			        <li class="{% if page.url == "/recruitment-requests/" %}active{% endif %}">
-			            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
-			        </li>
-			    </ul>
-			</section>
-
-			<!-- Admin User -->
-			<section class="lv-context-menu-user-group">
-			    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
-			    <ul class="lv-expander-content">
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-torso-business"></i> Client</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Divisions</a></li>
-			            	<li><a href="#">Splash Page Message</a></li>
-			            	<li><a href="#">Vacancy Template Library Access</a></li>
-			            	<li><a href="#">Job Board Emails</a></li>
-			            	<li><a href="#">Job Board Messages</a></li>
-			            	<li><a href="#">Recruitment Request Emails</a></li>
-			            	<li><a href="#">Requisition Emails</a></li>
-			            	<li><a href="#">Selection Report Approval Emails</a></li>
-			            	<li><a href="#">SHL Projects</a></li>
-			            	<li><a href="#">Applicant Attributes</a></li>
-			            	<li><a href="#">Attribute Display Groups</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-torsos-all"></i> Users</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">List</a></li>
-			            	<li><a href="#">Search Users</a></li>
-			            	<li><a href="#">New User</a></li>
-			            	<li><a href="#">Agency Users</a></li>
-			            	<li><a href="#">Groups</a></li>
-			            	<li><a href="#">My Account</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-page-copy"></i> Templates</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Vacancies</a></li>
-			            	<li><a href="#">Email</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-comments"></i> Questions</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">List</a></li>
-			            	<li><a href="#">Screening</a></li>
-			            	<li><a href="#">Application / Admin</a></li>
-			            	<li><a href="#">Preference</a></li>
-			            	<li><a href="#">KPI</a></li>
-			            	<li><a href="#">Selection Report</a></li>
-			            	<li><a href="#">Selection Report Approval</a></li>
-			            	<li><a href="#">Question Responses</a></li>
-			            	<li><a href="#">Library Groups</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Reporting Engine</a></li>
-			            	<li><a href="#">SMS Report</a></li>
-			            	<li><a href="#">Transaction Summary</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-info"></i> Help</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Helpdesk</a></li>
-			            	<li><a href="#">Service Levels</a></li>
-			            	<li><a href="#">Time &amp; Material Charges</a></li>
-			            	<li><a href="#">Training Directory</a></li>
-			            	<li><a href="#">Incident Report</a></li>
-			            	<li><a href="#">BigRedSky Update</a></li>
-			            </ul>
-			        </li>
-			    </ul>
-			</section>
-
-		</div> <!-- .lv-context-menu-panel -->
-
-		<!-- CONTEXT PANEL -->
-    	<div class="lv-context-menu-panel">
-			<section class="lv-context-menu-user-group">
-				{% if page.context_menu %}
-				    {% include {{ page.context_menu }} %}
-				{% endif %}
+				{% include {{ page.context_menu }} %}
 	    	</section>
 	    </div> <!-- .lv-context-menu-panel -->
+    {% endif %}
 
-    </div> <!-- .lv-context-menu-scroller -->
 </div> <!-- .lv-context-menu-fixed -->
