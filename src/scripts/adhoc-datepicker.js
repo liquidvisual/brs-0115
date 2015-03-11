@@ -7,9 +7,9 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
-/*
+
 // jQuery UI on SELECT elements
-$(".ui-datepicker").datepicker({ dateFormat: "dd-mm-yy" });
+$(".js-datepicker").datepicker({ dateFormat: "dd-mm-yy" });
 
 //-----------------------------------------------------------------
 // Adhoc Datepicker for Dashboard Below
@@ -45,4 +45,3 @@ $("#datepicker").datepicker({ changeMonth: true, changeYear: true, dateFormat: "
         }, 0);
 }});
 
-*/

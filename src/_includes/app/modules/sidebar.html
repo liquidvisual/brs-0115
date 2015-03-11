@@ -1,29 +1,21 @@
 <div class="lv-sidebar-inner">
 
-	<ul class="tabs text-center" data-tab role="tablist">
-		<li class="tab-title active">
-			<a title="Hints" href="#" role="tab"><i class="fi-lightbulb"></i><span class="text">Hints</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="Favourites" href="#" role="tab"><i class="fi-star"></i><span class="text">Favourites</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="History" href="#" role="tab"><i class="fi-clock"></i><span class="text">History</span></a>
-		</li>
-		<li class="tab-title collapse-btn">
-			<a title="Hide" href="#" role="tab"><i class="fi-arrow-right"></i><span class="text">Hide</span></a>
-		</li>
-	</ul>
+	<!-- SPECIAL TABS -->
+	<ul class="lv-tabs">
+		<li class="active"><a title="Hints" href="#"><i class="fi-lightbulb"></i><span class="text">Hints</span></a></li>
+		<li><a title="Favourites" href="#"><i class="fi-star"></i><span class="text">Favourites</span></a></li>
+		<li><a title="History" href="#"><i class="fi-clock"></i><span class="text">History</span></a></li>
+		<li class="collapse-btn"><a title="Hide" href="#"><i class="fi-arrow-right"></i><span class="text">Hide</span></a></li>
+	</ul> <!-- .lv-tabs -->
 
 	<!-- TABS CONTENT -->
 	<div class="tabs-content">
 
 		<!-- HINTS -->
-		<section role="tabpanel" aria-hidden="false" class="content active">
-
+		<section class="content active">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>Hints</h1>
-				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+				<a class="js-close-btn" href="#">Close</a>
 			</header>
 
 			{% if page.sidebar_details %}
@@ -34,41 +26,22 @@
 		</section>
 
 		<!-- FAVOURITES -->
-		<section role="tabpanel" aria-hidden="true" class="content">
-
+		<section class="content">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>Favourites</h1>
 				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
 			</header>
-
-			<p class="text-center"><a href="#" class="button radius small knockout">Favourite this Page</a></p>
-
-			<ul class="lv-ui-list">
-				<li><a href="#">This is an example of</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-				<li><a href="#">This is an example of a quicklink</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-				<li><a href="#">This is an example of a quicklink</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-			</ul>
+			{% include app/sidebar_content/favourites/favourites.html %}
 		</section>
 
 		<!-- HISTORY -->
-		<section role="tabpanel" aria-hidden="true" class="content">
-
+		<section class="content">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>History</h1>
 				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
 			</header>
-
-			<p>No history is available at this time.</p>
+			{% include app/sidebar_content/history/history.html %}
 		</section>
 
-	</div>
+	</div> <!-- .tabs-content -->
 </div> <!-- .lv-siderbar-inner -->

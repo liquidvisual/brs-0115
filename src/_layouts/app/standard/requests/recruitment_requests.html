@@ -2,4 +2,172 @@
 layout: app/internal
 ---
 
-{{ content }}
+<!-- { { content }} -->
+
+<!-- SEARCH - RESULTS | TABS -->
+<ul class="lv-tabs" data-tab data-options="deep_linking: true; scroll_to_content: false">
+	<li><a href="#search">Search</a></li>
+	<li class="active"><a href="#results">Results</a></li>
+</ul>
+
+<!-- TABS CONTENT PANEL -->
+<div class="tabs-content">
+	<section role="tabpanel" aria-hidden="true" class="content" id="search">
+
+		<form class="lv-form" data-abide novalidate method="post" action="#">
+
+			<!-- Date Submitted (FROM) -->
+			<div class="row">
+				<div class="medium-6 columns">
+					<label><span class="text">Date Submitted (FROM)</span> <!--<small>required</small>-->
+						<input class="js-datepicker" name="date-submitted-from" type="text" >
+					</label>
+					<small class="error">Your name is required.</small>
+				</div>
+				<div class="medium-6 columns">
+					<label><span class="text">Date Submitted (TO)</span>
+						<input class="js-datepicker" name="date-submitted-to" type="text">
+					</label>
+					<small class="error">Please try again.</small>
+				</div>
+			</div>
+
+			<!-- Job Title -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Job Title</span> <small>required</small>
+						<input name="job-title" type="email" required>
+					</label>
+					<small class="error">A job title is required</small>
+				</div>
+			</div>
+
+			<!-- Owner -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Owner</span></label> <!-- <small>required</small> -->
+					<select name="Vacancy[OwnerUserID]">
+						 <option value="" disabled selected>Select from list</option>
+						 <option value="15724">ASAP Corp -&gt; Arroyo, Jose (jarroyoru)</option>
+						 <option value="19957">ASAP Corp -&gt; Augustin, Patricia (paugustin)</option>
+						 <option value="19183">ASAP Corp -&gt; BRS, asapcorpru (brsasapcorpru)</option>
+						 <option value="25942">ASAP Corp -&gt; Black, Bev (bblack)</option>
+						 <option value="10976">ASAP Corp -&gt; Brougham, Gavin (gavin)</option>
+						 <option value="25943">ASAP Corp -&gt; Brynjolfson, Karyn (kbrynjolfson)</option>
+						 <option value="23360">ASAP Corp -&gt; CF, Balcatta (balcatta)</option>
+						 <option value="16451">ASAP Corp -&gt; Calabretta, Joe (jcalabrettaru)</option>
+						 <option value="26980">ASAP Corp -&gt; Campbell, Rob (rccorpru)</option>
+						 <option value="26069">ASAP Corp -&gt; Campbell, Rob (rcru)</option>
+						 <option value="26070">ASAP Corp -&gt; Campbell, Rob (rcru2)</option>
+						 <option value="20049">ASAP Corp -&gt; Capron, Sandra (scapron)</option>
+						 <option value="21723">ASAP Corp -&gt; Champion, Hannah (hchampion)</option>
+						 <option value="17812">ASAP Corp -&gt; Cook, Paisha (pcook)</option>
+						 <option value="13740">ASAP Corp -&gt; Correia, Tony (brsasapcorpsr)</option>
+						 <option value="15401">ASAP Corp -&gt; Department Manager, Jane (janedeptmgr)</option>
+						 <option value="20242">ASAP Corp -&gt; Dover, Andrew (adover)</option>
+						 <option value="13895">ASAP Corp -&gt; Driver, Sue (suesa)</option>
+						 <option value="13499">ASAP Corp -&gt; Eccles, Keryn (keccles)</option>
+						 <option value="19958">ASAP Corp -&gt; Ellerby, Annette (aellerby)</option>
+						 <option value="15400">ASAP Corp -&gt; Executive Manager, Jane (janeexecmgr)</option>
+						 <option value="22350">ASAP Corp -&gt; Garner, Reagan (rgarner)</option>
+						 <option value="27030">ASAP Corp -&gt; General, Manager (generalmanager)</option>
+						 <option value="7774">ASAP Corp -&gt; HOD, AR (arhod)</option>
+						 <option value="7773">ASAP Corp -&gt; HOD, Business Unit (buhod)</option>
+						 <option value="15399">ASAP Corp -&gt; HR Manager, Jane (janehrmgr)</option>
+						 <option value="7772">ASAP Corp -&gt; HR, Business Unit (buhr)</option>
+						 <option value="26352">ASAP Corp -&gt; Hawkins, Michael (mhawkinsru2)</option>
+						 <option value="6825">ASAP Corp -&gt; Hiller, Kim (pm)</option>
+						 <option value="15032">ASAP Corp -&gt; Holt, Nicole (nholt)</option>
+						 <option value="21525">ASAP Corp -&gt; Honner, Shelley (shonner)</option>
+						 <option value="20374">ASAP Corp -&gt; Johnston, Rhonda (rjohnston)</option>
+						 <option value="25145">ASAP Corp -&gt; Jones , Rachel  (rjones12)</option>
+						 <option value="23340">ASAP Corp -&gt; Jones, Rachel (rjonesru)</option>
+						 <option value="12602">ASAP Corp -&gt; Kaur, Ramneek (ramneekr)</option>
+						 <option value="13966">ASAP Corp -&gt; Kershaw, Lisa (Lisa)</option>
+						 <option value="25199">ASAP Corp -&gt; Line, Manager (mhawkinsru)</option>
+						 <option value="26094">ASAP Corp -&gt; Line, Manager - mhawkins (mhawkinsLM)</option>
+						 <option value="15033">ASAP Corp -&gt; Luke, Samantha (sluke)</option>
+						 <option value="27031">ASAP Corp -&gt; Managing, Director (managingdirector)</option>
+						 <option value="19959">ASAP Corp -&gt; Meghani, Chalina (cmeghani)</option>
+						 <option value="16243">ASAP Corp -&gt; Morgan, Daniel (dmorganru)</option>
+						 <option value="21526">ASAP Corp -&gt; Mudford, Laura (lmudford)</option>
+						 <option value="8692">ASAP Corp -&gt; Nelson (RU), Andrew (anelsonru)</option>
+						 <option value="22731">ASAP Corp -&gt; Nutt, Graham (gnutt)</option>
+						 <option value="21640">ASAP Corp -&gt; O'Connor, Marilyn (moconnor)</option>
+						 <option value="19975">ASAP Corp -&gt; O'Loughlin, Anthea (aoloughlin)</option>
+						 <option value="14750">ASAP Corp -&gt; O'Neill, Markus (moneillru)</option>
+						 <option value="7228">ASAP Corp -&gt; Officer 1, Returning (RO1)</option>
+						 <option value="19960">ASAP Corp -&gt; Planning, Workforce (wplanning)</option>
+						 <option value="27366">ASAP Corp -&gt; Poulos, Nick (npoulosru)</option>
+						 <option value="11475">ASAP Corp -&gt; RU, RU (cateru)</option>
+						 <option value="9337">ASAP Corp -&gt; Raithatha (RU), Neel (nrcorpru)</option>
+						 <option value="15411">ASAP Corp -&gt; Sales, Jane (janesales)</option>
+						 <option value="17277">ASAP Corp -&gt; Sherma, Srinath (nshermaru)</option>
+						 <option value="15380">ASAP Corp -&gt; Smith, Ron  (ronsmith)</option>
+						 <option value="27251">ASAP Corp -&gt; Test, Mock (mock.test)</option>
+						 <option value="26270">ASAP Corp -&gt; True RU, Jane (jtru)</option>
+						 <option value="15379">ASAP Corp -&gt; Turner, Casey (cturner)</option>
+						 <option value="25941">ASAP Corp -&gt; Wagner, Jade (jwagner)</option>
+						 <option value="21863">ASAP Corp -&gt; Walker EM, Jane (jwem)</option>
+						 <option value="17326">ASAP Corp -&gt; Walker HR Manager, Jane (jwhrmanager)</option>
+						 <option value="21862">ASAP Corp -&gt; Walker HR, Jane (jwhr)</option>
+						 <option value="17368">ASAP Corp -&gt; Walker RU, Jane (jwru)</option>
+						 <option value="25808">ASAP Corp -&gt; Wardrop, Brayden (bwardropwru)</option>
+						 <option value="6826">ASAP Corp -&gt; Way, Mick (pc)</option>
+						 <option value="12611">ASAP Corp -&gt; linemanagers, test (test)</option>
+						 <option value="13018">ASAP Corp -&gt; restricted, ramneekru (ramneekru)</option>
+						 <option value="12472">ASAP Corp -&gt; restricted, rochelle (rochelleru)</option>
+						 <option value="17970">ASAP Corp -&gt; restricteduser, michael (mhawkins1970ru)</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row collapse">
+				<div class="columns">
+					<input id="search-with-these-results" name="search-with-these-results" type="checkbox"><label for="search-with-these-results">Search with these results</label>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- Submit -->
+			<div class="row">
+				<div class="columns">
+					<!-- <button type="submit" class="button">Search</button> -->
+					<a href="#results" class="button small">Search</a>
+					<a href="#" class="button small">Reset</a>
+					<a href="#" class="button small">Clear</a>
+				</div>
+			</div>
+
+		</form>
+
+	</section>
+	<section role="tabpanel" aria-hidden="true" class="content" id="results">
+
+		<!-- RESULTS TAB CONTENT -->
+
+		<table class="footable lv-table-theme lv-unselectable">
+			<thead>
+				<tr>
+					<th data-type="numeric">Submitted</th>
+					<th data-type="numeric">Job Title</th>
+					<th data-hide="phone, tablet">Status</th>
+					<th data-hide="phone, tablet">Owner</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in (1..4) %}
+				<tr>
+					<td>03/04/2015</td>
+					<td><a href="#">{{forloop.index}}. Admin Assistant and other stuff and other stuff</a></td>
+					<td>Vacancy Request Completed Multi Level Approvals</td>
+					<td>Wardrop, Brayden 08 6430 3225</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+
+		<!-- end Results Tab -->
+	</section>
+</div>

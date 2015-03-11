@@ -10,7 +10,7 @@
 
 $sidebar-width: rem-calc(300) !default;
 $sidebar-width-collapsed: rem-calc(50) !default;
-$sidebar-background-color: $tabs-navigation-bg-color !default; //#EDEFEF !default;
+$sidebar-background-color: $tabs-navigation-bg-color; //#EDEFEF; //$tabs-navigation-bg-color !default; //#EDEFEF !default;
 $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 
 //-----------------------------------------------------------------
@@ -76,7 +76,10 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 // Sidebar Defaults
 //-----------------------------------------------------------------
 
-.lv-sidebar .tabs {
+.lv-sidebar .lv-tabs {
+	border: 0; // override tabs css
+	margin: 0; // override tabs css
+
 	@media #{$devices-only} {
 	    display: none;
 	}
@@ -104,13 +107,14 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 	overflow: hidden; // problematic? Override Y scroll?
 
 	// Tabs stick to top on collapsed
-	.tabs {
+	.lv-tabs {
 		position: fixed;
 		top: rem-calc(10);//0; //$header-height;
 		width: $sidebar-width-collapsed;
 		background: $sidebar-background-color; // need?
 
 		li {
+			display: block;
 			float: none;
 			width: 100%;
 
@@ -129,8 +133,8 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 	}
 
 	// Hide all of this - easiest.
-	.tabs .text,
-	.tabs .collapse-btn,
+	.lv-tabs .text,
+	.lv-tabs .collapse-btn,
 	.tabs-content {
 		display: none;
 	}
@@ -145,7 +149,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 @mixin uncollapsed() {
 	width: $sidebar-width;
 
-	.tabs {
+	.lv-tabs {
 		position: relative;
 		top: 0;
 		width: 100%;
@@ -170,6 +174,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 
 			a {
 				padding: rem-calc(10 0);
+				color: #222;
 				// border-right: 1px solid #ddd; //#CACDCD;
 			}
 		}
@@ -182,6 +187,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 			border-bottom: 0;
 			// background: $tabs-navigation-hover-bg-color;
 			color: $primary-color;
+			background: none; // override tabs css
 
 			i {
 				color: $primary-color;
@@ -189,15 +195,15 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 		}
 	}
 
-	.tabs .text,
-	.tabs .collapse-btn,
+	.lv-tabs .text,
+	.lv-tabs .collapse-btn,
 	.tabs-content {
 		display: block;
 	}
 
 	// Allow the 'fixed' inner snap back to normal. In flow now.
 	.lv-sidebar-inner {
-		width: auto;
+		// width: auto; // this created issue with history when there was no content to push it across
 	}
 }
 
@@ -233,7 +239,7 @@ $sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 			position: absolute;
 		}
 
-		.tabs .active a i {
+		.lv-tabs .active a i {
 			color: #222; // refactor
 		}
 	}

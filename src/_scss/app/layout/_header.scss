@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------
 
 $mobile-header-height: 50px !default;
-$header-icon-color: white; //#929292 !default;
+$header-icon-color: #929292 !default;
 
 //-----------------------------------------------------------------
 // Global Header (Appears in mobile / tablet views)
@@ -21,9 +21,10 @@ $header-icon-color: white; //#929292 !default;
         top: 0;
         left: 0;
         width: 100%;
-        // border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background: white;
         // background: rgba(white, .9);
-        background: $tertiary-color;
+        // background: $tertiary-color;
         text-align: center;
         z-index: 10;
     }
@@ -34,7 +35,7 @@ $header-icon-color: white; //#929292 !default;
 
     h1 {
         @media #{$devices-only} {
-            color: white;
+            // color: white;
             @include truncate(70%);
             margin: 0 auto;
             font-size: rem-calc(16);

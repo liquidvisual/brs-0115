@@ -120,6 +120,7 @@
         padding: rem-calc(0 15 0 50);
         background: #D1D7DE;
         box-shadow: none;
+        border: 0;
 
         @media #{$medium-up} {
             height: rem-calc(50);

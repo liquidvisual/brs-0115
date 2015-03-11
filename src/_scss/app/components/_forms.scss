@@ -34,13 +34,36 @@
 // Inputs
 //-----------------------------------------------------------------
 
+.lv-form {
+	background: white;
+	padding: rem-calc(15);
+	// border: 1px solid #ddd;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.08);
+
+	@media #{$medium-up} {
+	    padding: rem-calc(30);
+	}
+}
+
 select,
 input[type=text],
 input[type=number],
 input[type=password],
 input[type=email] {
-	border-radius: $global-radius;
+	// border-radius: $global-radius;
+	background: #F4F6F9; //white;
+	box-shadow: none;
+	border: 1px solid darken(#E6E8EA, 5%);
 	// margin-bottom: rem-calc(20);
+
+	&:focus {
+		background: #EEEFF3; //darken(#F4F6F9, 2%);
+		border-color: darken(#E6E8EA, 10%);
+	}
+}
+
+select:after {
+	content: "\f0d7";
 }
 
 form label .text {

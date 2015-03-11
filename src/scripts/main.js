@@ -13,14 +13,6 @@ $(document).ready(function() {
 
     // Fastclick on touch
     FastClick.attach(document.body);
-
-    // $(window).scroll(function (event) {
-    //     var y = $(this).scrollTop();
-    //     if (y >= 240)
-    //         $('.sticky-scroll').addClass('fixed');
-    //     else
-    //         $('.sticky-scroll').removeClass('fixed');
-    // });
 });
 
 //==================================================
@@ -32,25 +24,6 @@ $(window).load(function() {
 });
 
 // var top = $('.sticky-scroll-box').offset().top;
-
-$(function () {
-    $('.footable').footable({
-        breakpoints: {
-            phone: 480,
-            tablet: 963-30 //-30
-        }
-    }).removeClass('lv-loading');//.find('> tbody > tr:not(.footable-row-detail):nth-child(even)').addClass('zebra');
-});
-
-//-----------------------------------------------------------------
-// Refactor into legacy?
-//-----------------------------------------------------------------
-
-// $('.lv-content table').wrap('<div class="lv-table-responsive"></div>');
-
-$('.lv-content .Report, .lv-content .Form').addClass('lv-table-theme');
-
-$('.lv-content #questions').parent().addClass('legacy-form');
 
 //-----------------------------------------------------------------
 // <= IE8 Caution Message

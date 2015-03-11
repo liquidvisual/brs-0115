@@ -1,14 +1,13 @@
 /*
-    SIDEBAR.JS - Last updated: 22-02-15
+    SIDEBAR.JS - Last updated: 12-03-15
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 
-var TOUCH_ENABLED = $(".touch").length;
 var sidebar = $('.lv-sidebar');
-var sidebarContent = sidebar.find('.lv-sidebar-inner')
-var sidebarTabs = $('.lv-sidebar .tabs').children();
+var sidebarContent = $('.lv-sidebar-inner');
+var sidebarTabs = $('.lv-sidebar .lv-tabs').children();
 var sidebarTabPanels = $('.lv-sidebar .tabs-content').children();
 
 // --- API ---

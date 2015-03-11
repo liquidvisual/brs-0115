@@ -14,49 +14,44 @@
 //-----------------------------------------------------------------
 
 .lv-tabs {
-    position: relative;
-    margin-bottom: rem-calc(20) !important; // thanks foundation
+    display: table;
+
     border: 1px solid $primary-color;
+    margin: rem-calc(0 0 20 0);
     border-radius: $global-radius;
 
-    @media #{$medium-up} {
-        display: inline-block;
+    @media #{$devices-only} {
+        width: 100%;
     }
 
     li {
-        width: 33.3333333%;
+        display: table-cell;
         text-align: center;
     }
 
-    .tab-title a {
-        border-radius: $global-radius;
+    a {
+        // @include transition('background color'); feels slow
+        display: inline-block;
+        width: 100%;
+        padding: rem-calc(5 0);
         color: $primary-color;
-        padding: rem-calc(5);
-
+        outline: none;
+        // border-radius: $global-radius;
 
         @media #{$medium-up} {
-            padding: rem-calc(5 40);
+            padding: rem-calc(5 30);
         }
     }
 
-    .tab-title.active {
-        background: $primary-color;
+    li a:hover {
+        background: #DDDFE7;
+    }
 
-        a {
-            color: white;
-        }
+    li.active a {
+        background: $primary-color;
+        color: white;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -83,7 +78,7 @@
 // $tabs-vertical-navigation-margin-bottom: 1.25rem !default;
 
 //-----------------------------------------------------------------
-//
+// Foundation code - keep for reference
 //-----------------------------------------------------------------
 
 // @include exports("tab") {
