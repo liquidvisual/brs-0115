@@ -45,7 +45,9 @@
         
 
 <div class="lv-context-menu-fixed">
-    <div class="lv-context-menu-scroller">
+
+    <!-- GLOBAL PANEL -->
+    <div class="lv-context-menu-panel">
 
 		<!-- Logo -->
     	<a class="lv-logo" href="/dashboard/"><img src="/assets/img/content/logo@2x.png"></a>
@@ -56,115 +58,107 @@
     		<a href="/modal_output/logout.html" class="logout" data-reveal-id="modal-logout" data-reveal-ajax="true">Logout</a>
     	</div>
 
-	    <!-- GLOBAL PANEL -->
-	    <div class="lv-context-menu-panel ">
+		<!-- Standard User -->
+		<section class="lv-context-menu-user-group">
+		    <h6 class="lv-expander js-expander">Standard User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="">
+		            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
+		        </li>
+		        <li class="">
+		            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
+		        </li>
+		        <li class="">
+		            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
+		        </li>
+		        <li class="">
+		            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
+		        </li>
+		        <li class="active">
+		            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
+		        </li>
+		    </ul>
+		</section>
 
-			<!-- Standard User -->
-			<section class="lv-context-menu-user-group">
-			    <h6 class="lv-expander js-expander">Standard User</h6>
-			    <ul class="lv-expander-content">
-			        <li class="">
-			            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
-			        </li>
-			        <li class="">
-			            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
-			        </li>
-			        <li class="">
-			            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
-			        </li>
-			        <li class="">
-			            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
-			        </li>
-			        <li class="active">
-			            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
-			        </li>
-			    </ul>
-			</section>
+		<!-- Admin User -->
+		<section class="lv-context-menu-user-group">
+		    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torso-business"></i> Client</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Divisions</a></li>
+		            	<li><a href="#">Splash Page Message</a></li>
+		            	<li><a href="#">Vacancy Template Library Access</a></li>
+		            	<li><a href="#">Job Board Emails</a></li>
+		            	<li><a href="#">Job Board Messages</a></li>
+		            	<li><a href="#">Recruitment Request Emails</a></li>
+		            	<li><a href="#">Requisition Emails</a></li>
+		            	<li><a href="#">Selection Report Approval Emails</a></li>
+		            	<li><a href="#">SHL Projects</a></li>
+		            	<li><a href="#">Applicant Attributes</a></li>
+		            	<li><a href="#">Attribute Display Groups</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torsos-all"></i> Users</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Search Users</a></li>
+		            	<li><a href="#">New User</a></li>
+		            	<li><a href="#">Agency Users</a></li>
+		            	<li><a href="#">Groups</a></li>
+		            	<li><a href="#">My Account</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-page-copy"></i> Templates</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Vacancies</a></li>
+		            	<li><a href="#">Email</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-comments"></i> Questions</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Screening</a></li>
+		            	<li><a href="#">Application / Admin</a></li>
+		            	<li><a href="#">Preference</a></li>
+		            	<li><a href="#">KPI</a></li>
+		            	<li><a href="#">Selection Report</a></li>
+		            	<li><a href="#">Selection Report Approval</a></li>
+		            	<li><a href="#">Question Responses</a></li>
+		            	<li><a href="#">Library Groups</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Reporting Engine</a></li>
+		            	<li><a href="#">SMS Report</a></li>
+		            	<li><a href="#">Transaction Summary</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-info"></i> Help</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Helpdesk</a></li>
+		            	<li><a href="#">Service Levels</a></li>
+		            	<li><a href="#">Time &amp; Material Charges</a></li>
+		            	<li><a href="#">Training Directory</a></li>
+		            	<li><a href="#">Incident Report</a></li>
+		            	<li><a href="#">BigRedSky Update</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+		</section>
 
-			<!-- Admin User -->
-			<section class="lv-context-menu-user-group">
-			    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
-			    <ul class="lv-expander-content">
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-torso-business"></i> Client</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Divisions</a></li>
-			            	<li><a href="#">Splash Page Message</a></li>
-			            	<li><a href="#">Vacancy Template Library Access</a></li>
-			            	<li><a href="#">Job Board Emails</a></li>
-			            	<li><a href="#">Job Board Messages</a></li>
-			            	<li><a href="#">Recruitment Request Emails</a></li>
-			            	<li><a href="#">Requisition Emails</a></li>
-			            	<li><a href="#">Selection Report Approval Emails</a></li>
-			            	<li><a href="#">SHL Projects</a></li>
-			            	<li><a href="#">Applicant Attributes</a></li>
-			            	<li><a href="#">Attribute Display Groups</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-torsos-all"></i> Users</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">List</a></li>
-			            	<li><a href="#">Search Users</a></li>
-			            	<li><a href="#">New User</a></li>
-			            	<li><a href="#">Agency Users</a></li>
-			            	<li><a href="#">Groups</a></li>
-			            	<li><a href="#">My Account</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-page-copy"></i> Templates</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Vacancies</a></li>
-			            	<li><a href="#">Email</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-comments"></i> Questions</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">List</a></li>
-			            	<li><a href="#">Screening</a></li>
-			            	<li><a href="#">Application / Admin</a></li>
-			            	<li><a href="#">Preference</a></li>
-			            	<li><a href="#">KPI</a></li>
-			            	<li><a href="#">Selection Report</a></li>
-			            	<li><a href="#">Selection Report Approval</a></li>
-			            	<li><a href="#">Question Responses</a></li>
-			            	<li><a href="#">Library Groups</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Reporting Engine</a></li>
-			            	<li><a href="#">SMS Report</a></li>
-			            	<li><a href="#">Transaction Summary</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-info"></i> Help</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Helpdesk</a></li>
-			            	<li><a href="#">Service Levels</a></li>
-			            	<li><a href="#">Time &amp; Material Charges</a></li>
-			            	<li><a href="#">Training Directory</a></li>
-			            	<li><a href="#">Incident Report</a></li>
-			            	<li><a href="#">BigRedSky Update</a></li>
-			            </ul>
-			        </li>
-			    </ul>
-			</section>
+	</div> <!-- .lv-context-menu-panel -->
 
-		</div> <!-- .lv-context-menu-panel -->
+	<!-- CONTEXT PANEL -->
+	
 
-		<!-- CONTEXT PANEL -->
-    	<div class="lv-context-menu-panel">
-			<section class="lv-context-menu-user-group">
-				
-	    	</section>
-	    </div> <!-- .lv-context-menu-panel -->
-
-    </div> <!-- .lv-context-menu-scroller -->
 </div> <!-- .lv-context-menu-fixed -->
     </nav>
 
@@ -194,10 +188,196 @@
         <div class="lv-content">
             <div class="row">
                 <div class="columns">
-                    <!--- This child document initializes the page in Jekyll. -->
+                    <!-- { { content }} -->
 
-<div><script>var action='defaultLoaded';//Tabs codepreload_image01=new Image();preload_image02=new Image();preload_image03=new Image();preload_image04=new Image();preload_image05=new Image();preload_image06=new Image();preload_image01.src="images/results_on.gif'"; preload_image02.src="images/results_off.gif'";preload_image03.src="images/results_over.gif'";preload_image04.src="images/search_on.gif";preload_image05.src="images/search_off.gif";preload_image06.src="images/search_over.gif";function showReport(){var ReportDiv=document.getElementById("ReportDiv"); ReportDiv.style.display="block"; document.getElementById("ReportTab").className="OnTab"; document.getElementById("FormTab").className="OffTab"; document.getElementById("ReportImg").src=preload_image01.src; document.getElementById('FormImg').src='images/search_off.gif'; document.getElementById('FormImg').onmouseover=function smover(){document.getElementById('FormImg').src='images/search_over.gif';}; document.getElementById('FormImg').onmouseout=function smout(){document.getElementById('FormImg').src='images/search_off.gif';}; document.getElementById('ReportImg').src='images/results_on.gif'; document.getElementById('ReportImg').onmouseover=""; document.getElementById('ReportImg').onmouseout="";}function hideReport(){ReportDiv.style.display="none";}function showForm(){var FormDiv=document.getElementById("FormDiv"); FormDiv.style.display="block"; document.getElementById('ReportImg').src='images/results_off.gif'; document.getElementById('ReportImg').onmouseover=function rmover(){document.getElementById('ReportImg').src='images/results_over.gif';}; document.getElementById('ReportImg').onmouseout=function rmout(){document.getElementById('ReportImg').src='images/results_off.gif';}; document.getElementById('FormImg').src='images/search_on.gif'; document.getElementById('FormImg').onmouseover=""; document.getElementById('FormImg').onmouseout="";}function hideForm(){var FormDiv=document.getElementById("FormDiv"); FormDiv.style.display="none";}</script><style type="text/css">#container{height: 90%; width: 98%; min-width: 300px;}#content{height: 95%; width: 100%; overflow: scroll; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; background: #FBFFFF; padding: 10px;}#ReportFormContent{border: 1px solid #2A5A8F; margin-top: 0px; padding: 0px 20px 0px 20px; width: 100%;}#ReportTab{position: relative; top: 1px; left: 0px;}#FormTab{position: relative; top: 1px; left: 0px;}</style><script type="text/javascript">/*@cc_on @if (@_jscript_version==10) document.write('<style type="text/css">#ReportFormContent{margin-top: 20px}</style>'); @end @*/</script> <div id="tabsTop"> <div id="FormTab" onclick="hideReport();showForm();" class="OffTab"> <img id="FormImg" src="images/search_on.gif" onmouseover="this.src='images/search_over.gif';" onmouseout="this.src='images/search_off.gif';" /> </div><div id="ReportTab" onclick="hideForm();showReport();" class="OnTab"> <img id="ReportImg" src="images/results_off.gif" /> </div></div><div id="ReportFormContent"><br /><div id="ReportDiv" style="padding-bottom: 15px; display: none;"><script language="Javascript" type="text/Javascript"><!--var warnString="";var warnCount=0;var fieldTag="field";var elementType="";var jreqFieldID="";var jreqFieldLabel="";function checkRPTFields(){warnString="";warnCount=0;fieldTag="field";elementType="";for(i=0; i < jreqFieldID.length; i++){elementType=eval("document.tblGenForm." + jreqFieldID[i] + ".type");switch (elementType){case "text":case "textarea":case "hidden":if (eval("document.tblGenForm." + jreqFieldID[i] + ".value.length")==0){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break;case "select-one":if (eval("document.tblGenForm." + jreqFieldID[i] + ".selectedIndex") < 1){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break;case "select-multiple":if (eval("document.tblGenForm." + jreqFieldID[i] + ".selectedIndex") < 1){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break;default:alert ('This element type (' + elementType + ') needs to be added to the "form" file');}// end switch}if (warnCount > 1) fieldTag="fields";if (warnCount > 0) warnString='Please supply a value for the following ' + fieldTag + ': ' + warnString ;}function RPTvalidate(messg){if (document.tblGenForm.action.value=='Copy'){if (confirm('Save this as a new record?')){checkList=checkRPTFields(); if (warnString !=""){alert (warnString);}else{document.tblGenForm.submit();}}}if (document.tblGenForm.action.value=='Delete'){if (confirm('Do you want to permanently delete the selected records?')){document.tblGenForm.submit();}}if (document.tblGenForm.action.value=='Save'){checkRPTFields(); if (warnString !=""){alert (warnString);}else{document.tblGenForm.submit();}}if (document.tblGenForm.action.value=='Merge'){if (confirm('Do you want to merge these records?')){document.tblGenForm.submit();}}if (document.tblGenForm.action.value=='CheckboxCustomAction'){if (confirm(messg)){document.tblGenForm.submit();}}}// define index values for subsequent functions to use to update // hidden field values (called after form loads).function jsetHTMvars(){if (document.tblGenForm.elements){for (n=0; n < document.tblGenForm.elements.length; n++){if (document.tblGenForm.elements[n].name=='reload_data[colNo]'){htm_colNo=n;}if (document.tblGenForm.elements[n].name=='reload_data[asc_desc]'){htm_asc_desc=n;}if (document.tblGenForm.elements[n].name=='reload_data[column]'){htm_column=n;}if (document.tblGenForm.elements[n].name=='reload_data[filter]'){htm_filter=n;}if (document.tblGenForm.elements[n].name=='reload_data[firstRow]'){htm_firstRow=n;}}}}function jsortResults(orderBy)// change values of hidden fields, then submit form - next page load will be sorted by "colNo".{if('0'==orderBy){document.tblGenForm.elements[htm_colNo].value=orderBy;if(document.tblGenForm.elements[htm_asc_desc].value==''){document.tblGenForm.elements[htm_asc_desc].value='DESC';}else{document.tblGenForm.elements[htm_asc_desc].value=''}}else{document.tblGenForm.elements[htm_colNo].value=orderBy;document.tblGenForm.elements[htm_asc_desc].value=''}document.tblGenForm.submit();}function jnext_prev(rowStart)// change values of hidden fields, then submit form - next page load will start at row "rowStart".{document.tblGenForm.elements[htm_firstRow].value=rowStart;document.tblGenForm.submit();}function jfilter(columnVal, filterVal)// change hidden fields - submit - next page load will show rows where "columnVal"="filterVal".{document.tblGenForm.elements[htm_firstRow].value=0;document.tblGenForm.elements[htm_column].value=columnVal;document.tblGenForm.elements[htm_filter].value=filterVal; document.tblGenForm.submit();}function jset_CheckBoxes(){var names="";if (document.tblGenForm.allCheck){if (document.tblGenForm.allCheck.value=="none"){for (i=0; i<document.tblGenForm.rowCount.value; i++){try{eval('document.tblGenForm.' +'reportChkBox' + checkBoxNums[i] +'.checked=true;');}catch (e){}document.tblGenForm.allCheck.value="all"document.tblGenForm.chkBoxAll.value="All -"}}else{for (i=0; i<document.tblGenForm.rowCount.value; i++){try{eval('document.tblGenForm.' +'reportChkBox' + checkBoxNums[i] +'.checked=false;');eval('document.tblGenForm.' +'checkBoxSelectedID' + checkBoxNums[i] +'.value="off";');}catch(e){}document.tblGenForm.allCheck.value="none";document.tblGenForm.chkBoxAll.value="All +";}}}}// this array gets populated when the checkbox fields are created (used by jset_CheckBoxes())var checkBoxNums=new Array();//--></script> <form name="tblGenForm" action="/page.php?pageID=713" method="post"><input type="hidden" name="windowUID" value="WIND54f5206936525" /><input type="hidden" name="reload_data[colNo]" value="0" id="colNo" /><input type="hidden" name="reload_data[asc_desc]" value="DESC" id="asc_desc" /><input type="hidden" name="reload_data[firstRow]" value="0" id="firstRow" /><input type="hidden" name="reload_data[filter]" value="" id="filter" /><input type="hidden" name="reload_data[column]" value="" id="column" /><input type="hidden" name="rowCount" value="5" /><input type="hidden" name="allCheck" value="none" /><input type="hidden" name="reload_data[showAllRecords]" value="" id="colNo" /><table border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr><tr><td><table cellspacing="0" cellpadding="2" class="Report"><tbody><tr> <td class="reportheading"><a href="Javascript: void(jsortResults('0'))">Date Submitted</a></td><td class="reportheading"><a href="Javascript: void(jsortResults('1'))">Job Title</a></td><td class="reportheading"><a href="Javascript: void(jsortResults('2'))">Status</a></td><td class="reportheading"><a href="Javascript: void(jsortResults('3'))">Owner</a></td></tr><tr class="evenrow"> <td ondblclick="Javascript: jfilter('0','2015-02-23 15:34:18.014871+11')">23/02/2015</td><td ondblclick="Javascript: jfilter('1','xxxx')"><a href="page.php?pageID=709&amp;windowUID=WIND54f5206936525&amp;NewRecord[TableID]=12&amp;NewRecord[RowID]=227501">xxxx</a>&nbsp;</td><td ondblclick="Javascript: jfilter('2','Vacancy Request Submitted')">Vacancy Request Submitted</td><td ondblclick="Javascript: jfilter('3','25808')"><a href="mailto:brayden.wardrop@thomsonreuters.com">Wardrop, Brayden</a><br />08 6430 3225</td></tr><tr class="oddrow"> <td ondblclick="Javascript: jfilter('0','2015-02-23 15:30:53.836985+11')">23/02/2015</td><td ondblclick="Javascript: jfilter('1','Training Coordinator')"><a href="page.php?pageID=709&amp;windowUID=WIND54f5206936525&amp;NewRecord[TableID]=12&amp;NewRecord[RowID]=227500">Training Coordinator</a>&nbsp;</td><td ondblclick="Javascript: jfilter('2','Vacancy Request Submitted')">Vacancy Request Submitted</td><td ondblclick="Javascript: jfilter('3','17368')"><a href="mailto:jane.true@thomsonreuters.com">Walker RU, Jane</a><br />64303235</td></tr><tr class="evenrow"> <td ondblclick="Javascript: jfilter('0','2015-02-23 15:30:43.821416+11')">23/02/2015</td><td ondblclick="Javascript: jfilter('1','TEST Admin')"><a href="page.php?pageID=709&amp;windowUID=WIND54f5206936525&amp;NewRecord[TableID]=12&amp;NewRecord[RowID]=227499">TEST Admin</a>&nbsp;</td><td ondblclick="Javascript: jfilter('2','Vacancy Request Completed Multi Level Approvals')">Vacancy Request Completed Multi Level Approvals</td><td ondblclick="Javascript: jfilter('3','25808')"><a href="mailto:brayden.wardrop@thomsonreuters.com">Wardrop, Brayden</a><br />08 6430 3225</td></tr><tr class="oddrow"> <td ondblclick="Javascript: jfilter('0','2015-01-30 18:26:22.200778+11')">30/01/2015</td><td ondblclick="Javascript: jfilter('1','Bray Test')"><a href="page.php?pageID=709&amp;windowUID=WIND54f5206936525&amp;NewRecord[TableID]=12&amp;NewRecord[RowID]=226214">Bray Test</a>&nbsp;</td><td ondblclick="Javascript: jfilter('2','Vacancy Request Completed Multi Level Approvals')">Vacancy Request Completed Multi Level Approvals</td><td ondblclick="Javascript: jfilter('3','25808')"><a href="mailto:brayden.wardrop@thomsonreuters.com">Wardrop, Brayden</a><br />08 6430 3225</td></tr><tr class="evenrow"> <td ondblclick="Javascript: jfilter('0','2014-11-21 17:32:46.115239+11')">21/11/2014</td><td ondblclick="Javascript: jfilter('1','Admin Assistant')"><a href="page.php?pageID=709&amp;windowUID=WIND54f5206936525&amp;NewRecord[TableID]=12&amp;NewRecord[RowID]=220373">Admin Assistant</a>&nbsp;</td><td ondblclick="Javascript: jfilter('2','Vacancy Request Submitted')">Vacancy Request Submitted</td><td ondblclick="Javascript: jfilter('3','25808')"><a href="mailto:brayden.wardrop@thomsonreuters.com">Wardrop, Brayden</a><br />08 6430 3225</td></tr></tbody></table></td></tr><tr><td colspan="4" nowrap="" class="reportcontrols"><table width="100%"> <tbody><tr> <td width="20%" align="left"><nobr> &nbsp;&nbsp;</nobr></td></tr></tbody></table> </td></tr></tbody></table> <input type="hidden" name="action" value="" /></form><script language="javascript" type="text/javascript"><!--jsetHTMvars(); // --></script> </div><div id="FormDiv" style="display: block;"> <table border="0" cellspacing="0" cellpadding="0"> <tbody><tr> <td> <script language="Javascript" type="text/Javascript">var warnString="";var warnCount=0;var fieldTag="field";var elementType="";var jreqFieldID="";var jreqFieldLabel="";var customValidation=new Array();function checkFields(){warnString="";warnCount=0;fieldTag="field";elementType=""; if ((typeof(document.mainForm.nomatch)=='object') && (document.mainForm.nomatch.value=='true')) warnString +='\n - The passwords do not match';for(i=0; i < jreqFieldID.length; i++){elementType=eval("document.mainForm." + jreqFieldID[i] + ".type");switch (elementType){case "textarea": if (eval("document.mainForm." + jreqFieldID[i] + ".className")=="mceEditor"){if ((tinyMCE.get(jreqFieldID[i]).getContent()=='') || (tinyMCE.get(jreqFieldID[i]).getContent()=='<p>&nbsp;</p>')){warnCount ++; warnString +='\n - ' + jreqFieldLabel[i];}break;}case "text":case "hidden":if (eval("document.mainForm." + jreqFieldID[i] + ".value.length")==0){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break;case "select-one":if (eval("document.mainForm." + jreqFieldID[i] + ".selectedIndex") < 1){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break;case "select-multiple":if (eval("document.mainForm." + jreqFieldID[i] + ".selectedIndex") < 0){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break; case "radio": var radioChecked=false;elementName=eval("document.mainForm." + jreqFieldID[i] + ".name");ele=document.getElementsByName(elementName);for (j=0; j < ele.length; j++){if (ele[j].checked){radioChecked=true;}}if (!radioChecked){warnCount ++;warnString +='\n - ' + jreqFieldLabel[i];}break; default:// check if its an array which could indicate a multi-select if (eval("document.mainForm."+jreqFieldID[i]+"[0]")){if (eval("document.mainForm." + jreqFieldID[i] + "[1].selectedIndex")< 0){warnCount ++; warnString +='\n - ' + jreqFieldLabel[i];}break;}else alert ('This element type (' + elementType + ') needs to be added to the "form" file');}// end switch}for(i=0; i < customValidation.length; i++){// DAVE- ADD CODE HERE TO PICK UP VALIDATION FUNCTIONS FOR INDIVIDUAL ELEMENTS}if (warnCount > 1) fieldTag="fields";if (warnCount > 0) warnString='Please supply a value for the following ' + fieldTag + ': ' + warnString ;}function validate(type){//document.mainForm.submit();if (document.mainForm.action.value=='Copy'){if (confirm('Save this as a new record?')){checkList=checkFields(); if (warnString !=""){alert (warnString);}else{document.mainForm.submit();}}}if (document.mainForm.action.value=='Delete'){if (confirm('Do you want to permanently delete this record?')){document.mainForm.submit();}}if (document.mainForm.action.value=='RemoveApproversFromApprovalChain'){if (confirm('Do you want to remove these Approver(s) from the Approval Chain?')){document.mainForm.submit();}}if (document.mainForm.action.value=='Save'){checkFields(); if (warnString !=""){alert (warnString);}else{document.mainForm.submit();}}if (document.mainForm.action.value=='SaveAsNew'){checkFields(); if (warnString !=""){alert (warnString);}else{showSaveAsDialog();}}if (document.mainForm.action.value=='Search'){checkFields(); if (warnString !=""){alert (warnString);}else{document.mainForm.submit();}}}</script> <form name="mainForm" action="page.php?pageID=713&amp;windowUID=WIND54f5206936525#report" method="post" enctype="multipart/form-data"> <input type="hidden" name="Vacancy[ID]" value="" /><input type="hidden" name="saveTo[1]" value="Vacancy" /><table class="Form" cellspacing="1" cellpadding="2"><tbody><tr class="oddrow"> <td class="head">Date Submitted (FROM)</td><td><script language="Javascript">/** * DHTML date validation script. Courtesy of SmartWebby.com (http://www.smartwebby.com/dhtml/) */// Declaring valid date character, minimum year and maximum yearvar dtCh="/";var minYear=1900;var maxYear=2100;function isInteger(s){var i; for (i=0; i < s.length; i++){// Check that current character is number. var c=s.charAt(i); if (((c < "0") || (c > "9"))) return false;}// All characters are numbers. return true;}function stripCharsInBag(s, bag){var i; var returnString=""; // Search through string's characters one by one. // If character is not in bag, append to returnString. for (i=0; i < s.length; i++){var c=s.charAt(i); if (bag.indexOf(c)==-1) returnString +=c;}return returnString;}function daysInFebruary (year){// February has 29 days in any year evenly divisible by four, // EXCEPT for centurial years which are not also divisible by 400. return (((year % 4==0) && ( (!(year % 100==0)) || (year % 400==0))) ? 29 : 28 );}function DaysArray(n){for (var i=1; i <=n; i++){this[i]=31if (i==4 || i==6 || i==9 || i==11){this[i]=30}if (i==2){this[i]=29}}return this}function isDate(dtStr, fld){var daysInMonth=DaysArray(12)var pos1=dtStr.indexOf(dtCh)var pos2=dtStr.indexOf(dtCh,pos1+1)var strDay=dtStr.substring(0,pos1)var strMonth=dtStr.substring(pos1+1,pos2)var strYear=dtStr.substring(pos2+1)if (dtStr==''){return true}if (strMonth.length !=2 ||strDay.length !=2){alert("( " + fld + " ) Please enter the date as dd/mm/yyyy")return false}strYr=strYearif (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)for (var i=1; i <=3; i++){if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)}month=parseInt(strMonth)day=parseInt(strDay)year=parseInt(strYr)if (pos1==-1 || pos2==-1){alert("( " + fld + " ) The date format should be : dd/mm/yyyy")return false}if (strMonth.length<1 || month<1 || month>12){alert("( " + fld + " ) Please enter a valid month")return false}if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){alert("( " + fld + " ) Please enter a valid day")return false}if (strYear.length !=4 || year==0 || year<minYear || year>maxYear){alert("( " + fld + " ) Please enter a valid 4 digit year between "+minYear+" and "+maxYear)return false}if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false){alert("( " + fld + " ) Please enter a valid date")return false}return true}function ValidateForm(dt, field){//var dt=document.frmSample.txtDateif (isDate(dt.value, field)==false){dt.focus()return false}return true}</script><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle"><input type="text" value="" name="Vacancy[WaecPaymentCode]" id="WaecPaymentCode2482" onchange="return ValidateForm(this, 'On Field: Date Submitted (FROM)');" />&nbsp;</td><td>&nbsp;</td><td><img src="/images/dt.gif" alt="Date" border="0" onclick="openDateEditWaecPaymentCode2482()" />&nbsp;</td><td>&nbsp;</td><td valign="middle"><span class="tinytext" style="vertical-align:middle;">(dd/mm/yyyy)</span></td></tr></tbody></table><script language="JavaScript" type="text/javascript">document.onmouseover=handlerMOWaecPaymentCode2482;function handlerMOWaecPaymentCode2482(e){e=e || window.event;mx=e.pageX !==undefined ? e.pageX : e.clientX + document.body.scrollLeft;my=e.pageY !==undefined ? e.pageY : e.clientY + document.body.scrollTop;}function openDateEditWaecPaymentCode2482(fieldname){var argline;argline='/include/phpdatepop.php?updatefield=window.opener.parent.frames%5B%27page%27%5D.document.mainForm.WaecPaymentCode2482&HTMLFormName=mainForm&DateFormat=d%2Fm%2FY';props='toolbar=no,location=no,directories=no,status=no,scrollbars=no,resizable=no,copyhistory=no,width=140,height=165,top='+my+',left='+mx;mywin=window.open(argline, 'datepick', props)}</script></td></tr><tr class="evenrow"> <td class="head">Date Submitted (TO)</td><td><script language="Javascript">/** * DHTML date validation script. Courtesy of SmartWebby.com (http://www.smartwebby.com/dhtml/) */// Declaring valid date character, minimum year and maximum yearvar dtCh="/";var minYear=1900;var maxYear=2100;function isInteger(s){var i; for (i=0; i < s.length; i++){// Check that current character is number. var c=s.charAt(i); if (((c < "0") || (c > "9"))) return false;}// All characters are numbers. return true;}function stripCharsInBag(s, bag){var i; var returnString=""; // Search through string's characters one by one. // If character is not in bag, append to returnString. for (i=0; i < s.length; i++){var c=s.charAt(i); if (bag.indexOf(c)==-1) returnString +=c;}return returnString;}function daysInFebruary (year){// February has 29 days in any year evenly divisible by four, // EXCEPT for centurial years which are not also divisible by 400. return (((year % 4==0) && ( (!(year % 100==0)) || (year % 400==0))) ? 29 : 28 );}function DaysArray(n){for (var i=1; i <=n; i++){this[i]=31if (i==4 || i==6 || i==9 || i==11){this[i]=30}if (i==2){this[i]=29}}return this}function isDate(dtStr, fld){var daysInMonth=DaysArray(12)var pos1=dtStr.indexOf(dtCh)var pos2=dtStr.indexOf(dtCh,pos1+1)var strDay=dtStr.substring(0,pos1)var strMonth=dtStr.substring(pos1+1,pos2)var strYear=dtStr.substring(pos2+1)if (dtStr==''){return true}if (strMonth.length !=2 ||strDay.length !=2){alert("( " + fld + " ) Please enter the date as dd/mm/yyyy")return false}strYr=strYearif (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)for (var i=1; i <=3; i++){if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)}month=parseInt(strMonth)day=parseInt(strDay)year=parseInt(strYr)if (pos1==-1 || pos2==-1){alert("( " + fld + " ) The date format should be : dd/mm/yyyy")return false}if (strMonth.length<1 || month<1 || month>12){alert("( " + fld + " ) Please enter a valid month")return false}if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){alert("( " + fld + " ) Please enter a valid day")return false}if (strYear.length !=4 || year==0 || year<minYear || year>maxYear){alert("( " + fld + " ) Please enter a valid 4 digit year between "+minYear+" and "+maxYear)return false}if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false){alert("( " + fld + " ) Please enter a valid date")return false}return true}function ValidateForm(dt, field){//var dt=document.frmSample.txtDateif (isDate(dt.value, field)==false){dt.focus()return false}return true}</script><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle"><input type="text" value="" name="Vacancy[WaecAccountNumber]" id="WaecAccountNumber2483" onchange="return ValidateForm(this, 'On Field: Date Submitted (TO)');" />&nbsp;</td><td>&nbsp;</td><td><img src="/images/dt.gif" alt="Date" border="0" onclick="openDateEditWaecAccountNumber2483()" />&nbsp;</td><td>&nbsp;</td><td valign="middle"><span class="tinytext" style="vertical-align:middle;">(dd/mm/yyyy)</span></td></tr></tbody></table><script language="JavaScript" type="text/javascript">document.onmouseover=handlerMOWaecAccountNumber2483;function handlerMOWaecAccountNumber2483(e){e=e || window.event;mx=e.pageX !==undefined ? e.pageX : e.clientX + document.body.scrollLeft;my=e.pageY !==undefined ? e.pageY : e.clientY + document.body.scrollTop;}function openDateEditWaecAccountNumber2483(fieldname){var argline;argline='/include/phpdatepop.php?updatefield=window.opener.parent.frames%5B%27page%27%5D.document.mainForm.WaecAccountNumber2483&HTMLFormName=mainForm&DateFormat=d%2Fm%2FY';props='toolbar=no,location=no,directories=no,status=no,scrollbars=no,resizable=no,copyhistory=no,width=140,height=165,top='+my+',left='+mx;mywin=window.open(argline, 'datepick', props)}</script></td></tr><tr class="oddrow"> <td class="head">Job Title</td><td><input type="text" name="Vacancy[JobTitle]" value="" id="JobTitle2484" size="50" /></td></tr><tr class="evenrow"> <td class="head">Owner</td><td><select name="Vacancy[OwnerUserID]" id="OwnerUserID2485" style="visibility: visible;"> <option value=""> -- Select from List -- </option> <option value="15724">ASAP Corp -&gt; Arroyo, Jose (jarroyoru)</option> <option value="19957">ASAP Corp -&gt; Augustin, Patricia (paugustin)</option> <option value="19183">ASAP Corp -&gt; BRS, asapcorpru (brsasapcorpru)</option> <option value="25942">ASAP Corp -&gt; Black, Bev (bblack)</option> <option value="10976">ASAP Corp -&gt; Brougham, Gavin (gavin)</option> <option value="25943">ASAP Corp -&gt; Brynjolfson, Karyn (kbrynjolfson)</option> <option value="23360">ASAP Corp -&gt; CF, Balcatta (balcatta)</option> <option value="16451">ASAP Corp -&gt; Calabretta, Joe (jcalabrettaru)</option> <option value="26980">ASAP Corp -&gt; Campbell, Rob (rccorpru)</option> <option value="26069">ASAP Corp -&gt; Campbell, Rob (rcru)</option> <option value="26070">ASAP Corp -&gt; Campbell, Rob (rcru2)</option> <option value="20049">ASAP Corp -&gt; Capron, Sandra (scapron)</option> <option value="21723">ASAP Corp -&gt; Champion, Hannah (hchampion)</option> <option value="17812">ASAP Corp -&gt; Cook, Paisha (pcook)</option> <option value="13740">ASAP Corp -&gt; Correia, Tony (brsasapcorpsr)</option> <option value="15401">ASAP Corp -&gt; Department Manager, Jane (janedeptmgr)</option> <option value="20242">ASAP Corp -&gt; Dover, Andrew (adover)</option> <option value="13895">ASAP Corp -&gt; Driver, Sue (suesa)</option> <option value="13499">ASAP Corp -&gt; Eccles, Keryn (keccles)</option> <option value="19958">ASAP Corp -&gt; Ellerby, Annette (aellerby)</option> <option value="15400">ASAP Corp -&gt; Executive Manager, Jane (janeexecmgr)</option> <option value="22350">ASAP Corp -&gt; Garner, Reagan (rgarner)</option> <option value="27030">ASAP Corp -&gt; General, Manager (generalmanager)</option> <option value="7774">ASAP Corp -&gt; HOD, AR (arhod)</option> <option value="7773">ASAP Corp -&gt; HOD, Business Unit (buhod)</option> <option value="15399">ASAP Corp -&gt; HR Manager, Jane (janehrmgr)</option> <option value="7772">ASAP Corp -&gt; HR, Business Unit (buhr)</option> <option value="26352">ASAP Corp -&gt; Hawkins, Michael (mhawkinsru2)</option> <option value="6825">ASAP Corp -&gt; Hiller, Kim (pm)</option> <option value="15032">ASAP Corp -&gt; Holt, Nicole (nholt)</option> <option value="21525">ASAP Corp -&gt; Honner, Shelley (shonner)</option> <option value="20374">ASAP Corp -&gt; Johnston, Rhonda (rjohnston)</option> <option value="25145">ASAP Corp -&gt; Jones , Rachel (rjones12)</option> <option value="23340">ASAP Corp -&gt; Jones, Rachel (rjonesru)</option> <option value="12602">ASAP Corp -&gt; Kaur, Ramneek (ramneekr)</option> <option value="13966">ASAP Corp -&gt; Kershaw, Lisa (Lisa)</option> <option value="25199">ASAP Corp -&gt; Line, Manager (mhawkinsru)</option> <option value="26094">ASAP Corp -&gt; Line, Manager - mhawkins (mhawkinsLM)</option> <option value="15033">ASAP Corp -&gt; Luke, Samantha (sluke)</option> <option value="27031">ASAP Corp -&gt; Managing, Director (managingdirector)</option> <option value="19959">ASAP Corp -&gt; Meghani, Chalina (cmeghani)</option> <option value="16243">ASAP Corp -&gt; Morgan, Daniel (dmorganru)</option> <option value="21526">ASAP Corp -&gt; Mudford, Laura (lmudford)</option> <option value="8692">ASAP Corp -&gt; Nelson (RU), Andrew (anelsonru)</option> <option value="22731">ASAP Corp -&gt; Nutt, Graham (gnutt)</option> <option value="21640">ASAP Corp -&gt; O'Connor, Marilyn (moconnor)</option> <option value="19975">ASAP Corp -&gt; O'Loughlin, Anthea (aoloughlin)</option> <option value="14750">ASAP Corp -&gt; O'Neill, Markus (moneillru)</option> <option value="7228">ASAP Corp -&gt; Officer 1, Returning (RO1)</option> <option value="19960">ASAP Corp -&gt; Planning, Workforce (wplanning)</option> <option value="11475">ASAP Corp -&gt; RU, RU (cateru)</option> <option value="9337">ASAP Corp -&gt; Raithatha (RU), Neel (nrcorpru)</option> <option value="15411">ASAP Corp -&gt; Sales, Jane (janesales)</option> <option value="17277">ASAP Corp -&gt; Sherma, Srinath (nshermaru)</option> <option value="15380">ASAP Corp -&gt; Smith, Ron (ronsmith)</option> <option value="27251">ASAP Corp -&gt; Test, Mock (mock.test)</option> <option value="26270">ASAP Corp -&gt; True RU, Jane (jtru)</option> <option value="15379">ASAP Corp -&gt; Turner, Casey (cturner)</option> <option value="25941">ASAP Corp -&gt; Wagner, Jade (jwagner)</option> <option value="21863">ASAP Corp -&gt; Walker EM, Jane (jwem)</option> <option value="17326">ASAP Corp -&gt; Walker HR Manager, Jane (jwhrmanager)</option> <option value="21862">ASAP Corp -&gt; Walker HR, Jane (jwhr)</option> <option value="17368">ASAP Corp -&gt; Walker RU, Jane (jwru)</option> <option value="25808">ASAP Corp -&gt; Wardrop, Brayden (bwardropwru)</option> <option value="6826">ASAP Corp -&gt; Way, Mick (pc)</option> <option value="12611">ASAP Corp -&gt; linemanagers, test (test)</option> <option value="13018">ASAP Corp -&gt; restricted, ramneekru (ramneekru)</option> <option value="12472">ASAP Corp -&gt; restricted, rochelle (rochelleru)</option> <option value="17970">ASAP Corp -&gt; restricteduser, michael (mhawkins1970ru)</option></select></td></tr></tbody></table> <input type="hidden" name="action" value="" /> </form></td></tr><tr> <td> <script language="JavaScript"> function clearForm(){for (i=0; i < document.mainForm.elements.length; i++){switch (document.mainForm.elements[i].type){case "text": document.mainForm.elements[i].value=""; break; case "checkbox": document.mainForm.elements[i].checked=false; break; case "radio": document.mainForm.elements[i].checked=false; break; case "select-one": document.mainForm.elements[i].selectedIndex=0; break; case "select-multiple": document.mainForm.elements[i].selectedIndex=-1; break;}}}function toggleSearchWithin(el){if (el.checked){clearForm(); el.checked=true;}else document.mainForm.reset();}</script> <table border="0" cellspacing="2" cellpadding="0"> <tbody><tr><td colspan="3"><input type="checkbox" name="SearchWithin" value="true" onclick="toggleSearchWithin(this);" />Search within these results</td></tr><tr> <td><input type="button" id="brsSearchBtn" name="searchButton" value="Search" onclick="document.mainForm.action.value='Search'; validate(0);" style="width:70px;" /></td><td><input type="button" name="resetButton" value="Reset" onclick="document.mainForm.reset();" style="width:70px;" /></td><td><input type="button" name="clearButton" value="Clear" onclick="clearForm();" style="width:70px;" /></td></tr></tbody></table> </td></tr></tbody></table> </div><script>hideForm();showReport();</script></div><div id="customfooter"></div><div id="footer"><table width="100%" border="0"> <tbody><tr> <td colspan="3"><hr width="100%" /></td></tr><tr> <td rowspan="2"><a href="http://www.bigredsky.com" target="blank"><img border="0" src="/images/brs.gif" /></a></td><td class="FooterText">Welcome BRS, mitchsu @ ASAP Corp </td><td align="right" class="FooterText"><a href="mailto:helpdesk@bigredsky.com">Contact Customer Service</a> 1300 733 056<br />Please click <a href="https://www.nicereply.com/thomson-reuters-anz.bigredsky/bigredsky" target="_blank">here</a> to provide feedback </td></tr><tr><td colspan="2">&nbsp;</td></tr><tr> <td colspan="3" class="CopyrightText">BigRedSky ASAP R1.10 <br />© Thomson Reuters (Professional) Australia Limited 2000-2011 </td></tr></tbody></table></div><script language="Javascript" type="text/Javascript"> top.setPageTitle('Recruitment Request Search');</script></div>
+<!-- SEARCH - RESULTS | TABS -->
+<ul class="lv-tabs" data-tab data-options="deep_linking: true; scroll_to_content: false">
+	<li><a href="#search">Search</a></li>
+	<li class="active"><a href="#results">Results</a></li>
+</ul>
 
+<!-- TABS CONTENT PANEL -->
+<div class="tabs-content">
+	<section role="tabpanel" aria-hidden="true" class="content" id="search">
+
+		<form class="lv-form" data-abide novalidate method="post" action="#">
+
+			<!-- Date Submitted (FROM) -->
+			<div class="row">
+				<div class="medium-6 columns">
+					<label><span class="text">Date Submitted (FROM)</span> <!--<small>required</small>-->
+						<input class="js-datepicker" name="date-submitted-from" type="text" >
+					</label>
+					<small class="error">Your name is required.</small>
+				</div>
+				<div class="medium-6 columns">
+					<label><span class="text">Date Submitted (TO)</span>
+						<input class="js-datepicker" name="date-submitted-to" type="text">
+					</label>
+					<small class="error">Please try again.</small>
+				</div>
+			</div>
+
+			<!-- Job Title -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Job Title</span> <small>required</small>
+						<input name="job-title" type="email" required>
+					</label>
+					<small class="error">A job title is required</small>
+				</div>
+			</div>
+
+			<!-- Owner -->
+			<div class="row">
+				<div class="columns">
+					<label><span class="text">Owner</span></label> <!-- <small>required</small> -->
+					<select name="Vacancy[OwnerUserID]">
+						 <option value="" disabled selected>Select from list</option>
+						 <option value="15724">ASAP Corp -&gt; Arroyo, Jose (jarroyoru)</option>
+						 <option value="19957">ASAP Corp -&gt; Augustin, Patricia (paugustin)</option>
+						 <option value="19183">ASAP Corp -&gt; BRS, asapcorpru (brsasapcorpru)</option>
+						 <option value="25942">ASAP Corp -&gt; Black, Bev (bblack)</option>
+						 <option value="10976">ASAP Corp -&gt; Brougham, Gavin (gavin)</option>
+						 <option value="25943">ASAP Corp -&gt; Brynjolfson, Karyn (kbrynjolfson)</option>
+						 <option value="23360">ASAP Corp -&gt; CF, Balcatta (balcatta)</option>
+						 <option value="16451">ASAP Corp -&gt; Calabretta, Joe (jcalabrettaru)</option>
+						 <option value="26980">ASAP Corp -&gt; Campbell, Rob (rccorpru)</option>
+						 <option value="26069">ASAP Corp -&gt; Campbell, Rob (rcru)</option>
+						 <option value="26070">ASAP Corp -&gt; Campbell, Rob (rcru2)</option>
+						 <option value="20049">ASAP Corp -&gt; Capron, Sandra (scapron)</option>
+						 <option value="21723">ASAP Corp -&gt; Champion, Hannah (hchampion)</option>
+						 <option value="17812">ASAP Corp -&gt; Cook, Paisha (pcook)</option>
+						 <option value="13740">ASAP Corp -&gt; Correia, Tony (brsasapcorpsr)</option>
+						 <option value="15401">ASAP Corp -&gt; Department Manager, Jane (janedeptmgr)</option>
+						 <option value="20242">ASAP Corp -&gt; Dover, Andrew (adover)</option>
+						 <option value="13895">ASAP Corp -&gt; Driver, Sue (suesa)</option>
+						 <option value="13499">ASAP Corp -&gt; Eccles, Keryn (keccles)</option>
+						 <option value="19958">ASAP Corp -&gt; Ellerby, Annette (aellerby)</option>
+						 <option value="15400">ASAP Corp -&gt; Executive Manager, Jane (janeexecmgr)</option>
+						 <option value="22350">ASAP Corp -&gt; Garner, Reagan (rgarner)</option>
+						 <option value="27030">ASAP Corp -&gt; General, Manager (generalmanager)</option>
+						 <option value="7774">ASAP Corp -&gt; HOD, AR (arhod)</option>
+						 <option value="7773">ASAP Corp -&gt; HOD, Business Unit (buhod)</option>
+						 <option value="15399">ASAP Corp -&gt; HR Manager, Jane (janehrmgr)</option>
+						 <option value="7772">ASAP Corp -&gt; HR, Business Unit (buhr)</option>
+						 <option value="26352">ASAP Corp -&gt; Hawkins, Michael (mhawkinsru2)</option>
+						 <option value="6825">ASAP Corp -&gt; Hiller, Kim (pm)</option>
+						 <option value="15032">ASAP Corp -&gt; Holt, Nicole (nholt)</option>
+						 <option value="21525">ASAP Corp -&gt; Honner, Shelley (shonner)</option>
+						 <option value="20374">ASAP Corp -&gt; Johnston, Rhonda (rjohnston)</option>
+						 <option value="25145">ASAP Corp -&gt; Jones , Rachel  (rjones12)</option>
+						 <option value="23340">ASAP Corp -&gt; Jones, Rachel (rjonesru)</option>
+						 <option value="12602">ASAP Corp -&gt; Kaur, Ramneek (ramneekr)</option>
+						 <option value="13966">ASAP Corp -&gt; Kershaw, Lisa (Lisa)</option>
+						 <option value="25199">ASAP Corp -&gt; Line, Manager (mhawkinsru)</option>
+						 <option value="26094">ASAP Corp -&gt; Line, Manager - mhawkins (mhawkinsLM)</option>
+						 <option value="15033">ASAP Corp -&gt; Luke, Samantha (sluke)</option>
+						 <option value="27031">ASAP Corp -&gt; Managing, Director (managingdirector)</option>
+						 <option value="19959">ASAP Corp -&gt; Meghani, Chalina (cmeghani)</option>
+						 <option value="16243">ASAP Corp -&gt; Morgan, Daniel (dmorganru)</option>
+						 <option value="21526">ASAP Corp -&gt; Mudford, Laura (lmudford)</option>
+						 <option value="8692">ASAP Corp -&gt; Nelson (RU), Andrew (anelsonru)</option>
+						 <option value="22731">ASAP Corp -&gt; Nutt, Graham (gnutt)</option>
+						 <option value="21640">ASAP Corp -&gt; O'Connor, Marilyn (moconnor)</option>
+						 <option value="19975">ASAP Corp -&gt; O'Loughlin, Anthea (aoloughlin)</option>
+						 <option value="14750">ASAP Corp -&gt; O'Neill, Markus (moneillru)</option>
+						 <option value="7228">ASAP Corp -&gt; Officer 1, Returning (RO1)</option>
+						 <option value="19960">ASAP Corp -&gt; Planning, Workforce (wplanning)</option>
+						 <option value="27366">ASAP Corp -&gt; Poulos, Nick (npoulosru)</option>
+						 <option value="11475">ASAP Corp -&gt; RU, RU (cateru)</option>
+						 <option value="9337">ASAP Corp -&gt; Raithatha (RU), Neel (nrcorpru)</option>
+						 <option value="15411">ASAP Corp -&gt; Sales, Jane (janesales)</option>
+						 <option value="17277">ASAP Corp -&gt; Sherma, Srinath (nshermaru)</option>
+						 <option value="15380">ASAP Corp -&gt; Smith, Ron  (ronsmith)</option>
+						 <option value="27251">ASAP Corp -&gt; Test, Mock (mock.test)</option>
+						 <option value="26270">ASAP Corp -&gt; True RU, Jane (jtru)</option>
+						 <option value="15379">ASAP Corp -&gt; Turner, Casey (cturner)</option>
+						 <option value="25941">ASAP Corp -&gt; Wagner, Jade (jwagner)</option>
+						 <option value="21863">ASAP Corp -&gt; Walker EM, Jane (jwem)</option>
+						 <option value="17326">ASAP Corp -&gt; Walker HR Manager, Jane (jwhrmanager)</option>
+						 <option value="21862">ASAP Corp -&gt; Walker HR, Jane (jwhr)</option>
+						 <option value="17368">ASAP Corp -&gt; Walker RU, Jane (jwru)</option>
+						 <option value="25808">ASAP Corp -&gt; Wardrop, Brayden (bwardropwru)</option>
+						 <option value="6826">ASAP Corp -&gt; Way, Mick (pc)</option>
+						 <option value="12611">ASAP Corp -&gt; linemanagers, test (test)</option>
+						 <option value="13018">ASAP Corp -&gt; restricted, ramneekru (ramneekru)</option>
+						 <option value="12472">ASAP Corp -&gt; restricted, rochelle (rochelleru)</option>
+						 <option value="17970">ASAP Corp -&gt; restricteduser, michael (mhawkins1970ru)</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row collapse">
+				<div class="columns">
+					<input id="search-with-these-results" name="search-with-these-results" type="checkbox"><label for="search-with-these-results">Search with these results</label>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- Submit -->
+			<div class="row">
+				<div class="columns">
+					<!-- <button type="submit" class="button">Search</button> -->
+					<a href="#results" class="button small">Search</a>
+					<a href="#" class="button small">Reset</a>
+					<a href="#" class="button small">Clear</a>
+				</div>
+			</div>
+
+		</form>
+
+	</section>
+	<section role="tabpanel" aria-hidden="true" class="content" id="results">
+
+		<!-- RESULTS TAB CONTENT -->
+
+		<table class="footable lv-table-theme lv-unselectable">
+			<thead>
+				<tr>
+					<th data-type="numeric">Submitted</th>
+					<th data-type="numeric">Job Title</th>
+					<th data-hide="phone, tablet">Status</th>
+					<th data-hide="phone, tablet">Owner</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+				<tr>
+					<td>03/04/2015</td>
+					<td><a href="#">1. Admin Assistant and other stuff and other stuff</a></td>
+					<td>Vacancy Request Completed Multi Level Approvals</td>
+					<td>Wardrop, Brayden 08 6430 3225</td>
+				</tr>
+			
+				<tr>
+					<td>03/04/2015</td>
+					<td><a href="#">2. Admin Assistant and other stuff and other stuff</a></td>
+					<td>Vacancy Request Completed Multi Level Approvals</td>
+					<td>Wardrop, Brayden 08 6430 3225</td>
+				</tr>
+			
+				<tr>
+					<td>03/04/2015</td>
+					<td><a href="#">3. Admin Assistant and other stuff and other stuff</a></td>
+					<td>Vacancy Request Completed Multi Level Approvals</td>
+					<td>Wardrop, Brayden 08 6430 3225</td>
+				</tr>
+			
+				<tr>
+					<td>03/04/2015</td>
+					<td><a href="#">4. Admin Assistant and other stuff and other stuff</a></td>
+					<td>Vacancy Request Completed Multi Level Approvals</td>
+					<td>Wardrop, Brayden 08 6430 3225</td>
+				</tr>
+			
+			</tbody>
+		</table>
+
+		<!-- end Results Tab -->
+	</section>
+</div>
                 </div>
             </div>
         </div>
@@ -235,30 +415,22 @@
     <aside class="lv-sidebar">
         <div class="lv-sidebar-inner">
 
-	<ul class="tabs text-center" data-tab role="tablist">
-		<li class="tab-title active">
-			<a title="Hints" href="#" role="tab"><i class="fi-lightbulb"></i><span class="text">Hints</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="Favourites" href="#" role="tab"><i class="fi-star"></i><span class="text">Favourites</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="History" href="#" role="tab"><i class="fi-clock"></i><span class="text">History</span></a>
-		</li>
-		<li class="tab-title collapse-btn">
-			<a title="Hide" href="#" role="tab"><i class="fi-arrow-right"></i><span class="text">Hide</span></a>
-		</li>
-	</ul>
+	<!-- SPECIAL TABS -->
+	<ul class="lv-tabs">
+		<li class="active"><a title="Hints" href="#"><i class="fi-lightbulb"></i><span class="text">Hints</span></a></li>
+		<li><a title="Favourites" href="#"><i class="fi-star"></i><span class="text">Favourites</span></a></li>
+		<li><a title="History" href="#"><i class="fi-clock"></i><span class="text">History</span></a></li>
+		<li class="collapse-btn"><a title="Hide" href="#"><i class="fi-arrow-right"></i><span class="text">Hide</span></a></li>
+	</ul> <!-- .lv-tabs -->
 
 	<!-- TABS CONTENT -->
 	<div class="tabs-content">
 
 		<!-- HINTS -->
-		<section role="tabpanel" aria-hidden="false" class="content active">
-
+		<section class="content active">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>Hints</h1>
-				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+				<a class="js-close-btn" href="#">Close</a>
 			</header>
 
 			
@@ -280,43 +452,44 @@
 		</section>
 
 		<!-- FAVOURITES -->
-		<section role="tabpanel" aria-hidden="true" class="content">
-
+		<section class="content">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>Favourites</h1>
 				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
 			</header>
-
 			<p class="text-center"><a href="#" class="button radius small knockout">Favourite this Page</a></p>
 
-			<ul class="lv-ui-list">
-				<li><a href="#">This is an example of</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-				<li><a href="#">This is an example of a quicklink</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-				<li><a href="#">This is an example of a quicklink</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-			</ul>
+<p class="text"><a class="button tiny pill" href="#" data-edit="#favourites-list">Edit</a></p>
+
+<ul id="favourites-list" class="lv-ui-list">
+	<li>
+		<a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of a quicklink</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of a quicklink</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
+</ul>
+
+
 		</section>
 
 		<!-- HISTORY -->
-		<section role="tabpanel" aria-hidden="true" class="content">
-
+		<section class="content">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>History</h1>
 				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
 			</header>
-
 			<p>No history is available at this time.</p>
 		</section>
 
-	</div>
+	</div> <!-- .tabs-content -->
 </div> <!-- .lv-siderbar-inner -->
     </aside>
 

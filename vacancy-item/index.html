@@ -45,7 +45,9 @@
         
 
 <div class="lv-context-menu-fixed">
-    <div class="lv-context-menu-scroller">
+
+    <!-- GLOBAL PANEL -->
+    <div class="lv-context-menu-panel">
 
 		<!-- Logo -->
     	<a class="lv-logo" href="/dashboard/"><img src="/assets/img/content/logo@2x.png"></a>
@@ -56,115 +58,107 @@
     		<a href="/modal_output/logout.html" class="logout" data-reveal-id="modal-logout" data-reveal-ajax="true">Logout</a>
     	</div>
 
-	    <!-- GLOBAL PANEL -->
-	    <div class="lv-context-menu-panel ">
+		<!-- Standard User -->
+		<section class="lv-context-menu-user-group">
+		    <h6 class="lv-expander js-expander">Standard User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="">
+		            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
+		        </li>
+		        <li class="">
+		            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
+		        </li>
+		        <li class="">
+		            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
+		        </li>
+		        <li class="">
+		            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
+		        </li>
+		        <li class="">
+		            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
+		        </li>
+		    </ul>
+		</section>
 
-			<!-- Standard User -->
-			<section class="lv-context-menu-user-group">
-			    <h6 class="lv-expander js-expander">Standard User</h6>
-			    <ul class="lv-expander-content">
-			        <li class="">
-			            <a href="/dashboard/"><i class="fi-layout"></i> Dashboard</a>
-			        </li>
-			        <li class="">
-			            <a href="/applicant-search/"><i class="fi-torsos-male-female"></i> Applicant Search</a>
-			        </li>
-			        <li class="">
-			            <a href="/vacancy-search/"><i class="fi-page-search"></i> Vacancy Search</a>
-			        </li>
-			        <li class="">
-			            <a href="/new-vacancy/"><i class="fi-page-edit"></i> New Vacancy</a>
-			        </li>
-			        <li class="">
-			            <a href="/recruitment-requests/"><i class="fi-graph-trend"></i> Recruitment Requests</a>
-			        </li>
-			    </ul>
-			</section>
+		<!-- Admin User -->
+		<section class="lv-context-menu-user-group">
+		    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
+		    <ul class="lv-expander-content">
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torso-business"></i> Client</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Divisions</a></li>
+		            	<li><a href="#">Splash Page Message</a></li>
+		            	<li><a href="#">Vacancy Template Library Access</a></li>
+		            	<li><a href="#">Job Board Emails</a></li>
+		            	<li><a href="#">Job Board Messages</a></li>
+		            	<li><a href="#">Recruitment Request Emails</a></li>
+		            	<li><a href="#">Requisition Emails</a></li>
+		            	<li><a href="#">Selection Report Approval Emails</a></li>
+		            	<li><a href="#">SHL Projects</a></li>
+		            	<li><a href="#">Applicant Attributes</a></li>
+		            	<li><a href="#">Attribute Display Groups</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-torsos-all"></i> Users</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Search Users</a></li>
+		            	<li><a href="#">New User</a></li>
+		            	<li><a href="#">Agency Users</a></li>
+		            	<li><a href="#">Groups</a></li>
+		            	<li><a href="#">My Account</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-page-copy"></i> Templates</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Vacancies</a></li>
+		            	<li><a href="#">Email</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-comments"></i> Questions</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">List</a></li>
+		            	<li><a href="#">Screening</a></li>
+		            	<li><a href="#">Application / Admin</a></li>
+		            	<li><a href="#">Preference</a></li>
+		            	<li><a href="#">KPI</a></li>
+		            	<li><a href="#">Selection Report</a></li>
+		            	<li><a href="#">Selection Report Approval</a></li>
+		            	<li><a href="#">Question Responses</a></li>
+		            	<li><a href="#">Library Groups</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Reporting Engine</a></li>
+		            	<li><a href="#">SMS Report</a></li>
+		            	<li><a href="#">Transaction Summary</a></li>
+		            </ul>
+		        </li>
+		        <li class="lv-has-dropdown js-accordion-trigger">
+		            <a href="#"><i class="fi-info"></i> Help</a>
+		            <ul class="lv-dropdown js-accordion">
+		            	<li><a href="#">Helpdesk</a></li>
+		            	<li><a href="#">Service Levels</a></li>
+		            	<li><a href="#">Time &amp; Material Charges</a></li>
+		            	<li><a href="#">Training Directory</a></li>
+		            	<li><a href="#">Incident Report</a></li>
+		            	<li><a href="#">BigRedSky Update</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+		</section>
 
-			<!-- Admin User -->
-			<section class="lv-context-menu-user-group">
-			    <h6 class="lv-expander lv-expander-hidden js-expander">Admin User</h6>
-			    <ul class="lv-expander-content">
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-torso-business"></i> Client</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Divisions</a></li>
-			            	<li><a href="#">Splash Page Message</a></li>
-			            	<li><a href="#">Vacancy Template Library Access</a></li>
-			            	<li><a href="#">Job Board Emails</a></li>
-			            	<li><a href="#">Job Board Messages</a></li>
-			            	<li><a href="#">Recruitment Request Emails</a></li>
-			            	<li><a href="#">Requisition Emails</a></li>
-			            	<li><a href="#">Selection Report Approval Emails</a></li>
-			            	<li><a href="#">SHL Projects</a></li>
-			            	<li><a href="#">Applicant Attributes</a></li>
-			            	<li><a href="#">Attribute Display Groups</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-torsos-all"></i> Users</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">List</a></li>
-			            	<li><a href="#">Search Users</a></li>
-			            	<li><a href="#">New User</a></li>
-			            	<li><a href="#">Agency Users</a></li>
-			            	<li><a href="#">Groups</a></li>
-			            	<li><a href="#">My Account</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-page-copy"></i> Templates</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Vacancies</a></li>
-			            	<li><a href="#">Email</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-comments"></i> Questions</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">List</a></li>
-			            	<li><a href="#">Screening</a></li>
-			            	<li><a href="#">Application / Admin</a></li>
-			            	<li><a href="#">Preference</a></li>
-			            	<li><a href="#">KPI</a></li>
-			            	<li><a href="#">Selection Report</a></li>
-			            	<li><a href="#">Selection Report Approval</a></li>
-			            	<li><a href="#">Question Responses</a></li>
-			            	<li><a href="#">Library Groups</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-clipboard-notes"></i> Reports</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Reporting Engine</a></li>
-			            	<li><a href="#">SMS Report</a></li>
-			            	<li><a href="#">Transaction Summary</a></li>
-			            </ul>
-			        </li>
-			        <li class="lv-has-dropdown js-accordion-trigger">
-			            <a href="#"><i class="fi-info"></i> Help</a>
-			            <ul class="lv-dropdown js-accordion">
-			            	<li><a href="#">Helpdesk</a></li>
-			            	<li><a href="#">Service Levels</a></li>
-			            	<li><a href="#">Time &amp; Material Charges</a></li>
-			            	<li><a href="#">Training Directory</a></li>
-			            	<li><a href="#">Incident Report</a></li>
-			            	<li><a href="#">BigRedSky Update</a></li>
-			            </ul>
-			        </li>
-			    </ul>
-			</section>
+	</div> <!-- .lv-context-menu-panel -->
 
-		</div> <!-- .lv-context-menu-panel -->
+	<!-- CONTEXT PANEL -->
+	
 
-		<!-- CONTEXT PANEL -->
-    	<div class="lv-context-menu-panel">
-			<section class="lv-context-menu-user-group">
-				
-	    	</section>
-	    </div> <!-- .lv-context-menu-panel -->
-
-    </div> <!-- .lv-context-menu-scroller -->
 </div> <!-- .lv-context-menu-fixed -->
     </nav>
 
@@ -237,30 +231,22 @@
     <aside class="lv-sidebar">
         <div class="lv-sidebar-inner">
 
-	<ul class="tabs text-center" data-tab role="tablist">
-		<li class="tab-title active">
-			<a title="Hints" href="#" role="tab"><i class="fi-lightbulb"></i><span class="text">Hints</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="Favourites" href="#" role="tab"><i class="fi-star"></i><span class="text">Favourites</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="History" href="#" role="tab"><i class="fi-clock"></i><span class="text">History</span></a>
-		</li>
-		<li class="tab-title collapse-btn">
-			<a title="Hide" href="#" role="tab"><i class="fi-arrow-right"></i><span class="text">Hide</span></a>
-		</li>
-	</ul>
+	<!-- SPECIAL TABS -->
+	<ul class="lv-tabs">
+		<li class="active"><a title="Hints" href="#"><i class="fi-lightbulb"></i><span class="text">Hints</span></a></li>
+		<li><a title="Favourites" href="#"><i class="fi-star"></i><span class="text">Favourites</span></a></li>
+		<li><a title="History" href="#"><i class="fi-clock"></i><span class="text">History</span></a></li>
+		<li class="collapse-btn"><a title="Hide" href="#"><i class="fi-arrow-right"></i><span class="text">Hide</span></a></li>
+	</ul> <!-- .lv-tabs -->
 
 	<!-- TABS CONTENT -->
 	<div class="tabs-content">
 
 		<!-- HINTS -->
-		<section role="tabpanel" aria-hidden="false" class="content active">
-
+		<section class="content active">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>Hints</h1>
-				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
+				<a class="js-close-btn" href="#">Close</a>
 			</header>
 
 			
@@ -282,43 +268,44 @@
 		</section>
 
 		<!-- FAVOURITES -->
-		<section role="tabpanel" aria-hidden="true" class="content">
-
+		<section class="content">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>Favourites</h1>
 				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
 			</header>
-
 			<p class="text-center"><a href="#" class="button radius small knockout">Favourite this Page</a></p>
 
-			<ul class="lv-ui-list">
-				<li><a href="#">This is an example of</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-				<li><a href="#">This is an example of a quicklink</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-				<li><a href="#">This is an example of a quicklink</a></li>
-				<li><a href="#">Shorter link</a></li>
-				<li><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li><a href="#">Another link</a></li>
-			</ul>
+<p class="text"><a class="button tiny pill" href="#" data-edit="#favourites-list">Edit</a></p>
+
+<ul id="favourites-list" class="lv-ui-list">
+	<li>
+		<a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of a quicklink</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an example of a quicklink</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Shorter link</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> This is an even longer example of a quicklink here</a></li>
+	<li><a href="#"><i class="fi-x js-delete-btn hide"></i><i class="fi-pencil js-rename-btn hide"></i> Another link</a></li>
+</ul>
+
+
 		</section>
 
 		<!-- HISTORY -->
-		<section role="tabpanel" aria-hidden="true" class="content">
-
+		<section class="content">
 			<header class="lv-header lv-global-header lv-sidebar-header hide-for-large-up">
 				<h1>History</h1>
 				<a class="js-close-btn" href="#"><i class="fa fa-chevron-leftX"></i> Close</a>
 			</header>
-
 			<p>No history is available at this time.</p>
 		</section>
 
-	</div>
+	</div> <!-- .tabs-content -->
 </div> <!-- .lv-siderbar-inner -->
     </aside>
 
