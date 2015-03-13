@@ -1,0 +1,78 @@
+/*
+    THEMES.CSS
+
+    - Last updated: 13.03.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Themes
+//-----------------------------------------------------------------
+
+.light-theme {
+
+    .lv-stage {
+        padding-top: 0;
+    }
+
+    .lv-context-menu,
+    .lv-context-menu-panel {
+        background: white;
+        border-right: 1px solid #D4DCE3;
+    }
+
+    .lv-context-menu-user {
+        border-bottom: 1px solid #D4DCE3;
+
+        .user {
+            color: #222;
+        }
+    }
+
+    .lv-context-menu-user-group {
+        a {
+            color: #555;
+            // border-bottom: 1px solid #D4DCE3;
+            // padding: rem-calc(10 15);
+        }
+
+        .active a:not(.active) {
+            background: #5E6E7E;
+
+            &:before {
+                background: none; //$primary-color;
+            }
+        }
+    }
+
+    .lv-main {
+        border-radius: 0;
+        background: #F5F6F6;
+    }
+
+    .lv-feature-button {
+        background: white; //darken(#F5F6F6, 5%);
+        border-radius: 0;
+        border: 0;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.08);
+    }
+
+    .lv-sidebar {
+        background: #EDEFEF;
+    }
+
+    .lv-footer {
+        background: $secondary-color;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+
+
+
+
